@@ -334,37 +334,6 @@ export default function Home() {
         </FadeIn>
 
         <FadeIn>
-          <section id="industries" className="bg-muted">
-            <div className="container px-4 md:px-6">
-              <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Industries We Serve</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-                  Providing expert facility management across Pune's diverse corporate landscape.
-                </p>
-              </div>
-              <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-4 lg:gap-10">
-                {industries.map((industry) => (
-                  <div key={industry.name} className="flex flex-col items-center space-y-3">
-                    <div className="bg-primary/10 p-4 rounded-full">
-                      {
-                        {
-                          'IT Parks': <Building className="h-8 w-8 text-primary" />,
-                          'Manufacturing Units': <Factory className="h-8 w-8 text-primary" />,
-                          'Corporate Offices': <Briefcase className="h-8 w-8 text-primary" />,
-                          'Commercial Complexes': <Users className="h-8 w-8 text-primary" />
-                        }[industry.name]
-                      }
-                    </div>
-                    <h3 className="text-xl font-bold">{industry.name}</h3>
-                    <p className="text-center text-muted-foreground">{industry.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </FadeIn>
-
-        <FadeIn>
           <section>
             <div className="container">
               <div className="relative rounded-lg overflow-hidden p-8 md:p-12 lg:p-20 text-center">
