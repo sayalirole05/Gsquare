@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -19,6 +20,7 @@ import {
 import { services, industries, processSteps, whyChooseUs, siteConfig } from '@/lib/data';
 import { JsonLd } from '@/components/JsonLd';
 import { FadeIn } from '@/components/FadeIn';
+import placeholderImages from '@/lib/placeholder-images.json';
 
 export default function Home() {
   return (
@@ -39,8 +41,17 @@ export default function Home() {
         url: siteConfig.url,
       }} />
       <div className="flex flex-col min-h-[100dvh]">
-        <section className="w-full bg-[#34495e] relative">
-          <div className="container px-4 md:px-6 flex items-center min-h-[90vh] md:min-h-screen">
+        <section className="w-full relative">
+          <Image
+            alt={placeholderImages.hero.alt}
+            src={placeholderImages.hero.src}
+            fill
+            priority
+            className="object-cover"
+            data-ai-hint={placeholderImages.hero.hint}
+          />
+          <div className="absolute inset-0 bg-[#2c3e50]/90" />
+          <div className="container relative px-4 md:px-6 flex items-center min-h-[90vh] md:min-h-screen">
             <div className="flex flex-col space-y-8 max-w-3xl py-24">
               <div>
                 <div className="inline-block bg-white/10 border border-white/20 text-white text-xs font-medium px-4 py-1.5 rounded-full mb-6">
@@ -49,9 +60,9 @@ export default function Home() {
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl leading-tight">
                   Strategic Workplace
                   <br />
-                  Support for <span className="text-[#f39c12]">Modern
+                  Support for Modern
                   <br />
-                  Enterprises</span>
+                  <span className="text-[#f39c12]">Enterprises</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-lg text-gray-200">
                   Empowering Organisations with Operational Excellence, Compliance,

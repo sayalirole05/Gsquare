@@ -1,0 +1,9 @@
+{
+  "hero": {
+    "src": "https://picsum.photos/seed/hero-bg/1920/1080",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Modern office interior with glass walls",
+    "hint": "office interior"
+  }
+}
