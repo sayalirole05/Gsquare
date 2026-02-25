@@ -1,66 +1,67 @@
 import Link from 'next/link';
-import { siteConfig, mainNav, servicePages } from '@/lib/data';
 import { Logo } from '@/components/icons/Logo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const footerQuickLinks = [
+    { title: 'Home', href: '/' },
+    { title: 'Services', href: '/services' },
+    { title: 'Process', href: '/process' },
+    { title: 'Contact', href: '/contact' },
+  ];
+
+  const footerServices = [
+    { title: 'Housekeeping Manpower', href: '/services/housekeeping' },
+    { title: 'Housekeeping Materials', href: '/services/material-supply' },
+    { title: 'Office Stationery', href: '/services/stationery' },
+    { title: 'General Supplies', href: '/services/material-supply' },
+    { title: 'Corporate Gifting', href: '/services/corporate-gifting' },
+  ];
+
   return (
-    <footer className="bg-muted border-t">
-      <div className="container py-12 px-4 md:px-6">
-        <div className="grid gap-8 md:grid-cols-4">
-          <div className="space-y-4 md:col-span-1">
-            <Link href="/" className="flex items-center space-x-2">
-              <Logo className="h-8 w-8 text-primary" />
-              <span className="font-bold text-lg">{siteConfig.brandName}</span>
+    <footer className="bg-[#34495e] text-gray-300">
+      <div className="container py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-3">
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center space-x-3 text-white font-bold">
+              <Logo className="h-8 w-8" />
+              <span>GSQUARE CORPORATE SERVICES</span>
             </Link>
-            <p className="text-sm text-muted-foreground max-w-xs">
-              Your trusted partner for comprehensive facility management and corporate support services in Pune.
+            <p className="text-sm text-gray-400">
+              Executive Corporate Support Partner for Organisations
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 col-span-3">
-            <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
-              <ul className="space-y-2">
-                {mainNav.map((item) => (
-                  <li key={item.title}>
-                    <Link href={item.href} className="text-sm text-muted-foreground hover:text-primary">
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3">Our Services</h4>
-              <ul className="space-y-2">
-                {servicePages.map((service) => (
-                  <li key={service.slug}>
-                    <Link href={`/services/${service.slug}`} className="text-sm text-muted-foreground hover:text-primary">
-                      {service.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3">Contact Us</h4>
-              <address className="not-italic text-sm text-muted-foreground space-y-2">
-                <p>{siteConfig.name}</p>
-                <p>
-                  {siteConfig.address.street},<br />
-                  {siteConfig.address.city}, {siteConfig.address.zip}
-                </p>
-                <p>
-                  <a href={`tel:${siteConfig.phone}`} className="hover:text-primary">
-                    {siteConfig.phone}
-                  </a>
-                </p>
-              </address>
-            </div>
+
+          <div>
+            <h4 className="font-bold text-white mb-4">Quick Links</h4>
+            <ul className="space-y-3">
+              {footerQuickLinks.map((item) => (
+                <li key={item.title}>
+                  <Link href={item.href} className="text-sm hover:text-white transition-colors">
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-white mb-4">Our Services</h4>
+            <ul className="space-y-3">
+              {footerServices.map((service) => (
+                <li key={service.title}>
+                  <Link href={service.href} className="text-sm hover:text-white transition-colors">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
+
+        <div className="mt-16 border-t border-white/20 pt-8 text-center text-sm text-gray-400">
+          <p>&copy; {currentYear} GSquare Corporate Services. All rights reserved.</p>
         </div>
       </div>
     </footer>
