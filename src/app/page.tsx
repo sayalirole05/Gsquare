@@ -13,6 +13,8 @@ import {
   ClipboardList,
   Truck,
   Package,
+  ArrowRight,
+  ChevronDown,
 } from 'lucide-react';
 import { services, industries, processSteps, whyChooseUs, siteConfig } from '@/lib/data';
 import { JsonLd } from '@/components/JsonLd';
@@ -37,34 +39,52 @@ export default function Home() {
         url: siteConfig.url,
       }} />
       <div className="flex flex-col min-h-[100dvh]">
-        <section className="bg-primary/5 border-b">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4 py-24 sm:py-32">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
-                    Facility Management Services in Pune
-                  </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    G SQUARE CORPORATE SERVICES offers comprehensive, reliable, and
-                    cost-effective solutions to keep your workplace running
-                    smoothly.
-                  </p>
+        <section className="w-full bg-[#34495e] relative">
+          <div className="container px-4 md:px-6 flex items-center min-h-[90vh] md:min-h-screen">
+            <div className="flex flex-col space-y-8 max-w-3xl py-24">
+              <div>
+                <div className="inline-block bg-white/10 border border-white/20 text-white text-xs font-medium px-4 py-1.5 rounded-full mb-6">
+                  Executive Corporate Support Partner
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button asChild size="lg">
-                    <Link href="/contact">Get a Free Quote</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link href="/services">Our Services</Link>
-                  </Button>
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl leading-tight">
+                  Strategic Workplace
+                  <br />
+                  Support for <span className="text-[#f39c12]">Modern
+                  <br />
+                  Enterprises</span>
+                </h1>
+                <p className="mt-6 max-w-xl text-lg text-gray-200">
+                  Empowering Organisations with Operational Excellence, Compliance,
+                  and Scalable Workforce Solutions
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm">
+                <div className="flex items-center gap-2 text-white">
+                  <CheckCircle className="h-5 w-5 text-[#f39c12]" />
+                  <span>Operational Excellence</span>
+                </div>
+                <div className="flex items-center gap-2 text-white">
+                  <CheckCircle className="h-5 w-5 text-[#f39c12]" />
+                  <span>Compliance Ready</span>
+                </div>
+                <div className="flex items-center gap-2 text-white">
+                  <CheckCircle className="h-5 w-5 text-[#f39c12]" />
+                  <span>Scalable Solutions</span>
                 </div>
               </div>
-              <div className="hidden lg:flex items-center justify-center">
-                <Building className="h-64 w-64 text-primary/20" />
+              <div className="flex flex-col gap-4 min-[400px]:flex-row">
+                <Button asChild size="lg" className="bg-[#f39c12] text-white hover:bg-[#f39c12]/90">
+                  <Link href="/contact">Request Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
+                  <Link href="/services">Explore Services</Link>
+                </Button>
               </div>
             </div>
           </div>
+          <a href="#services" className="absolute bottom-8 left-1/2 -translate-x-1/2" aria-label="Scroll to next section">
+             <ChevronDown className="h-8 w-8 text-white/50 animate-bounce" />
+          </a>
         </section>
 
         <FadeIn>
