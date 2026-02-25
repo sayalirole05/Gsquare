@@ -138,53 +138,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <a href="#services" className="absolute bottom-8 left-1/2 -translate-x-1/2" aria-label="Scroll to next section">
+          <a href="#why-choose-us" className="absolute bottom-8 left-1/2 -translate-x-1/2" aria-label="Scroll to next section">
              <ChevronDown className="h-8 w-8 text-white/50 animate-bounce" />
           </a>
         </section>
-
-        <FadeIn>
-          <section id="services">
-            <div className="container px-4 md:px-6">
-              <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
-                    Our Core Services
-                  </h2>
-                  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Tailored facility management and corporate support to meet your
-                    unique business needs.
-                  </p>
-                </div>
-              </div>
-              <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-4 mt-12">
-                {services.map((service) => (
-                  <Card key={service.slug} className="hover:shadow-lg transition-shadow">
-                    <CardHeader className="flex flex-row items-center gap-4">
-                      <div className="bg-primary/10 p-3 rounded-full">
-                         {
-                          {
-                            'housekeeping': <ClipboardList className="h-6 w-6 text-primary" />,
-                            'material-supply': <Truck className="h-6 w-6 text-primary" />,
-                            'stationery': <Package className="h-6 w-6 text-primary" />,
-                            'corporate-gifting': <Gift className="h-6 w-6 text-primary" />
-                          }[service.slug]
-                        }
-                      </div>
-                      <CardTitle>{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4">{service.shortDescription}</p>
-                      <Button variant="link" asChild className="p-0 h-auto">
-                        <Link href={`/services/${service.slug}`}>Learn More <ChevronRight className="w-4 h-4 ml-1" /></Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
-        </FadeIn>
 
         <FadeIn>
           <section id="why-choose-us">
