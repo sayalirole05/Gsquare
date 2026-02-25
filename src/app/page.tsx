@@ -16,6 +16,10 @@ import {
   Package,
   ArrowRight,
   ChevronDown,
+  Focus,
+  TrendingUp,
+  Zap,
+  BarChart2,
 } from 'lucide-react';
 import { services, industries, processSteps, whyChooseUs, siteConfig } from '@/lib/data';
 import { JsonLd } from '@/components/JsonLd';
@@ -23,6 +27,47 @@ import { FadeIn } from '@/components/FadeIn';
 import placeholderImages from '@/lib/placeholder-images.json';
 
 export default function Home() {
+  const whyChooseGsquareItems = [
+    {
+      icon: <Focus className="h-7 w-7 text-[#f39c12]" />,
+      title: 'Single-Window Solution',
+      description: 'One trusted vendor for all your corporate operational needs - from housekeeping to gifting',
+    },
+    {
+      icon: <CheckCircle className="h-7 w-7 text-[#f39c12]" />,
+      title: 'Compliance Assured',
+      description: 'Verified workforce with complete documentation transparency and adherence to corporate standards',
+    },
+    {
+      icon: <TrendingUp className="h-7 w-7 text-[#f39c12]" />,
+      title: 'Enterprise Scalability',
+      description: 'Seamless staffing solutions for large campuses and multi-location offices across India',
+    },
+    {
+      icon: <Zap className="h-7 w-7 text-[#f39c12]" />,
+      title: 'Reliable Delivery',
+      description: 'Time-bound material supply with robust supply chain management and SLA discipline',
+    },
+    {
+      icon: <BarChart2 className="h-7 w-7 text-[#f39c12]" />,
+      title: 'Performance Driven',
+      description: 'Supervised teams with measurable service quality and professional reporting systems',
+    },
+    {
+      icon: <Handshake className="h-7 w-7 text-[#f39c12]" />,
+      title: 'Long-Term Partnership',
+      description: 'Relationship-driven approach focused on continuous improvement and strategic alignment',
+    },
+  ];
+
+  const stats = [
+      { value: '500+', label: 'Organisations Served' },
+      { value: '50+', label: 'Multi-Location Offices' },
+      { value: '99.5%', label: 'SLA Compliance' },
+      { value: '10+', label: 'Years of Excellence' },
+  ];
+
+
   return (
     <>
      <JsonLd data={{
@@ -142,33 +187,34 @@ export default function Home() {
         </FadeIn>
 
         <FadeIn>
-          <section id="why-choose-us" className="bg-muted">
+          <section id="why-choose-us">
             <div className="container px-4 md:px-6">
-              <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-                <div className="space-y-4">
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">
-                    Why G Square is Your Ideal Partner
-                  </h2>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    We are committed to excellence, compliance, and building long-term partnerships through reliable service.
-                  </p>
-                  <ul className="grid gap-4">
-                    {whyChooseUs.map((item, index) => (
-                       <li key={index} className="flex items-start gap-4">
-                          <div className="bg-primary/10 p-2 rounded-full mt-1">
-                            <CheckCircle className="h-5 w-5 text-primary" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold">{item.title}</h3>
-                            <p className="text-muted-foreground">{item.description}</p>
-                          </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                 <div className="hidden lg:flex items-center justify-center">
-                   <Handshake className="h-64 w-64 text-primary/20" />
-                </div>
+              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#2c3e50]">Why Leading Companies Choose GSquare</h2>
+                <p className="max-w-3xl mx-auto text-muted-foreground md:text-lg">
+                    We deliver enterprise-ready solutions that transform operational efficiency and enable your leadership to focus on strategic growth
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {whyChooseGsquareItems.map((item, index) => (
+                    <div key={index} className="bg-card p-6 rounded-lg border shadow-sm text-left">
+                        <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-[#f39c12]/10 mb-5">
+                            {item.icon}
+                        </div>
+                        <h3 className="text-lg font-bold mb-2 text-[#2c3e50]">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 mt-20 text-center">
+                {stats.map((stat, index) => (
+                    <div key={index}>
+                        <p className="text-4xl lg:text-5xl font-bold text-[#f39c12]">{stat.value}</p>
+                        <p className="text-muted-foreground mt-2 text-sm sm:text-base">{stat.label}</p>
+                    </div>
+                ))}
               </div>
             </div>
           </section>
