@@ -363,14 +363,24 @@ export default function Home() {
         <FadeIn>
           <section>
             <div className="container">
-              <div className="rounded-lg bg-primary text-primary-foreground p-8 md:p-12 lg:p-16 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Ready to Elevate Your Facility?</h2>
-                <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
-                  Let's discuss how G Square can create a cleaner, safer, and more efficient environment for your business.
-                </p>
-                <Button asChild size="lg" variant="secondary">
-                  <Link href="/contact">Contact Us Today</Link>
-                </Button>
+              <div className="relative rounded-lg overflow-hidden p-8 md:p-12 lg:p-20 text-center">
+                <Image
+                  alt={placeholderImages.cta.alt}
+                  src={placeholderImages.cta.src}
+                  fill
+                  className="object-cover"
+                  data-ai-hint={placeholderImages.cta.hint}
+                />
+                <div className="absolute inset-0 bg-[#2c3e50]/80" />
+                <div className="relative space-y-6">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Ready to Transform Your Operations?</h2>
+                  <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
+                    Join leading organisations who trust GSquare for their operational excellence
+                  </p>
+                  <Button asChild size="lg" className="bg-[#f39c12] text-white hover:bg-[#f39c12]/90">
+                    <Link href="/contact">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </section>

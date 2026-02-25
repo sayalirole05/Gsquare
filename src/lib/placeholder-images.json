@@ -26,5 +26,12 @@
     "height": 800,
     "alt": "Hands exchanging a beautifully wrapped corporate gift",
     "hint": "gift exchange"
+  },
+  "cta": {
+    "src": "https://picsum.photos/seed/cta-bg/1200/400",
+    "width": 1200,
+    "height": 400,
+    "alt": "Team collaborating in a modern office",
+    "hint": "team meeting"
   }
 }
