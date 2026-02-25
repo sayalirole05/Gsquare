@@ -5,5 +5,26 @@
     "height": 1080,
     "alt": "Modern office interior with glass walls",
     "hint": "office interior"
+  },
+  "housekeeping": {
+    "src": "https://picsum.photos/seed/housekeeping/600/400",
+    "width": 600,
+    "height": 400,
+    "alt": "Professional cleaning staff at work in an office",
+    "hint": "office cleaning"
+  },
+  "officeSupplies": {
+    "src": "https://picsum.photos/seed/office-supplies/600/400",
+    "width": 600,
+    "height": 400,
+    "alt": "Desk organizer filled with pens and office supplies",
+    "hint": "office supplies"
+  },
+  "corporateGifting": {
+    "src": "https://picsum.photos/seed/gifting/600/800",
+    "width": 600,
+    "height": 800,
+    "alt": "Hands exchanging a beautifully wrapped corporate gift",
+    "hint": "gift exchange"
   }
 }

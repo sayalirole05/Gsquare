@@ -178,6 +178,111 @@ export default function Home() {
         </FadeIn>
 
         <FadeIn>
+          <section id="services-portfolio" className="bg-muted">
+            <div className="container px-4 md:px-6">
+              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-[#2c3e50]">Our Integrated Corporate Service Portfolio</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
+                  Comprehensive solutions designed to streamline your operational excellence
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Housekeeping Card */}
+                <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+                  <div className="relative h-64">
+                    <Image
+                      src={placeholderImages.housekeeping.src}
+                      alt={placeholderImages.housekeeping.alt}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={placeholderImages.housekeeping.hint}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Housekeeping Services</h3>
+                  </div>
+                  <div className="p-6 space-y-4">
+                    <div>
+                      <h4 className="font-bold text-md text-card-foreground">Trained Manpower</h4>
+                      <p className="text-sm text-muted-foreground">Verified, uniformed workforce with dedicated supervisors ensuring consistent quality</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-md text-card-foreground">Premium Materials</h4>
+                      <p className="text-sm text-muted-foreground">High-quality chemicals, tools, and consumables for professional maintenance</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Office Supplies Card */}
+                <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+                  <div className="relative h-64">
+                    <Image
+                      src={placeholderImages.officeSupplies.src}
+                      alt={placeholderImages.officeSupplies.alt}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={placeholderImages.officeSupplies.hint}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Office Supplies</h3>
+                  </div>
+                  <div className="p-6 space-y-4">
+                    <div>
+                      <h4 className="font-bold text-md text-card-foreground">Stationery Management</h4>
+                      <p className="text-sm text-muted-foreground">End-to-end supply of desk essentials, print materials, and office consumables</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-md text-card-foreground">General Supplies</h4>
+                      <p className="text-sm text-muted-foreground">Pantry items, utilities, and recurring operational materials with automated inventory</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Corporate Gifting Card */}
+                <div className="rounded-lg border bg-card text-card-foreground shadow-sm lg:col-span-2 overflow-hidden">
+                  <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className="relative min-h-[300px] md:h-full">
+                       <Image
+                          src={placeholderImages.corporateGifting.src}
+                          alt={placeholderImages.corporateGifting.alt}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={placeholderImages.corporateGifting.hint}
+                       />
+                    </div>
+                    <div className="p-8 flex flex-col justify-center">
+                       <h3 className="text-2xl font-bold mb-2 text-[#2c3e50]">Corporate Gifting</h3>
+                       <p className="text-muted-foreground mb-6">
+                         Customized festive and employee engagement kits that strengthen relationships and boost morale. From festival celebrations to employee milestones, we create memorable gifting experiences.
+                       </p>
+                       <ul className="space-y-3">
+                        <li className="flex items-center gap-3">
+                          <CheckCircle className="h-5 w-5 text-[#f39c12] flex-shrink-0" />
+                          <span>Customized gift solutions</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                          <CheckCircle className="h-5 w-5 text-[#f39c12] flex-shrink-0" />
+                          <span>Festival & occasion-based kits</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                          <CheckCircle className="h-5 w-5 text-[#f39c12] flex-shrink-0" />
+                          <span>Employee engagement packages</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                          <CheckCircle className="h-5 w-5 text-[#f39c12] flex-shrink-0" />
+                          <span>Bulk ordering & timely delivery</span>
+                        </li>
+                       </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        <FadeIn>
           <section id="process">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
