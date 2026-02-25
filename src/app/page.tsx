@@ -20,12 +20,16 @@ import {
   TrendingUp,
   Zap,
   BarChart2,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react';
 import { services, industries, processSteps, whyChooseUs, siteConfig } from '@/lib/data';
 import { JsonLd } from '@/components/JsonLd';
 import { FadeIn } from '@/components/FadeIn';
 import placeholderImages from '@/lib/placeholder-images.json';
 import React from 'react';
+import { HomeContactForm } from '@/components/HomeContactForm';
 
 export default function Home() {
   const whyChooseGsquareItems = [
@@ -380,6 +384,78 @@ export default function Home() {
                   <Button asChild size="lg" className="bg-[#f39c12] text-white hover:bg-[#f39c12]/90">
                     <Link href="/contact">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        <FadeIn>
+          <section id="contact-us" className="bg-white">
+            <div className="container px-4 md:px-6">
+              <div className="grid lg:grid-cols-2 gap-16 items-start">
+                <div className="space-y-8">
+                  <div className="space-y-3">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#2c3e50] font-headline">Let's Start a Conversation</h2>
+                    <p className="text-muted-foreground text-lg">
+                      Whether you're looking to streamline operations, ensure compliance, or scale your workforce, we're here to help. Get in touch with our team today.
+                    </p>
+                  </div>
+                  <div className="space-y-6">
+                    <div>
+                      <div className="flex items-center gap-4">
+                        <div className="bg-[#f39c12]/10 p-3 rounded-full">
+                          <Phone className="h-6 w-6 text-[#f39c12]" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm text-muted-foreground">Call Us</h4>
+                          <p className="font-semibold text-[#2c3e50] text-lg">+91 97649 97648</p>
+                          <p className="font-semibold text-[#2c3e50] text-lg">+91 70208 13399</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-4">
+                        <div className="bg-[#f39c12]/10 p-3 rounded-full">
+                          <Mail className="h-6 w-6 text-[#f39c12]" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm text-muted-foreground">Email Us</h4>
+                          <a href="mailto:services@gsquarecorp.co.in" className="font-semibold text-[#2c3e50] text-lg hover:underline">
+                            services@gsquarecorp.co.in
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-4">
+                        <div className="bg-[#f39c12]/10 p-3 rounded-full">
+                          <MapPin className="h-6 w-6 text-[#f39c12]" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm text-muted-foreground">Registered Office</h4>
+                          <address className="not-italic font-semibold text-[#2c3e50] text-lg">
+                            C/13, S NO 6, SHUBHAM COMPLEX,<br/>
+                            OLD JAKAT NAKA, CHINCHWAD,<br/>
+                            PUNE, India - 411033
+                          </address>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#fef5ec] p-8 rounded-xl mt-12">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="bg-white p-4 rounded-full shadow-md mb-4">
+                        <Phone className="h-8 w-8 text-[#f39c12]" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-[#2c3e50]">Let's Connect</h3>
+                      <p className="text-muted-foreground mt-2">We're here to help transform your operations</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <HomeContactForm />
                 </div>
               </div>
             </div>
