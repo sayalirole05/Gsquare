@@ -25,6 +25,7 @@ import { services, industries, processSteps, whyChooseUs, siteConfig } from '@/l
 import { JsonLd } from '@/components/JsonLd';
 import { FadeIn } from '@/components/FadeIn';
 import placeholderImages from '@/lib/placeholder-images.json';
+import React from 'react';
 
 export default function Home() {
   const whyChooseGsquareItems = [
@@ -283,27 +284,45 @@ export default function Home() {
         </FadeIn>
 
         <FadeIn>
-          <section id="process">
+          <section id="process" className="bg-white">
             <div className="container px-4 md:px-6">
-              <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Our Engagement Process</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">A streamlined, transparent process to ensure your needs are met efficiently.</p>
+              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-[#2c3e50]">
+                  Our Structured Engagement Process For Manpower Deployment
+                </h2>
+                <p className="max-w-3xl text-muted-foreground md:text-xl/relaxed">
+                  A proven methodology that ensures seamless onboarding and exceptional service delivery
+                </p>
               </div>
-              <div className="relative mt-12 max-w-3xl mx-auto">
-                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
+
+              {/* Mobile View */}
+              <div className="grid grid-cols-1 gap-y-12 md:hidden">
                 {processSteps.map((step, index) => (
-                  <div key={index} className="relative flex items-center justify-between my-8 w-full">
-                    <div className={`w-[calc(50%-2rem)] text-right ${index % 2 === 0 ? 'order-1' : 'order-3'}`}>
-                      <h3 className="font-bold text-lg">{step.title}</h3>
-                      <p className="text-muted-foreground">{step.description}</p>
+                    <div key={index} className="bg-white rounded-lg p-8 border shadow-sm text-left">
+                      <span className="text-7xl font-extrabold text-[#FBE5DA]">{`0${index + 1}`}</span>
+                      <h3 className="font-bold text-xl mt-4 text-[#2c3e50]">{step.title}</h3>
+                      <p className="text-muted-foreground text-base mt-2">{step.description}</p>
                     </div>
-                    <div className="z-10 bg-background p-2 rounded-full border-2 border-primary order-2">
-                      <div className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold">
-                        {index + 1}
+                ))}
+              </div>
+
+              {/* Desktop View */}
+              <div className="hidden md:flex items-stretch justify-center">
+                {processSteps.map((step, index) => (
+                  <React.Fragment key={index}>
+                    <div className="flex-1 max-w-xs">
+                      <div className="bg-white rounded-lg p-6 border shadow-sm flex flex-col h-full text-left">
+                        <span className="text-6xl font-extrabold text-[#FBE5DA]">{`0${index + 1}`}</span>
+                        <h3 className="font-bold text-lg mt-4 text-[#2c3e50]">{step.title}</h3>
+                        <p className="text-muted-foreground text-sm mt-2 flex-grow">{step.description}</p>
                       </div>
                     </div>
-                    <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'order-3' : 'order-1'}`}></div>
-                  </div>
+                    {index < processSteps.length - 1 && (
+                      <div className="flex items-center justify-center px-4 flex-shrink-0">
+                        <ArrowRight className="h-8 w-8 text-[#f39c12]" />
+                      </div>
+                    )}
+                  </React.Fragment>
                 ))}
               </div>
             </div>

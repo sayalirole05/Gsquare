@@ -142,24 +142,24 @@ export const industries = [
 
 export const processSteps = [
   {
-    title: 'Requirement Study',
-    description: 'We start by conducting a thorough assessment of your facility, operational needs, and specific requirements.',
+    title: 'Requirement Understanding',
+    description: 'In-depth consultation to understand your specific operational needs and challenges.',
   },
   {
-    title: 'Custom Proposal',
-    description: 'Based on the study, we design a customized service proposal with a clear scope of work and transparent pricing.',
+    title: 'Site Assessment',
+    description: 'Comprehensive evaluation of your facilities and workflow requirements.',
   },
   {
-    title: 'Deployment',
-    description: 'Our trained and verified team is deployed with the right equipment and a clear execution plan.',
+    title: 'Tailored Proposal',
+    description: 'Customized solution design with transparent pricing and SLA commitments.',
   },
   {
-    title: 'Monitoring',
-    description: 'Regular supervision, quality audits, and client feedback sessions to ensure service excellence.',
+    title: 'Deployment & Onboarding',
+    description: 'Smooth transition with trained teams and complete documentation.',
   },
   {
-    title: 'Continuous Improvement',
-    description: 'We use performance data and feedback to continuously refine our services and deliver greater value.',
+    title: 'Monitoring & Improvement',
+    description: 'Continuous performance tracking with regular feedback and optimization.',
   },
 ];
 
