@@ -8,16 +8,17 @@ export const TestimonialsColumn = (props: {
   className?: string;
   testimonials: typeof newTestimonials;
   duration?: number;
+  isPaused?: boolean;
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isColumnHovered, setIsColumnHovered] = useState(false);
+
+  const isAnimationPaused = props.isPaused || isColumnHovered;
 
   return (
-    <div
-      className={props.className}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className={props.className}>
       <motion.div
+        onMouseEnter={() => setIsColumnHovered(true)}
+        onMouseLeave={() => setIsColumnHovered(false)}
         animate={{
           translateY: "-50%",
         }}
@@ -28,7 +29,7 @@ export const TestimonialsColumn = (props: {
           repeatType: "loop",
         }}
         style={{
-          animationPlayState: isHovered ? "paused" : "running",
+          animationPlayState: isAnimationPaused ? "paused" : "running",
         }}
         className="flex flex-col gap-6 pb-6 bg-background"
       >

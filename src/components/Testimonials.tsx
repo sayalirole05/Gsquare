@@ -2,12 +2,15 @@
 import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
 import { newTestimonials } from "@/lib/data";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
 
 const firstColumn = newTestimonials.slice(0, 3);
 const secondColumn = newTestimonials.slice(3, 6);
 const thirdColumn = newTestimonials.slice(6, 9);
 
 export function Testimonials() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section className="bg-background my-20 relative">
       <div className="container z-10 mx-auto">
@@ -30,17 +33,27 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
-          <TestimonialsColumn testimonials={firstColumn} duration={15} />
+        <div
+          className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <TestimonialsColumn
+            testimonials={firstColumn}
+            duration={15}
+            isPaused={isHovered}
+          />
           <TestimonialsColumn
             testimonials={secondColumn}
             className="hidden md:block"
             duration={19}
+            isPaused={isHovered}
           />
           <TestimonialsColumn
             testimonials={thirdColumn}
             className="hidden lg:block"
             duration={17}
+            isPaused={isHovered}
           />
         </div>
       </div>
