@@ -1,7 +1,7 @@
 "use client";
 import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
 import { newTestimonials } from "@/lib/data";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const firstColumn = newTestimonials.slice(0, 3);
 const secondColumn = newTestimonials.slice(3, 6);
