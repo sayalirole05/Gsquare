@@ -30,6 +30,7 @@ import { FadeIn } from '@/components/FadeIn';
 import placeholderImages from '@/lib/placeholder-images.json';
 import React from 'react';
 import { HomeContactForm } from '@/components/HomeContactForm';
+import { Testimonials } from '@/components/Testimonials';
 
 export default function Home() {
   const whyChooseGsquareItems = [
@@ -331,6 +332,10 @@ export default function Home() {
               </div>
             </div>
           </section>
+        </FadeIn>
+
+        <FadeIn>
+          <Testimonials />
         </FadeIn>
 
         <FadeIn>

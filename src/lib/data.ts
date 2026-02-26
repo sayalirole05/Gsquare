@@ -1,3 +1,5 @@
+import placeholderImages from './placeholder-images.json';
+
 export const siteConfig = {
   name: 'G SQUARE CORPORATE SERVICES',
   brandName: 'G SQUARE',
@@ -201,4 +203,61 @@ export const testimonials = [
         industry: 'Manufacturing',
         quote: 'Managing a manufacturing plant\'s housekeeping is challenging, but G Square handles it with expertise. Their adherence to safety and compliance standards is commendable. A truly professional service.',
     }
+];
+
+export const newTestimonials = [
+  {
+    text: "This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely.",
+    image: placeholderImages.testimonial1.src,
+    name: "Briana Patton",
+    role: "Operations Manager",
+  },
+  {
+    text: "Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless.",
+    image: placeholderImages.testimonial2.src,
+    name: "Bilal Ahmed",
+    role: "IT Manager",
+  },
+  {
+    text: "The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction.",
+    image: placeholderImages.testimonial3.src,
+    name: "Saman Malik",
+    role: "Customer Support Lead",
+  },
+  {
+    text: "This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface.",
+    image: placeholderImages.testimonial4.src,
+    name: "Omar Raza",
+    role: "CEO",
+  },
+  {
+    text: "Its robust features and quick support have transformed our workflow, making us significantly more efficient.",
+    image: placeholderImages.testimonial5.src,
+    name: "Zainab Hussain",
+    role: "Project Manager",
+  },
+  {
+    text: "The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance.",
+    image: placeholderImages.testimonial6.src,
+    name: "Aliza Khan",
+    role: "Business Analyst",
+  },
+  {
+    text: "Our business functions improved with a user-friendly design and positive customer feedback.",
+    image: placeholderImages.testimonial7.src,
+    name: "Farhan Siddiqui",
+    role: "Marketing Director",
+  },
+  {
+    text: "They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations.",
+    image: placeholderImages.testimonial8.src,
+    name: "Sana Sheikh",
+    role: "Sales Manager",
+  },
+  {
+    text: "Using this ERP, our online presence and conversions significantly improved, boosting business performance.",
+    image: placeholderImages.testimonial9.src,
+    name: "Hassan Ali",
+    role: "E-commerce Manager",
+  },
 ];
