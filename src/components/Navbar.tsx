@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import { siteConfig, mainNav } from '@/lib/data';
+import { mainNav } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/icons/Logo';
 
@@ -34,11 +34,8 @@ export function Navbar() {
     >
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Logo className="h-8 w-auto" />
-            <span className="hidden font-bold sm:inline-block">
-              {siteConfig.brandName}
-            </span>
+          <Link href="/" className="mr-6 flex items-center">
+            <Logo className="h-10 w-auto" />
           </Link>
         </div>
         <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">

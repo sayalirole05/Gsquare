@@ -24,9 +24,8 @@ export function Footer() {
       <div className="container py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-3">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-3 text-white font-bold">
-              <Logo className="h-8 w-auto" />
-              <span>GSQUARE CORPORATE SERVICES</span>
+            <Link href="/" className="flex items-center text-white font-bold">
+              <Logo className="h-12 w-auto" />
             </Link>
             <p className="text-sm text-gray-400">
               Executive Corporate Support Partner for Organisations
