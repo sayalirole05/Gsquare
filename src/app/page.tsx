@@ -372,7 +372,7 @@ export default function Home() {
         <FadeIn>
           <section id="contact-us" className="bg-white">
             <div className="container px-4 md:px-6">
-              <div className="grid lg:grid-cols-2 gap-16 items-start">
+              <div className="grid grid-cols-1 justify-items-center gap-16">
                 <div className="space-y-8">
                   <div className="space-y-3">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground font-headline">Let's Start a Conversation</h2>
@@ -431,10 +431,6 @@ export default function Home() {
                       <p className="text-muted-foreground mt-2">We're here to help transform your operations</p>
                     </div>
                   </div>
-                </div>
-
-                <div>
-                  <HomeContactForm />
                 </div>
               </div>
             </div>
