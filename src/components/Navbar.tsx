@@ -34,8 +34,14 @@ export function Navbar() {
     >
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center">
+          <Link href="/" className="mr-6 flex items-center gap-3">
             <Logo className="h-10 w-auto" />
+            <span className="hidden font-bold text-xl tracking-wider lg:block">
+              <span className="text-primary">G</span>
+              <span className="text-secondary">
+                SQUARE CORPORATE SERVICES
+              </span>
+            </span>
           </Link>
         </div>
         <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">
