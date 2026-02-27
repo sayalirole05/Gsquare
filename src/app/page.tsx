@@ -109,12 +109,12 @@ export default function Home() {
                 <div className="inline-block bg-white/10 border border-white/20 text-white text-xs font-medium px-4 py-1.5 rounded-full mb-6">
                   Executive Corporate Support Partner
                 </div>
-                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl leading-tight">
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl leading-normal">
                   Strategic Workplace
                   <br />
-                  Support for Modern
+                  Support for
                   <br />
-                  <span className="text-primary">Enterprises</span>
+                  <span className="text-primary">Modern Enterprises</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-lg text-gray-200">
                   Empowering Organisations with Operational Excellence, Compliance,
