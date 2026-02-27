@@ -53,17 +53,14 @@ export function Navbar() {
                   'transition-colors hover:text-primary',
                   pathname === item.href
                     ? 'text-primary'
-                    : 'text-foreground/60'
+                    : 'text-navlink'
                 )}
               >
                 {item.title}
               </Link>
             ))}
           </nav>
-          <Button asChild className="hidden md:flex">
-            <Link href="/contact">Contact Us</Link>
-          </Button>
-
+          
           {/* Mobile menu */}
           <div className="md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -91,17 +88,12 @@ export function Navbar() {
                         'transition-colors hover:text-primary',
                         pathname === item.href
                           ? 'text-primary'
-                          : 'text-foreground/80'
+                          : 'text-navlink'
                       )}
                     >
                       {item.title}
                     </Link>
                   ))}
-                  <Button asChild className="mt-4">
-                    <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                      Contact Us
-                    </Link>
-                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>

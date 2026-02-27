@@ -24,6 +24,7 @@
     --input: 210 20% 92%;
     --ring: 25 99% 57%;
     --radius: 0.5rem;
+    --nav-link-foreground: 215 14% 27%;
   }
  
   .dark {
@@ -46,6 +47,7 @@
     --border: 213 40% 20%;
     --input: 213 40% 20%;
     --ring: 25 99% 57%;
+    --nav-link-foreground: 215 14% 70%;
   }
 }
  
