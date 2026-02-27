@@ -153,7 +153,7 @@ export default function Home() {
           <section id="why-choose-us">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">Why Leading Companies Choose GSquare</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why Leading Companies Choose GSquare</h2>
                 <p className="max-w-3xl mx-auto text-muted-foreground md:text-lg">
                     We deliver enterprise-ready solutions that transform operational efficiency and enable your leadership to focus on strategic growth
                 </p>
