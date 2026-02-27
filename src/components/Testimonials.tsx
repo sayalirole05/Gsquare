@@ -4,9 +4,9 @@ import { newTestimonials } from "@/lib/data";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
-const firstColumn = newTestimonials.slice(0, 3);
-const secondColumn = newTestimonials.slice(3, 6);
-const thirdColumn = newTestimonials.slice(6, 9);
+const firstColumn = newTestimonials.slice(0, 7);
+const secondColumn = newTestimonials.slice(7, 14);
+const thirdColumn = newTestimonials.slice(14, 20);
 
 export function Testimonials() {
   const [isHovered, setIsHovered] = useState(false);
@@ -40,19 +40,19 @@ export function Testimonials() {
         >
           <TestimonialsColumn
             testimonials={firstColumn}
-            duration={15}
+            duration={40}
             isPaused={isHovered}
           />
           <TestimonialsColumn
             testimonials={secondColumn}
             className="hidden md:block"
-            duration={19}
+            duration={50}
             isPaused={isHovered}
           />
           <TestimonialsColumn
             testimonials={thirdColumn}
             className="hidden lg:block"
-            duration={17}
+            duration={45}
             isPaused={isHovered}
           />
         </div>

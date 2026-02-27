@@ -207,57 +207,123 @@ export const testimonials = [
 
 export const newTestimonials = [
   {
-    text: "This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely.",
-    image: placeholderImages.testimonial1.src,
-    name: "Briana Patton",
-    role: "Operations Manager",
+    "text": "Gsquare transformed our workplace operations with structured housekeeping and timely material supply. Their professionalism reflects true enterprise standards.",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    "name": "Anita Kulkarni",
+    "role": "Admin Head, IT Park Pune"
   },
   {
-    text: "Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless.",
-    image: placeholderImages.testimonial2.src,
-    name: "Bilal Ahmed",
-    role: "IT Manager",
+    "text": "Their manpower deployment process is systematic and reliable. We’ve seen improved cleanliness standards across our corporate campus.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "name": "Rahul Mehta",
+    "role": "Facility Manager"
   },
   {
-    text: "The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction.",
-    image: placeholderImages.testimonial3.src,
-    name: "Saman Malik",
-    role: "Customer Support Lead",
+    "text": "From onboarding to supervision, Gsquare maintains strong compliance and operational discipline. A dependable partner in Pune.",
+    "image": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce",
+    "name": "Neha Deshpande",
+    "role": "Operations Director"
   },
   {
-    text: "This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface.",
-    image: placeholderImages.testimonial4.src,
-    name: "Omar Raza",
-    role: "CEO",
+    "text": "Their corporate gifting solutions are thoughtfully curated and premium. Perfectly aligned with our brand standards.",
+    "image": "https://images.unsplash.com/photo-1552058544-f2b08422138a",
+    "name": "Siddharth Rao",
+    "role": "HR Manager"
   },
   {
-    text: "Its robust features and quick support have transformed our workflow, making us significantly more efficient.",
-    image: placeholderImages.testimonial5.src,
-    name: "Zainab Hussain",
-    role: "Project Manager",
+    "text": "We appreciate their structured reporting and daily supervision model. It gives us full operational visibility.",
+    "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+    "name": "Priya Shah",
+    "role": "Corporate Administrator"
   },
   {
-    text: "The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance.",
-    image: placeholderImages.testimonial6.src,
-    name: "Aliza Khan",
-    role: "Business Analyst",
+    "text": "Their housekeeping team is well-trained, uniformed, and punctual. The service quality is consistent and dependable.",
+    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    "name": "Vikram Patil",
+    "role": "Plant Head"
   },
   {
-    text: "Our business functions improved with a user-friendly design and positive customer feedback.",
-    image: placeholderImages.testimonial7.src,
-    name: "Farhan Siddiqui",
-    role: "Marketing Director",
+    "text": "Gsquare helped us consolidate multiple vendors into one structured solution, reducing operational complexity.",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "name": "Karan Gupta",
+    "role": "Procurement Lead"
   },
   {
-    text: "They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations.",
-    image: placeholderImages.testimonial8.src,
-    name: "Sana Sheikh",
-    role: "Sales Manager",
+    "text": "Their SLA-driven approach ensures performance accountability. A reliable facility management partner.",
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+    "name": "Meera Joshi",
+    "role": "Business Operations Manager"
   },
   {
-    text: "Using this ERP, our online presence and conversions significantly improved, boosting business performance.",
-    image: placeholderImages.testimonial9.src,
-    name: "Hassan Ali",
-    role: "E-commerce Manager",
+    "text": "Material supply is always timely with zero stock-out situations. Their supply chain reliability is commendable.",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
+    "name": "Rohit Agarwal",
+    "role": "Warehouse Supervisor"
   },
+  {
+    "text": "The transition from our previous vendor to Gsquare was smooth and professionally managed.",
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+    "name": "Amit Verma",
+    "role": "Facility Head"
+  },
+  {
+    "text": "Their integrated support model has significantly improved workplace hygiene and operational efficiency.",
+    "image": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9",
+    "name": "Sneha Kulkarni",
+    "role": "Admin Executive"
+  },
+  {
+    "text": "We value their responsiveness and structured communication. It makes coordination seamless.",
+    "image": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce",
+    "name": "Nikhil Bhosale",
+    "role": "Corporate Services Manager"
+  },
+  {
+    "text": "Gsquare understands corporate expectations and delivers with consistency and discipline.",
+    "image": "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7",
+    "name": "Divya Iyer",
+    "role": "HR Business Partner"
+  },
+  {
+    "text": "Their workforce training standards ensure professional behavior and quality service delivery.",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
+    "name": "Arjun Nair",
+    "role": "Operations Supervisor"
+  },
+  {
+    "text": "We appreciate their structured engagement model and ongoing improvement initiatives.",
+    "image": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91",
+    "name": "Pooja Sethi",
+    "role": "Corporate Admin Lead"
+  },
+  {
+    "text": "Corporate gifting campaigns were executed flawlessly during festive season. Highly professional.",
+    "image": "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
+    "name": "Manish Khanna",
+    "role": "Marketing Head"
+  },
+  {
+    "text": "Their housekeeping manpower deployment has elevated workplace standards across our offices.",
+    "image": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef",
+    "name": "Shreya Patankar",
+    "role": "Office Manager"
+  },
+  {
+    "text": "Gsquare’s structured processes and supervisor oversight ensure consistent service quality.",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "name": "Aditya Deshmukh",
+    "role": "Facility Operations Head"
+  },
+  {
+    "text": "Their ability to manage multiple services under one umbrella simplifies vendor management.",
+    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    "name": "Kavita Rao",
+    "role": "Procurement Manager"
+  },
+  {
+    "text": "A trusted facility management partner in Pune with professional execution and enterprise focus.",
+    "image": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce",
+    "name": "Saurabh Kulkarni",
+    "role": "Operations Director"
+  }
 ];
