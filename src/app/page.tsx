@@ -301,9 +301,9 @@ export default function Home() {
               {/* Mobile View */}
               <div className="grid grid-cols-1 gap-y-12 md:hidden">
                 {processSteps.map((step, index) => (
-                    <div key={index} className="bg-white rounded-lg p-8 border shadow-sm text-left">
-                      <span className="text-7xl font-extrabold text-accent">{`0${index + 1}`}</span>
-                      <h3 className="font-bold text-xl mt-4 text-foreground">{step.title}</h3>
+                    <div key={index} className="group bg-card p-8 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                      <span className="text-7xl font-extrabold text-accent group-hover:text-primary transition-colors">{`0${index + 1}`}</span>
+                      <h3 className="font-bold text-xl mt-4 text-secondary group-hover:text-primary transition-colors">{step.title}</h3>
                       <p className="text-muted-foreground text-base mt-2">{step.description}</p>
                     </div>
                 ))}
@@ -315,9 +315,9 @@ export default function Home() {
                   {processSteps.map((step, index) => (
                     <React.Fragment key={index}>
                       <div className="w-72 flex-shrink-0 mx-2">
-                        <div className="bg-white rounded-lg p-6 border shadow-sm flex flex-col h-full text-left">
-                          <span className="text-6xl font-extrabold text-accent">{`0${index + 1}`}</span>
-                          <h3 className="font-bold text-lg mt-4 text-foreground">{step.title}</h3>
+                        <div className="group bg-card rounded-lg p-6 border-2 border-secondary shadow-sm flex flex-col h-full text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                          <span className="text-6xl font-extrabold text-accent group-hover:text-primary transition-colors">{`0${index + 1}`}</span>
+                          <h3 className="font-bold text-lg mt-4 text-secondary group-hover:text-primary transition-colors">{step.title}</h3>
                           <p className="text-muted-foreground text-sm mt-2 flex-grow">{step.description}</p>
                         </div>
                       </div>

@@ -19,22 +19,22 @@ export const metadata: Metadata = {
 
 const pricingPrinciples = [
   {
-    icon: <FileText className="h-8 w-8 text-primary" />,
+    icon: <FileText className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
     title: 'Transparent Proposals',
     description: 'We provide detailed, itemized proposals with a clear scope of work. You\'ll know exactly what you\'re paying for, with no hidden costs or surprise fees.',
   },
   {
-    icon: <Star className="h-8 w-8 text-primary" />,
+    icon: <Star className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
     title: 'Value-Driven Solutions',
     description: 'Our goal is to provide the best possible value. We focus on efficiency, quality, and long-term results to ensure a high return on your investment in our services.',
   },
   {
-    icon: <CheckCircle className="h-8 w-8 text-primary" />,
+    icon: <CheckCircle className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
     title: 'Service Level Agreement (SLA) Commitment',
     description: 'All our partnerships are governed by a stringent SLA that defines service standards, response times, and quality metrics, holding us accountable for our performance.',
   },
   {
-    icon: <Zap className="h-8 w-8 text-primary" />,
+    icon: <Zap className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
     title: 'Replacement Guarantee',
     description: 'We stand by the quality of our team. Our replacement guarantee ensures that we provide swift and suitable replacements for staff if their performance does not meet your expectations.',
   },
@@ -81,12 +81,12 @@ export default function PricingPage() {
               </div>
               <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 mt-16">
                 {pricingPrinciples.map((principle) => (
-                  <Card key={principle.title} className="text-center hover:shadow-lg transition-shadow">
+                  <Card key={principle.title} className="group text-center transition-all duration-300 border-2 border-secondary hover:border-primary hover:shadow-xl">
                     <CardHeader className="flex flex-col items-center">
-                      <div className="bg-primary/10 p-4 rounded-full mb-4">
+                      <div className="bg-primary/10 group-hover:bg-primary p-4 rounded-full mb-4 transition-colors">
                         {principle.icon}
                       </div>
-                      <CardTitle className="text-xl font-headline">{principle.title}</CardTitle>
+                      <CardTitle className="text-xl font-headline text-secondary group-hover:text-primary transition-colors">{principle.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground">{principle.description}</p>

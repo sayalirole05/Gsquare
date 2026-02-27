@@ -56,20 +56,20 @@ export default function ServicesHubPage() {
             <div className="container px-4 md:px-6">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
                 {servicePages.map((service) => (
-                  <Card key={service.slug} className="flex flex-col hover:shadow-lg transition-shadow">
+                  <Card key={service.slug} className="group flex flex-col transition-all duration-300 border-2 border-secondary hover:border-primary hover:shadow-xl">
                     <CardHeader className="flex flex-row items-center gap-4">
-                      <div className="bg-primary/10 p-4 rounded-full">
+                      <div className="bg-primary/10 group-hover:bg-primary p-4 rounded-full transition-colors">
                         {
                           {
-                            'housekeeping': <ClipboardList className="h-8 w-8 text-primary" />,
-                            'material-supply': <Truck className="h-8 w-8 text-primary" />,
-                            'stationery': <Package className="h-8 w-8 text-primary" />,
-                            'corporate-gifting': <Gift className="h-8 w-8 text-primary" />
+                            'housekeeping': <ClipboardList className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
+                            'material-supply': <Truck className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
+                            'stationery': <Package className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
+                            'corporate-gifting': <Gift className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />
                           }[service.slug]
                         }
                       </div>
                       <div>
-                        <CardTitle className="text-2xl font-headline">{service.title.replace(' in Pune', '')}</CardTitle>
+                        <CardTitle className="text-2xl font-headline text-secondary group-hover:text-primary transition-colors">{service.title.replace(' in Pune', '')}</CardTitle>
                         <CardDescription>Comprehensive solutions for your business.</CardDescription>
                       </div>
                     </CardHeader>

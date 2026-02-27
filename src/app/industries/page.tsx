@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 };
 
 const icons = {
-  'IT Parks': <Building className="h-10 w-10 text-primary" />,
-  'Manufacturing Units': <Factory className="h-10 w-10 text-primary" />,
-  'Corporate Offices': <Briefcase className="h-10 w-10 text-primary" />,
-  'Commercial Complexes': <Users className="h-10 w-10 text-primary" />,
+  'IT Parks': <Building className="h-10 w-10 text-primary group-hover:text-primary-foreground transition-colors" />,
+  'Manufacturing Units': <Factory className="h-10 w-10 text-primary group-hover:text-primary-foreground transition-colors" />,
+  'Corporate Offices': <Briefcase className="h-10 w-10 text-primary group-hover:text-primary-foreground transition-colors" />,
+  'Commercial Complexes': <Users className="h-10 w-10 text-primary group-hover:text-primary-foreground transition-colors" />,
 };
 
 export default function IndustriesPage() {
@@ -55,12 +55,12 @@ export default function IndustriesPage() {
             <div className="container px-4 md:px-6">
               <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 {industries.map((industry) => (
-                  <Card key={industry.name} className="text-center hover:shadow-lg transition-shadow">
+                  <Card key={industry.name} className="group text-center transition-all duration-300 border-2 border-secondary hover:border-primary hover:shadow-xl">
                     <CardHeader className="flex flex-col items-center">
-                      <div className="bg-primary/10 p-4 rounded-full mb-4">
+                      <div className="bg-primary/10 group-hover:bg-primary p-4 rounded-full mb-4 transition-colors">
                         {icons[industry.name as keyof typeof icons]}
                       </div>
-                      <CardTitle className="text-2xl font-headline">{industry.name}</CardTitle>
+                      <CardTitle className="text-2xl font-headline text-secondary group-hover:text-primary transition-colors">{industry.name}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground">{industry.description}</p>

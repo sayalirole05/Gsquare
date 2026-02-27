@@ -30,7 +30,7 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-lg shadow-sm border">
+    <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-lg shadow-sm border-2 border-secondary">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label htmlFor="name">Full Name</Label>
