@@ -44,21 +44,23 @@ export function Navbar() {
             </span>
           </Link>
         </div>
-        <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">
-          {mainNav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                'transition-colors hover:text-primary',
-                pathname === item.href ? 'text-primary' : 'text-foreground/60'
-              )}
-            >
-              {item.title}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end space-x-6">
+          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+            {mainNav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  'transition-colors hover:text-primary',
+                  pathname === item.href
+                    ? 'text-primary'
+                    : 'text-foreground/60'
+                )}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </nav>
           <Button asChild className="hidden md:flex">
             <Link href="/contact">Contact Us</Link>
           </Button>
@@ -72,7 +74,7 @@ export function Navbar() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-t">
+        <div className="border-t bg-background md:hidden">
           <nav className="container flex flex-col space-y-2 py-4">
             {mainNav.map((item) => (
               <Link
@@ -81,14 +83,18 @@ export function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
                 className={cn(
                   'py-2 text-lg font-medium transition-colors hover:text-primary',
-                  pathname === item.href ? 'text-primary' : 'text-foreground/80'
+                  pathname === item.href
+                    ? 'text-primary'
+                    : 'text-foreground/80'
                 )}
               >
                 {item.title}
               </Link>
             ))}
-             <Button asChild className="w-full mt-4">
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+            <Button asChild className="mt-4 w-full">
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                Contact Us
+              </Link>
             </Button>
           </nav>
         </div>
