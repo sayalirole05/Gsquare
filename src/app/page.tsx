@@ -110,7 +110,7 @@ export default function Home() {
                 <div className="inline-block bg-primary text-primary-foreground text-xs font-medium px-4 py-1.5 rounded-full mb-6">
                   Executive Corporate Support Partner
                 </div>
-                <h1 className="text-6xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl leading-tight">
+                <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl leading-tight">
                   Strategic Workplace Support for <span className="text-primary">Modern Enterprises</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-lg text-gray-200">
@@ -193,7 +193,7 @@ export default function Home() {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Housekeeping Card */}
-                <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+                <div className="rounded-lg border-2 border-secondary group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
                   <div className="relative h-64">
                     <Image
                       src={placeholderImages.housekeeping.src}
@@ -205,20 +205,20 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Housekeeping Services</h3>
                   </div>
-                  <div className="p-6 space-y-4">
+                  <div className="p-6 space-y-4 bg-card">
                     <div>
-                      <h4 className="font-bold text-md text-secondary">Trained Manpower</h4>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Trained Manpower</h4>
                       <p className="text-sm text-muted-foreground">Verified, uniformed workforce with dedicated supervisors ensuring consistent quality</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-md text-secondary">Premium Materials</h4>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Premium Materials</h4>
                       <p className="text-sm text-muted-foreground">High-quality chemicals, tools, and consumables for professional maintenance</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Office Supplies Card */}
-                <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+                <div className="rounded-lg border-2 border-secondary group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
                   <div className="relative h-64">
                     <Image
                       src={placeholderImages.officeSupplies.src}
@@ -230,21 +230,21 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Office Supplies</h3>
                   </div>
-                  <div className="p-6 space-y-4">
+                  <div className="p-6 space-y-4 bg-card">
                     <div>
-                      <h4 className="font-bold text-md text-secondary">Stationery Management</h4>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Stationery Management</h4>
                       <p className="text-sm text-muted-foreground">End-to-end supply of desk essentials, print materials, and office consumables</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-md text-secondary">General Supplies</h4>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">General Supplies</h4>
                       <p className="text-sm text-muted-foreground">Pantry items, utilities, and recurring operational materials with automated inventory</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Corporate Gifting Card */}
-                <div className="rounded-lg border bg-card text-card-foreground shadow-sm lg:col-span-2 overflow-hidden">
-                  <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="rounded-lg border-2 border-secondary group text-card-foreground shadow-sm lg:col-span-2 overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
+                  <div className="grid grid-cols-1 md:grid-cols-2 bg-card">
                     <div className="relative min-h-[300px] md:h-full">
                        <Image
                           src={placeholderImages.corporateGifting.src}
@@ -255,7 +255,7 @@ export default function Home() {
                        />
                     </div>
                     <div className="p-8 flex flex-col justify-center">
-                       <h3 className="text-2xl font-bold mb-2 text-secondary">Corporate Gifting</h3>
+                       <h3 className="text-2xl font-bold mb-2 text-secondary group-hover:text-primary transition-colors">Corporate Gifting</h3>
                        <p className="text-muted-foreground mb-6">
                          Customized festive and employee engagement kits that strengthen relationships and boost morale. From festival celebrations to employee milestones, we create memorable gifting experiences.
                        </p>
