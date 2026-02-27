@@ -1,4 +1,5 @@
 
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -110,7 +111,7 @@ export default function Home() {
                 <div className="inline-block bg-primary text-primary-foreground text-xs font-medium px-4 py-1.5 rounded-full mb-6">
                   Executive Corporate Support Partner
                 </div>
-                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight">
                   Strategic Workplace Support for <span className="text-primary">Modern Enterprises</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-lg text-gray-200">
@@ -298,37 +299,14 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Mobile View */}
-              <div className="grid grid-cols-1 gap-y-12 md:hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {processSteps.map((step, index) => (
-                    <div key={index} className="group bg-card p-8 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                    <div key={index} className="group bg-card p-8 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl flex flex-col">
                       <span className="text-7xl font-extrabold text-accent group-hover:text-primary transition-colors">{`0${index + 1}`}</span>
                       <h3 className="font-bold text-xl mt-4 text-secondary group-hover:text-primary transition-colors">{step.title}</h3>
-                      <p className="text-muted-foreground text-base mt-2">{step.description}</p>
+                      <p className="text-muted-foreground text-base mt-2 flex-grow">{step.description}</p>
                     </div>
                 ))}
-              </div>
-
-              {/* Desktop View */}
-              <div className="hidden md:block">
-                <div className="flex items-stretch justify-start md:justify-center overflow-x-auto pb-4">
-                  {processSteps.map((step, index) => (
-                    <React.Fragment key={index}>
-                      <div className="w-72 flex-shrink-0 mx-2">
-                        <div className="group bg-card rounded-lg p-6 border-2 border-secondary shadow-sm flex flex-col h-full text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
-                          <span className="text-6xl font-extrabold text-accent group-hover:text-primary transition-colors">{`0${index + 1}`}</span>
-                          <h3 className="font-bold text-lg mt-4 text-secondary group-hover:text-primary transition-colors">{step.title}</h3>
-                          <p className="text-muted-foreground text-sm mt-2 flex-grow">{step.description}</p>
-                        </div>
-                      </div>
-                      {index < processSteps.length - 1 && (
-                        <div className="flex items-center justify-center px-4 flex-shrink-0">
-                          <ArrowRight className="h-8 w-8 text-primary" />
-                        </div>
-                      )}
-                    </React.Fragment>
-                  ))}
-                </div>
               </div>
             </div>
           </section>
