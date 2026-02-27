@@ -37,32 +37,32 @@ import { LogoCloudSection } from '@/components/LogoCloudSection';
 export default function Home() {
   const whyChooseGsquareItems = [
     {
-      icon: <Focus className="h-7 w-7 text-primary" />,
+      icon: <Focus className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />,
       title: 'Single-Window Solution',
       description: 'One trusted vendor for all your corporate operational needs - from housekeeping to gifting',
     },
     {
-      icon: <CheckCircle className="h-7 w-7 text-primary" />,
+      icon: <CheckCircle className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />,
       title: 'Compliance Assured',
       description: 'Verified workforce with complete documentation transparency and adherence to corporate standards',
     },
     {
-      icon: <TrendingUp className="h-7 w-7 text-primary" />,
+      icon: <TrendingUp className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />,
       title: 'Enterprise Scalability',
       description: 'Seamless staffing solutions for large campuses and multi-location offices across India',
     },
     {
-      icon: <Zap className="h-7 w-7 text-primary" />,
+      icon: <Zap className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />,
       title: 'Reliable Delivery',
       description: 'Time-bound material supply with robust supply chain management and SLA discipline',
     },
     {
-      icon: <BarChart2 className="h-7 w-7 text-primary" />,
+      icon: <BarChart2 className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />,
       title: 'Performance Driven',
       description: 'Supervised teams with measurable service quality and professional reporting systems',
     },
     {
-      icon: <Handshake className="h-7 w-7 text-primary" />,
+      icon: <Handshake className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />,
       title: 'Long-Term Partnership',
       description: 'Relationship-driven approach focused on continuous improvement and strategic alignment',
     },
@@ -107,13 +107,11 @@ export default function Home() {
           <div className="container relative px-4 md:px-6 flex items-center min-h-[90vh] md:min-h-screen">
             <div className="flex flex-col space-y-8 max-w-3xl py-24">
               <div>
-                <div className="inline-block bg-white/10 border border-white/20 text-primary text-xs font-medium px-4 py-1.5 rounded-full mb-6">
+                <div className="inline-block bg-primary text-primary-foreground text-xs font-medium px-4 py-1.5 rounded-full mb-6">
                   Executive Corporate Support Partner
                 </div>
-                <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-8xl leading-tight">
-                  Strategic Workplace
-                  <br />
-                  Support for <span className="text-primary">Modern Enterprises</span>
+                <h1 className="text-6xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl leading-tight">
+                  Strategic Workplace Support for <span className="text-primary">Modern Enterprises</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-lg text-gray-200">
                   Empowering Organisations with Operational Excellence, Compliance,
@@ -161,11 +159,11 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {whyChooseGsquareItems.map((item, index) => (
-                    <div key={index} className="bg-card p-6 rounded-lg border shadow-sm text-left">
-                        <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-primary/10 mb-5">
+                    <div key={index} className="group bg-card p-6 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                        <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-accent mb-5 transition-colors duration-300 group-hover:bg-primary">
                             {item.icon}
                         </div>
-                        <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
+                        <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                     </div>
                 ))}
