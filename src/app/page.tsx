@@ -313,23 +313,25 @@ export default function Home() {
               </div>
 
               {/* Desktop View */}
-              <div className="hidden md:flex items-stretch justify-center">
-                {processSteps.map((step, index) => (
-                  <React.Fragment key={index}>
-                    <div className="flex-1 max-w-xs">
-                      <div className="bg-white rounded-lg p-6 border shadow-sm flex flex-col h-full text-left">
-                        <span className="text-6xl font-extrabold text-accent">{`0${index + 1}`}</span>
-                        <h3 className="font-bold text-lg mt-4 text-foreground">{step.title}</h3>
-                        <p className="text-muted-foreground text-sm mt-2 flex-grow">{step.description}</p>
+              <div className="hidden md:block">
+                <div className="flex items-stretch justify-start md:justify-center overflow-x-auto pb-4">
+                  {processSteps.map((step, index) => (
+                    <React.Fragment key={index}>
+                      <div className="w-72 flex-shrink-0 mx-2">
+                        <div className="bg-white rounded-lg p-6 border shadow-sm flex flex-col h-full text-left">
+                          <span className="text-6xl font-extrabold text-accent">{`0${index + 1}`}</span>
+                          <h3 className="font-bold text-lg mt-4 text-foreground">{step.title}</h3>
+                          <p className="text-muted-foreground text-sm mt-2 flex-grow">{step.description}</p>
+                        </div>
                       </div>
-                    </div>
-                    {index < processSteps.length - 1 && (
-                      <div className="flex items-center justify-center px-4 flex-shrink-0">
-                        <ArrowRight className="h-8 w-8 text-primary" />
-                      </div>
-                    )}
-                  </React.Fragment>
-                ))}
+                      {index < processSteps.length - 1 && (
+                        <div className="flex items-center justify-center px-4 flex-shrink-0">
+                          <ArrowRight className="h-8 w-8 text-primary" />
+                        </div>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
