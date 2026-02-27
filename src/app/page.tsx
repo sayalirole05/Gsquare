@@ -185,7 +185,7 @@ export default function Home() {
           <section id="services-portfolio" className="bg-muted">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-foreground">Our Integrated Corporate Service Portfolio</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-secondary">Our Integrated Corporate Service Portfolio</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
                   Comprehensive solutions designed to streamline your operational excellence
                 </p>
@@ -207,11 +207,11 @@ export default function Home() {
                   </div>
                   <div className="p-6 space-y-4">
                     <div>
-                      <h4 className="font-bold text-md text-card-foreground">Trained Manpower</h4>
+                      <h4 className="font-bold text-md text-secondary">Trained Manpower</h4>
                       <p className="text-sm text-muted-foreground">Verified, uniformed workforce with dedicated supervisors ensuring consistent quality</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-md text-card-foreground">Premium Materials</h4>
+                      <h4 className="font-bold text-md text-secondary">Premium Materials</h4>
                       <p className="text-sm text-muted-foreground">High-quality chemicals, tools, and consumables for professional maintenance</p>
                     </div>
                   </div>
@@ -232,11 +232,11 @@ export default function Home() {
                   </div>
                   <div className="p-6 space-y-4">
                     <div>
-                      <h4 className="font-bold text-md text-card-foreground">Stationery Management</h4>
+                      <h4 className="font-bold text-md text-secondary">Stationery Management</h4>
                       <p className="text-sm text-muted-foreground">End-to-end supply of desk essentials, print materials, and office consumables</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-md text-card-foreground">General Supplies</h4>
+                      <h4 className="font-bold text-md text-secondary">General Supplies</h4>
                       <p className="text-sm text-muted-foreground">Pantry items, utilities, and recurring operational materials with automated inventory</p>
                     </div>
                   </div>
@@ -255,7 +255,7 @@ export default function Home() {
                        />
                     </div>
                     <div className="p-8 flex flex-col justify-center">
-                       <h3 className="text-2xl font-bold mb-2 text-foreground">Corporate Gifting</h3>
+                       <h3 className="text-2xl font-bold mb-2 text-secondary">Corporate Gifting</h3>
                        <p className="text-muted-foreground mb-6">
                          Customized festive and employee engagement kits that strengthen relationships and boost morale. From festival celebrations to employee milestones, we create memorable gifting experiences.
                        </p>
@@ -290,7 +290,7 @@ export default function Home() {
           <section id="process" className="bg-white">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-foreground">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-secondary">
                   Structured Workforce Deployment Process
                 </h2>
                 <p className="max-w-3xl text-muted-foreground md:text-xl/relaxed">
@@ -374,7 +374,7 @@ export default function Home() {
               <div className="grid grid-cols-1 justify-items-center gap-16">
                 <div className="space-y-8">
                   <div className="space-y-3">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground font-headline">Let's Start a Conversation</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-secondary font-headline">Let's Start a Conversation</h2>
                     <p className="text-muted-foreground text-lg">
                       Whether you're looking to streamline operations, ensure compliance, or scale your workforce, we're here to help. Get in touch with our team today.
                     </p>
@@ -386,7 +386,7 @@ export default function Home() {
                           <Phone className="h-6 w-6 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-sm text-muted-foreground">Call Us</h4>
+                          <h4 className="text-sm text-secondary">Call Us</h4>
                           <p className="font-semibold text-foreground text-lg">+91 97649 97648</p>
                           <p className="font-semibold text-foreground text-lg">+91 70208 13399</p>
                         </div>
@@ -398,7 +398,7 @@ export default function Home() {
                           <Mail className="h-6 w-6 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-sm text-muted-foreground">Email Us</h4>
+                          <h4 className="text-sm text-secondary">Email Us</h4>
                           <a href="mailto:services@gsquarecorp.co.in" className="font-semibold text-foreground text-lg hover:underline">
                             services@gsquarecorp.co.in
                           </a>
@@ -411,7 +411,7 @@ export default function Home() {
                           <MapPin className="h-6 w-6 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-sm text-muted-foreground">Registered Office</h4>
+                          <h4 className="text-sm text-secondary">Registered Office</h4>
                           <address className="not-italic font-semibold text-foreground text-lg">
                             C/13, S NO 6, SHUBHAM COMPLEX,<br/>
                             OLD JAKAT NAKA, CHINCHWAD,<br/>
@@ -426,7 +426,7 @@ export default function Home() {
                       <div className="bg-white p-4 rounded-full shadow-md mb-4">
                         <Phone className="h-8 w-8 text-primary" />
                       </div>
-                      <h3 className="text-2xl font-bold text-foreground">Let's Connect</h3>
+                      <h3 className="text-2xl font-bold text-secondary">Let's Connect</h3>
                       <p className="text-muted-foreground mt-2">We're here to help transform your operations</p>
                     </div>
                   </div>
