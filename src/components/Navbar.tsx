@@ -35,7 +35,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Logo className="h-8 w-8 text-primary" />
+            <Logo className="h-8 w-auto" />
             <span className="hidden font-bold sm:inline-block">
               {siteConfig.brandName}
             </span>
