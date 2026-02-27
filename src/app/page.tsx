@@ -31,6 +31,7 @@ import placeholderImages from '@/lib/placeholder-images.json';
 import React from 'react';
 import { HomeContactForm } from '@/components/HomeContactForm';
 import { Testimonials } from '@/components/Testimonials';
+import { LogoCloudSection } from '@/components/LogoCloudSection';
 
 export default function Home() {
   const whyChooseGsquareItems = [
@@ -332,6 +333,10 @@ export default function Home() {
               </div>
             </div>
           </section>
+        </FadeIn>
+
+        <FadeIn>
+          <LogoCloudSection />
         </FadeIn>
 
         <FadeIn>
