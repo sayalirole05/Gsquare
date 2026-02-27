@@ -3,12 +3,13 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { mainNav } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/icons/Logo';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -22,8 +23,6 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <header
@@ -44,7 +43,7 @@ export function Navbar() {
             </span>
           </Link>
         </div>
-        <div className="flex flex-1 items-center justify-end space-x-6">
+        <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
             {mainNav.map((item) => (
               <Link
@@ -64,41 +63,51 @@ export function Navbar() {
           <Button asChild className="hidden md:flex">
             <Link href="/contact">Contact Us</Link>
           </Button>
-          <button
-            className="md:hidden"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </button>
+
+          {/* Mobile menu */}
+          <div className="md:hidden">
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" aria-label="Toggle menu">
+                  <Menu />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left">
+                <nav className="grid gap-6 p-6 text-lg font-medium">
+                  <Link
+                    href="/"
+                    className="flex items-center gap-2 text-lg font-semibold mb-4"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Logo className="h-10 w-auto" />
+                    <span className="sr-only">GSquare</span>
+                  </Link>
+                  {mainNav.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={cn(
+                        'transition-colors hover:text-primary',
+                        pathname === item.href
+                          ? 'text-primary'
+                          : 'text-foreground/80'
+                      )}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                  <Button asChild className="mt-4">
+                    <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                      Contact Us
+                    </Link>
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="border-t bg-background md:hidden">
-          <nav className="container flex flex-col space-y-2 py-4">
-            {mainNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className={cn(
-                  'py-2 text-lg font-medium transition-colors hover:text-primary',
-                  pathname === item.href
-                    ? 'text-primary'
-                    : 'text-foreground/80'
-                )}
-              >
-                {item.title}
-              </Link>
-            ))}
-            <Button asChild className="mt-4 w-full">
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                Contact Us
-              </Link>
-            </Button>
-          </nav>
-        </div>
-      )}
     </header>
   );
 }
