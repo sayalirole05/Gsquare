@@ -35,7 +35,7 @@ export function Navbar() {
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center gap-3">
             <Logo className="h-10 w-auto" />
-            <span className="hidden font-bold text-xl tracking-wider lg:block">
+            <span className="hidden font-bold text-lg tracking-wide lg:block">
               <span className="text-primary">G</span>
               <span className="text-secondary">
                 SQUARE CORPORATE SERVICES
