@@ -21,7 +21,6 @@ export const mainNav = [
   { title: 'Industries', href: '/industries' },
   { title: 'Process', href: '/process' },
   { title: 'Pricing', href: '/pricing' },
-  { title: 'Case Studies', href: '/case-studies' },
   { title: 'Contact', href: '/contact' },
 ];
 
@@ -182,27 +181,6 @@ export const whyChooseUs = [
     title: 'Client-Centric Approach',
     description: 'Flexible SLAs, replacement guarantees, and a commitment to building long-term partnerships based on trust.'
   }
-];
-
-export const testimonials = [
-    {
-        name: 'Amit Patel',
-        title: 'Admin Manager, Tech Solutions Inc.',
-        industry: 'IT Park',
-        quote: 'G Square has transformed our facility management. Their team is professional, proactive, and incredibly reliable. Our office has never been cleaner, and their streamlined material supply has saved us countless hours.',
-    },
-    {
-        name: 'Priya Sharma',
-        title: 'HR Head, Innovate Labs',
-        industry: 'Corporate Office',
-        quote: 'The corporate gifting service from G Square was a huge success for our annual awards. The quality of gifts and the seamless execution were impressive. They are now our go-to partner for all employee engagement activities.',
-    },
-    {
-        name: 'Rajesh Kumar',
-        title: 'Plant Head, Precision Auto',
-        industry: 'Manufacturing',
-        quote: 'Managing a manufacturing plant\'s housekeeping is challenging, but G Square handles it with expertise. Their adherence to safety and compliance standards is commendable. A truly professional service.',
-    }
 ];
 
 export const newTestimonials = [

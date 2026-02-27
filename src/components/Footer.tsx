@@ -19,7 +19,6 @@ export function Footer() {
     { title: 'About Us', href: '/about' },
     { title: 'Industries', href: '/industries' },
     { title: 'Our Process', href: '/process' },
-    { title: 'Case Studies', href: '/case-studies' },
     { title: 'Contact Us', href: '/contact' },
   ];
 
