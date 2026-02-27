@@ -36,32 +36,32 @@ import { LogoCloudSection } from '@/components/LogoCloudSection';
 export default function Home() {
   const whyChooseGsquareItems = [
     {
-      icon: <Focus className="h-7 w-7 text-[#f39c12]" />,
+      icon: <Focus className="h-7 w-7 text-primary" />,
       title: 'Single-Window Solution',
       description: 'One trusted vendor for all your corporate operational needs - from housekeeping to gifting',
     },
     {
-      icon: <CheckCircle className="h-7 w-7 text-[#f39c12]" />,
+      icon: <CheckCircle className="h-7 w-7 text-primary" />,
       title: 'Compliance Assured',
       description: 'Verified workforce with complete documentation transparency and adherence to corporate standards',
     },
     {
-      icon: <TrendingUp className="h-7 w-7 text-[#f39c12]" />,
+      icon: <TrendingUp className="h-7 w-7 text-primary" />,
       title: 'Enterprise Scalability',
       description: 'Seamless staffing solutions for large campuses and multi-location offices across India',
     },
     {
-      icon: <Zap className="h-7 w-7 text-[#f39c12]" />,
+      icon: <Zap className="h-7 w-7 text-primary" />,
       title: 'Reliable Delivery',
       description: 'Time-bound material supply with robust supply chain management and SLA discipline',
     },
     {
-      icon: <BarChart2 className="h-7 w-7 text-[#f39c12]" />,
+      icon: <BarChart2 className="h-7 w-7 text-primary" />,
       title: 'Performance Driven',
       description: 'Supervised teams with measurable service quality and professional reporting systems',
     },
     {
-      icon: <Handshake className="h-7 w-7 text-[#f39c12]" />,
+      icon: <Handshake className="h-7 w-7 text-primary" />,
       title: 'Long-Term Partnership',
       description: 'Relationship-driven approach focused on continuous improvement and strategic alignment',
     },
@@ -102,7 +102,7 @@ export default function Home() {
             className="object-cover"
             data-ai-hint={placeholderImages.hero.hint}
           />
-          <div className="absolute inset-0 bg-[#2c3e50]/90" />
+          <div className="absolute inset-0 bg-foreground/90" />
           <div className="container relative px-4 md:px-6 flex items-center min-h-[90vh] md:min-h-screen">
             <div className="flex flex-col space-y-8 max-w-3xl py-24">
               <div>
@@ -114,7 +114,7 @@ export default function Home() {
                   <br />
                   Support for Modern
                   <br />
-                  <span className="text-[#f39c12]">Enterprises</span>
+                  <span className="text-primary">Enterprises</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-lg text-gray-200">
                   Empowering Organisations with Operational Excellence, Compliance,
@@ -123,20 +123,20 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm">
                 <div className="flex items-center gap-2 text-white">
-                  <CheckCircle className="h-5 w-5 text-[#f39c12]" />
+                  <CheckCircle className="h-5 w-5 text-primary" />
                   <span>Operational Excellence</span>
                 </div>
                 <div className="flex items-center gap-2 text-white">
-                  <CheckCircle className="h-5 w-5 text-[#f39c12]" />
+                  <CheckCircle className="h-5 w-5 text-primary" />
                   <span>Compliance Ready</span>
                 </div>
                 <div className="flex items-center gap-2 text-white">
-                  <CheckCircle className="h-5 w-5 text-[#f39c12]" />
+                  <CheckCircle className="h-5 w-5 text-primary" />
                   <span>Scalable Solutions</span>
                 </div>
               </div>
               <div className="flex flex-col gap-4 min-[400px]:flex-row">
-                <Button asChild size="lg" className="bg-[#f39c12] text-white hover:bg-[#f39c12]/90">
+                <Button asChild size="lg">
                   <Link href="/contact">Request Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
@@ -154,7 +154,7 @@ export default function Home() {
           <section id="why-choose-us">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#2c3e50]">Why Leading Companies Choose GSquare</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">Why Leading Companies Choose GSquare</h2>
                 <p className="max-w-3xl mx-auto text-muted-foreground md:text-lg">
                     We deliver enterprise-ready solutions that transform operational efficiency and enable your leadership to focus on strategic growth
                 </p>
@@ -163,10 +163,10 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {whyChooseGsquareItems.map((item, index) => (
                     <div key={index} className="bg-card p-6 rounded-lg border shadow-sm text-left">
-                        <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-[#f39c12]/10 mb-5">
+                        <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-primary/10 mb-5">
                             {item.icon}
                         </div>
-                        <h3 className="text-lg font-bold mb-2 text-[#2c3e50]">{item.title}</h3>
+                        <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                     </div>
                 ))}
@@ -175,7 +175,7 @@ export default function Home() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 mt-20 text-center">
                 {stats.map((stat, index) => (
                     <div key={index}>
-                        <p className="text-4xl lg:text-5xl font-bold text-[#f39c12]">{stat.value}</p>
+                        <p className="text-4xl lg:text-5xl font-bold text-primary">{stat.value}</p>
                         <p className="text-muted-foreground mt-2 text-sm sm:text-base">{stat.label}</p>
                     </div>
                 ))}
@@ -188,7 +188,7 @@ export default function Home() {
           <section id="services-portfolio" className="bg-muted">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-[#2c3e50]">Our Integrated Corporate Service Portfolio</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-foreground">Our Integrated Corporate Service Portfolio</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
                   Comprehensive solutions designed to streamline your operational excellence
                 </p>
@@ -258,25 +258,25 @@ export default function Home() {
                        />
                     </div>
                     <div className="p-8 flex flex-col justify-center">
-                       <h3 className="text-2xl font-bold mb-2 text-[#2c3e50]">Corporate Gifting</h3>
+                       <h3 className="text-2xl font-bold mb-2 text-foreground">Corporate Gifting</h3>
                        <p className="text-muted-foreground mb-6">
                          Customized festive and employee engagement kits that strengthen relationships and boost morale. From festival celebrations to employee milestones, we create memorable gifting experiences.
                        </p>
                        <ul className="space-y-3">
                         <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-[#f39c12] flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                           <span>Customized gift solutions</span>
                         </li>
                         <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-[#f39c12] flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                           <span>Festival & occasion-based kits</span>
                         </li>
                         <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-[#f39c12] flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                           <span>Employee engagement packages</span>
                         </li>
                         <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-[#f39c12] flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                           <span>Bulk ordering & timely delivery</span>
                         </li>
                        </ul>
@@ -293,7 +293,7 @@ export default function Home() {
           <section id="process" className="bg-white">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-[#2c3e50]">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-foreground">
                   Structured Workforce Deployment Process
                 </h2>
                 <p className="max-w-3xl text-muted-foreground md:text-xl/relaxed">
@@ -305,8 +305,8 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-y-12 md:hidden">
                 {processSteps.map((step, index) => (
                     <div key={index} className="bg-white rounded-lg p-8 border shadow-sm text-left">
-                      <span className="text-7xl font-extrabold text-[#FBE5DA]">{`0${index + 1}`}</span>
-                      <h3 className="font-bold text-xl mt-4 text-[#2c3e50]">{step.title}</h3>
+                      <span className="text-7xl font-extrabold text-accent">{`0${index + 1}`}</span>
+                      <h3 className="font-bold text-xl mt-4 text-foreground">{step.title}</h3>
                       <p className="text-muted-foreground text-base mt-2">{step.description}</p>
                     </div>
                 ))}
@@ -318,14 +318,14 @@ export default function Home() {
                   <React.Fragment key={index}>
                     <div className="flex-1 max-w-xs">
                       <div className="bg-white rounded-lg p-6 border shadow-sm flex flex-col h-full text-left">
-                        <span className="text-6xl font-extrabold text-[#FBE5DA]">{`0${index + 1}`}</span>
-                        <h3 className="font-bold text-lg mt-4 text-[#2c3e50]">{step.title}</h3>
+                        <span className="text-6xl font-extrabold text-accent">{`0${index + 1}`}</span>
+                        <h3 className="font-bold text-lg mt-4 text-foreground">{step.title}</h3>
                         <p className="text-muted-foreground text-sm mt-2 flex-grow">{step.description}</p>
                       </div>
                     </div>
                     {index < processSteps.length - 1 && (
                       <div className="flex items-center justify-center px-4 flex-shrink-0">
-                        <ArrowRight className="h-8 w-8 text-[#f39c12]" />
+                        <ArrowRight className="h-8 w-8 text-primary" />
                       </div>
                     )}
                   </React.Fragment>
@@ -354,13 +354,13 @@ export default function Home() {
                   className="object-cover"
                   data-ai-hint={placeholderImages.cta.hint}
                 />
-                <div className="absolute inset-0 bg-[#2c3e50]/80" />
+                <div className="absolute inset-0 bg-foreground/80" />
                 <div className="relative space-y-6">
                   <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Ready to Transform Your Operations?</h2>
                   <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
                     Join leading organisations who trust GSquare for their operational excellence
                   </p>
-                  <Button asChild size="lg" className="bg-[#f39c12] text-white hover:bg-[#f39c12]/90">
+                  <Button asChild size="lg">
                     <Link href="/contact">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </div>
@@ -375,7 +375,7 @@ export default function Home() {
               <div className="grid lg:grid-cols-2 gap-16 items-start">
                 <div className="space-y-8">
                   <div className="space-y-3">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#2c3e50] font-headline">Let's Start a Conversation</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground font-headline">Let's Start a Conversation</h2>
                     <p className="text-muted-foreground text-lg">
                       Whether you're looking to streamline operations, ensure compliance, or scale your workforce, we're here to help. Get in touch with our team today.
                     </p>
@@ -383,24 +383,24 @@ export default function Home() {
                   <div className="space-y-6">
                     <div>
                       <div className="flex items-center gap-4">
-                        <div className="bg-[#f39c12]/10 p-3 rounded-full">
-                          <Phone className="h-6 w-6 text-[#f39c12]" />
+                        <div className="bg-primary/10 p-3 rounded-full">
+                          <Phone className="h-6 w-6 text-primary" />
                         </div>
                         <div>
                           <h4 className="text-sm text-muted-foreground">Call Us</h4>
-                          <p className="font-semibold text-[#2c3e50] text-lg">+91 97649 97648</p>
-                          <p className="font-semibold text-[#2c3e50] text-lg">+91 70208 13399</p>
+                          <p className="font-semibold text-foreground text-lg">+91 97649 97648</p>
+                          <p className="font-semibold text-foreground text-lg">+91 70208 13399</p>
                         </div>
                       </div>
                     </div>
                     <div>
                       <div className="flex items-center gap-4">
-                        <div className="bg-[#f39c12]/10 p-3 rounded-full">
-                          <Mail className="h-6 w-6 text-[#f39c12]" />
+                        <div className="bg-primary/10 p-3 rounded-full">
+                          <Mail className="h-6 w-6 text-primary" />
                         </div>
                         <div>
                           <h4 className="text-sm text-muted-foreground">Email Us</h4>
-                          <a href="mailto:services@gsquarecorp.co.in" className="font-semibold text-[#2c3e50] text-lg hover:underline">
+                          <a href="mailto:services@gsquarecorp.co.in" className="font-semibold text-foreground text-lg hover:underline">
                             services@gsquarecorp.co.in
                           </a>
                         </div>
@@ -408,12 +408,12 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="flex items-center gap-4">
-                        <div className="bg-[#f39c12]/10 p-3 rounded-full">
-                          <MapPin className="h-6 w-6 text-[#f39c12]" />
+                        <div className="bg-primary/10 p-3 rounded-full">
+                          <MapPin className="h-6 w-6 text-primary" />
                         </div>
                         <div>
                           <h4 className="text-sm text-muted-foreground">Registered Office</h4>
-                          <address className="not-italic font-semibold text-[#2c3e50] text-lg">
+                          <address className="not-italic font-semibold text-foreground text-lg">
                             C/13, S NO 6, SHUBHAM COMPLEX,<br/>
                             OLD JAKAT NAKA, CHINCHWAD,<br/>
                             PUNE, India - 411033
@@ -422,12 +422,12 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-[#fef5ec] p-8 rounded-xl mt-12">
+                  <div className="bg-accent p-8 rounded-xl mt-12">
                     <div className="flex flex-col items-center text-center">
                       <div className="bg-white p-4 rounded-full shadow-md mb-4">
-                        <Phone className="h-8 w-8 text-[#f39c12]" />
+                        <Phone className="h-8 w-8 text-primary" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#2c3e50]">Let's Connect</h3>
+                      <h3 className="text-2xl font-bold text-foreground">Let's Connect</h3>
                       <p className="text-muted-foreground mt-2">We're here to help transform your operations</p>
                     </div>
                   </div>

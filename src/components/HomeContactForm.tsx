@@ -31,7 +31,7 @@ export function HomeContactForm() {
 
   return (
     <div className="bg-white p-8 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.1)] w-full max-w-lg">
-        <h3 className="text-2xl font-bold text-[#2c3e50] mb-6">Request a Consultation</h3>
+        <h3 className="text-2xl font-bold text-foreground mb-6">Request a Consultation</h3>
         <form onSubmit={handleSubmit} className="space-y-5">
             <div>
                 <Label htmlFor="name" className="text-sm font-medium text-gray-700">Full Name <span className="text-red-500">*</span></Label>
@@ -53,7 +53,7 @@ export function HomeContactForm() {
                 <Label htmlFor="message" className="text-sm font-medium text-gray-700">Message</Label>
                 <Textarea id="message" name="message" placeholder="Tell us about your requirements..." rows={4} value={formData.message} onChange={handleChange} className="mt-1 bg-white"/>
             </div>
-            <Button type="submit" className="w-full bg-[#f39c12] hover:bg-[#e68a00] text-white text-base" size="lg">
+            <Button type="submit" className="w-full text-base" size="lg">
                 Submit Request <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
         </form>
