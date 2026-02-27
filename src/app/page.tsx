@@ -1,5 +1,6 @@
 
 
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -299,13 +300,22 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              <div className="flex flex-col lg:flex-row items-stretch justify-center gap-y-8 lg:gap-x-4">
                 {processSteps.map((step, index) => (
-                    <div key={index} className="group bg-card p-8 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl flex flex-col">
-                      <span className="text-7xl font-extrabold text-accent group-hover:text-primary transition-colors">{`0${index + 1}`}</span>
-                      <h3 className="font-bold text-xl mt-4 text-secondary group-hover:text-primary transition-colors">{step.title}</h3>
-                      <p className="text-muted-foreground text-base mt-2 flex-grow">{step.description}</p>
+                  <React.Fragment key={index}>
+                    <div className="w-full max-w-sm mx-auto lg:w-auto lg:max-w-[260px] lg:mx-0 flex-1">
+                      <div className="bg-card p-6 rounded-lg border-2 border-secondary text-left h-full flex flex-col">
+                        <span className="text-6xl font-extrabold text-primary/30">{`0${index + 1}`}</span>
+                        <h3 className="font-bold text-lg mt-4 text-secondary">{step.title}</h3>
+                        <p className="text-muted-foreground text-sm mt-2 flex-grow">{step.description}</p>
+                      </div>
                     </div>
+                    {index < processSteps.length - 1 && (
+                      <div className="hidden lg:flex items-center justify-center">
+                        <ChevronRight className="h-8 w-8 text-primary" />
+                      </div>
+                    )}
+                  </React.Fragment>
                 ))}
               </div>
             </div>
