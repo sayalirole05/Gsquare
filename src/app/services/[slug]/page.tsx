@@ -23,7 +23,7 @@ import {
   Layers,
   Recycle,
   Droplets,
-  Broom,
+  Sparkles,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -120,7 +120,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
   const serviceBreakdown = [
       {
-        icon: <Broom className="h-8 w-8 text-primary" />,
+        icon: <Sparkles className="h-8 w-8 text-primary" />,
         title: "Daily Cleaning & Maintenance",
         description: "Scheduled cleaning of floors, desks, cabins, and common areas to maintain a consistently professional look."
       },
