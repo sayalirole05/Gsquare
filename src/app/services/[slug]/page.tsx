@@ -1,3 +1,4 @@
+
 import { servicePages, siteConfig, industries, processSteps, whyChooseUs, newTestimonials } from '@/lib/data';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -37,6 +38,7 @@ import {
   Crown,
   Leaf,
   PackageSearch,
+  Award,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
