@@ -33,5 +33,20 @@
     "height": 400,
     "alt": "Team collaborating in a modern office",
     "hint": "team meeting"
+  },
+  "materialSupplyPage": {
+    "src": "https://images.unsplash.com/photo-1583947215259-38e34be8751f?q=80&w=1920",
+    "alt": "Shelves stocked with cleaning supplies",
+    "hint": "cleaning supplies"
+  },
+  "stationeryPage": {
+    "src": "https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1920",
+    "alt": "A well-organized desk with stationery",
+    "hint": "desk stationery"
+  },
+  "giftingPage": {
+    "src": "https://images.unsplash.com/photo-1606823573838-b638c5388557?q=80&w=1920",
+    "alt": "A collection of curated corporate gifts",
+    "hint": "corporate gifts"
   }
 }
