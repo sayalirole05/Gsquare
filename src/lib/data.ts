@@ -17,7 +17,28 @@ export const siteConfig = {
 export const mainNav = [
   { title: 'Home', href: '/' },
   { title: 'About', href: '/about' },
-  { title: 'Services', href: '/services' },
+  {
+    title: 'Services',
+    href: '/services',
+    children: [
+      {
+        title: 'Corporate Housekeeping',
+        href: '/services/housekeeping',
+      },
+      {
+        title: 'Cleaning Material Supply',
+        href: '/services/material-supply',
+      },
+      {
+        title: 'Office Stationery',
+        href: '/services/stationery',
+      },
+      {
+        title: 'Corporate Gifting',
+        href: '/services/corporate-gifting',
+      },
+    ],
+  },
   { title: 'Industries', href: '/industries' },
   { title: 'Process', href: '/process' },
   { title: 'Pricing', href: '/pricing' },
@@ -185,8 +206,8 @@ export const whyChooseUs = [
 export const newTestimonials = [
   {
     "text": "Gsquare transformed our workplace operations with structured housekeeping and timely material supply. Their professionalism reflects true enterprise standards.",
-    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    "name": "Anita Kulkarni",
+    "image": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&h=150&fit=crop&crop=face",
+    "name": "Siddharth Rao",
     "role": "Admin Head, IT Park Pune"
   },
   {
@@ -203,8 +224,8 @@ export const newTestimonials = [
   },
   {
     "text": "Their corporate gifting solutions are thoughtfully curated and premium. Perfectly aligned with our brand standards.",
-    "image": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&h=150&fit=crop&crop=face",
-    "name": "Siddharth Rao",
+    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    "name": "Anita Kulkarni",
     "role": "HR Manager"
   },
   {

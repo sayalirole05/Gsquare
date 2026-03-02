@@ -3,13 +3,25 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { mainNav } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/icons/Logo';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -35,7 +47,7 @@ export function Navbar() {
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center gap-3">
             <Logo className="h-10 w-auto" />
-            <span className="hidden font-bold text-lg tracking-wide lg:block">
+            <span className="hidden font-bold tracking-wider text-sm lg:block">
               <span className="text-primary">G</span>
               <span className="text-secondary">
                 SQUARE CORPORATE SERVICES
@@ -45,20 +57,46 @@ export function Navbar() {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-            {mainNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  'transition-colors hover:text-primary',
-                  pathname === item.href
-                    ? 'text-primary'
-                    : 'text-navlink'
-                )}
-              >
-                {item.title}
-              </Link>
-            ))}
+            {mainNav.map((item) =>
+              item.children ? (
+                <DropdownMenu key={item.href}>
+                  <DropdownMenuTrigger
+                    className={cn(
+                      'flex items-center gap-1 outline-none transition-colors hover:text-primary',
+                      pathname.startsWith(item.href)
+                        ? 'text-primary'
+                        : 'text-navlink'
+                    )}
+                  >
+                    {item.title}
+                    <ChevronDown className="h-4 w-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem asChild>
+                      <Link href={item.href}>All Services</Link>
+                    </DropdownMenuItem>
+                    {item.children.map((child) => (
+                      <DropdownMenuItem key={child.href} asChild>
+                        <Link href={child.href}>{child.title}</Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    'transition-colors hover:text-primary',
+                    pathname === item.href
+                      ? 'text-primary'
+                      : 'text-navlink'
+                  )}
+                >
+                  {item.title}
+                </Link>
+              )
+            )}
           </nav>
           
           {/* Mobile menu */}
@@ -70,31 +108,75 @@ export function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left">
-                <nav className="grid gap-6 p-6 text-lg font-medium">
-                  <Link
+                <div className="p-6 pt-0">
+                   <Link
                     href="/"
-                    className="flex items-center gap-2 text-lg font-semibold mb-4"
+                    className="flex items-center gap-2 text-lg font-semibold my-6"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Logo className="h-10 w-auto" />
                     <span className="sr-only">GSquare</span>
                   </Link>
-                  {mainNav.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setIsMenuOpen(false)}
-                      className={cn(
-                        'transition-colors hover:text-primary',
-                        pathname === item.href
-                          ? 'text-primary'
-                          : 'text-navlink'
-                      )}
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </nav>
+                  <Accordion type="single" collapsible className="w-full">
+                    {mainNav.map((item) =>
+                      !item.children ? (
+                         <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className={cn(
+                            'flex py-4 text-lg font-medium transition-colors hover:text-primary border-b',
+                            pathname === item.href
+                              ? 'text-primary'
+                              : 'text-navlink'
+                          )}
+                        >
+                          {item.title}
+                        </Link>
+                      ) : (
+                        <AccordionItem value={item.title} key={item.title} className="border-b">
+                          <AccordionTrigger
+                            className={cn(
+                              'py-4 text-lg font-medium transition-colors hover:text-primary hover:no-underline',
+                              pathname.startsWith(item.href)
+                                ? 'text-primary'
+                                : 'text-navlink'
+                            )}
+                          >
+                            {item.title}
+                          </AccordionTrigger>
+                          <AccordionContent>
+                            <nav className="grid gap-4 pl-4 pt-2">
+                               <Link
+                                href={item.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={cn(
+                                  'text-base transition-colors hover:text-primary',
+                                  pathname === item.href ? 'text-primary' : 'text-navlink'
+                                )}
+                              >
+                                All Services
+                              </Link>
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.href}
+                                  href={child.href}
+                                  onClick={() => setIsMenuOpen(false)}
+                                  className={cn(
+                                    'text-base transition-colors hover:text-primary',
+                                    pathname === child.href ? 'text-primary' : 'text-navlink'
+                                  )}
+                                >
+                                  {child.title}
+                                </Link>
+                              ))}
+                            </nav>
+                          </AccordionContent>
+                        </AccordionItem>
+                      )
+                    )}
+                  </Accordion>
+                </div>
               </SheetContent>
             </Sheet>
           </div>
