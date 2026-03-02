@@ -22,6 +22,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { GetStartedModal } from './GetStartedModal';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -95,77 +96,86 @@ export function Navbar() {
               )
             )}
           </nav>
-          
-          {/* Mobile menu */}
-          <div className="md:hidden">
-            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" aria-label="Toggle menu">
-                  <Menu />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left">
-                <div className="p-6 pt-0">
-                   <Link
-                    href="/"
-                    className="flex items-center gap-2 text-lg font-semibold my-6"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <Logo className="h-10 w-auto" />
-                    <span className="sr-only">GSquare</span>
-                  </Link>
-                  <Accordion type="single" collapsible className="w-full">
-                    {mainNav.map((item) =>
-                      !item.children ? (
-                         <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setIsMenuOpen(false)}
-                          className={cn(
-                            'flex py-4 text-lg font-medium transition-colors hover:text-primary border-b',
-                            pathname === item.href
-                              ? 'text-primary'
-                              : 'text-navlink'
-                          )}
-                        >
-                          {item.title}
-                        </Link>
-                      ) : (
-                        <AccordionItem value={item.title} key={item.title} className="border-b">
-                          <AccordionTrigger
+
+          <div className="flex items-center gap-2">
+            <div className="hidden sm:block">
+              <GetStartedModal />
+            </div>
+            
+            {/* Mobile menu */}
+            <div className="md:hidden">
+              <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" aria-label="Toggle menu">
+                    <Menu />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left">
+                  <div className="p-6 pt-0">
+                    <Link
+                      href="/"
+                      className="flex items-center gap-2 text-lg font-semibold my-6"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Logo className="h-10 w-auto" />
+                      <span className="sr-only">GSquare</span>
+                    </Link>
+                    <Accordion type="single" collapsible className="w-full">
+                      {mainNav.map((item) =>
+                        !item.children ? (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setIsMenuOpen(false)}
                             className={cn(
-                              'py-4 text-lg font-medium transition-colors hover:text-primary hover:no-underline',
-                              pathname.startsWith(item.href)
+                              'flex py-4 text-lg font-medium transition-colors hover:text-primary border-b',
+                              pathname === item.href
                                 ? 'text-primary'
                                 : 'text-navlink'
                             )}
                           >
                             {item.title}
-                          </AccordionTrigger>
-                          <AccordionContent>
-                            <nav className="grid gap-4 pl-4 pt-2">
-                              {item.children.map((child) => (
-                                <Link
-                                  key={child.href}
-                                  href={child.href}
-                                  onClick={() => setIsMenuOpen(false)}
-                                  className={cn(
-                                    'text-base transition-colors hover:text-primary',
-                                    pathname === child.href ? 'text-primary' : 'text-navlink'
-                                  )}
-                                >
-                                  {child.title}
-                                </Link>
-                              ))}
-                            </nav>
-                          </AccordionContent>
-                        </AccordionItem>
-                      )
-                    )}
-                  </Accordion>
-                </div>
-              </SheetContent>
-            </Sheet>
+                          </Link>
+                        ) : (
+                          <AccordionItem value={item.title} key={item.title} className="border-b">
+                            <AccordionTrigger
+                              className={cn(
+                                'py-4 text-lg font-medium transition-colors hover:text-primary hover:no-underline',
+                                pathname.startsWith(item.href)
+                                  ? 'text-primary'
+                                  : 'text-navlink'
+                              )}
+                            >
+                              {item.title}
+                            </AccordionTrigger>
+                            <AccordionContent>
+                              <nav className="grid gap-4 pl-4 pt-2">
+                                {item.children.map((child) => (
+                                  <Link
+                                    key={child.href}
+                                    href={child.href}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={cn(
+                                      'text-base transition-colors hover:text-primary',
+                                      pathname === child.href ? 'text-primary' : 'text-navlink'
+                                    )}
+                                  >
+                                    {child.title}
+                                  </Link>
+                                ))}
+                              </nav>
+                            </AccordionContent>
+                          </AccordionItem>
+                        )
+                      )}
+                    </Accordion>
+                     <div className="mt-6">
+                      <GetStartedModal />
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </div>

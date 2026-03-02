@@ -39,9 +39,7 @@ export const mainNav = [
       },
     ],
   },
-  { title: 'Industries', href: '/industries' },
-  { title: 'Process', href: '/process' },
-  { title: 'Pricing', href: '/pricing' },
+  { title: 'Contact', href: '/contact' },
 ];
 
 export const services = [
