@@ -95,8 +95,8 @@ export default function Home() {
         telephone: siteConfig.phone,
         url: siteConfig.url,
       }} />
-      <div className="flex flex-col min-h-[100dvh]">
-        <section className="w-full relative">
+      <div className="flex flex-col ">
+        <section className="w-full relative py-20">
           <Image
             alt={placeholderImages.hero.alt}
             src={placeholderImages.hero.src}
@@ -106,8 +106,8 @@ export default function Home() {
             data-ai-hint={placeholderImages.hero.hint}
           />
           <div className="absolute inset-0 bg-foreground/90" />
-          <div className="container relative px-4 md:px-6 flex items-center min-h-[90vh] md:min-h-screen">
-            <div className="flex flex-col space-y-8 max-w-3xl py-24">
+          <div className="container relative px-4 md:px-6 flex items-center">
+            <div className="flex flex-col space-y-8 max-w-3xl py-0">
               <div>
                 <div className="inline-block bg-primary text-primary-foreground text-xs font-medium px-4 py-1.5 rounded-full mb-6">
                   Executive Corporate Support Partner
