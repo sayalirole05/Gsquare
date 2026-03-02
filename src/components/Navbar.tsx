@@ -72,9 +72,6 @@ export function Navbar() {
                     <ChevronDown className="h-4 w-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
-                    <DropdownMenuItem asChild>
-                      <Link href={item.href}>All Services</Link>
-                    </DropdownMenuItem>
                     {item.children.map((child) => (
                       <DropdownMenuItem key={child.href} asChild>
                         <Link href={child.href}>{child.title}</Link>
@@ -147,16 +144,6 @@ export function Navbar() {
                           </AccordionTrigger>
                           <AccordionContent>
                             <nav className="grid gap-4 pl-4 pt-2">
-                               <Link
-                                href={item.href}
-                                onClick={() => setIsMenuOpen(false)}
-                                className={cn(
-                                  'text-base transition-colors hover:text-primary',
-                                  pathname === item.href ? 'text-primary' : 'text-navlink'
-                                )}
-                              >
-                                All Services
-                              </Link>
                               {item.children.map((child) => (
                                 <Link
                                   key={child.href}
