@@ -1,6 +1,7 @@
 
 
 
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -136,7 +137,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-4 min-[400px]:flex-row">
                 <Button asChild size="lg">
-                  <Link href="/contact">Request Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link href="/#contact-us">Request Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="bg-transparent border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground">
                   <Link href="/services">Explore Services</Link>
@@ -300,23 +301,33 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="flex flex-col lg:flex-row items-stretch justify-center gap-y-8 lg:gap-x-4">
-                {processSteps.map((step, index) => (
-                  <React.Fragment key={index}>
-                    <div className="w-full max-w-sm mx-auto lg:w-auto lg:max-w-[260px] lg:mx-0 flex-1">
-                      <div className="bg-card p-6 rounded-lg border-2 border-secondary text-left h-full flex flex-col">
-                        <span className="text-6xl font-extrabold text-primary/30">{`0${index + 1}`}</span>
-                        <h3 className="font-bold text-lg mt-4 text-secondary">{step.title}</h3>
-                        <p className="text-muted-foreground text-sm mt-2 flex-grow">{step.description}</p>
+              <div className="relative">
+                <div
+                  className="hidden lg:block absolute left-0 top-1/2 w-full h-0.5 bg-border -translate-y-1/2"
+                  aria-hidden="true"
+                />
+                <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                  {processSteps.map((step, index) => (
+                    <div
+                      key={index}
+                      className="relative flex flex-col items-center text-center p-4"
+                    >
+                      <div className="relative z-10">
+                        <div className="w-20 h-20 rounded-full bg-card border-2 border-secondary flex items-center justify-center">
+                          <span className="text-3xl font-extrabold text-primary">{`0${
+                            index + 1
+                          }`}</span>
+                        </div>
                       </div>
+                      <h3 className="font-bold text-lg mt-4 text-secondary">
+                        {step.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mt-2 flex-grow">
+                        {step.description}
+                      </p>
                     </div>
-                    {index < processSteps.length - 1 && (
-                      <div className="hidden lg:flex items-center justify-center">
-                        <ChevronRight className="h-8 w-8 text-primary" />
-                      </div>
-                    )}
-                  </React.Fragment>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -348,7 +359,7 @@ export default function Home() {
                     Join leading organisations who trust GSquare for their operational excellence
                   </p>
                   <Button asChild size="lg">
-                    <Link href="/contact">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href="/#contact-us">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </div>
               </div>

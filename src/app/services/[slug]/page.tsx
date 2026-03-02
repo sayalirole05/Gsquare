@@ -745,7 +745,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                   Contact us today for a customized proposal and discover how we can add value to your business.
                 </p>
                 <Button asChild size="lg" variant="secondary">
-                  <Link href="/contact">Get a Quote</Link>
+                  <Link href="/#contact-us">Get a Quote</Link>
                 </Button>
               </div>
             </div>

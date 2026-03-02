@@ -17,7 +17,6 @@ export function Footer() {
 
   const footerCompany = [
     { title: 'About Us', href: '/about' },
-    { title: 'Contact Us', href: '/contact' },
   ];
 
   return (

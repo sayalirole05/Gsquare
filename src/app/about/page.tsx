@@ -121,7 +121,7 @@ export default function AboutPage() {
                   <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
                       Discover the difference that professional, compliant, and client-focused facility management can make.
                   </p>
-                  <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md bg-secondary px-8 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                  <Link href="/#contact-us" className="inline-flex h-12 items-center justify-center rounded-md bg-secondary px-8 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
                       Request a Consultation
                   </Link>
                   </div>
