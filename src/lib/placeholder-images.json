@@ -7,25 +7,25 @@
     "hint": "office interior"
   },
   "housekeeping": {
-    "src": "https://picsum.photos/seed/housekeeping/600/400",
-    "width": 600,
-    "height": 400,
-    "alt": "Professional cleaning staff at work in an office",
+    "src": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1920",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Professional cleaning staff member wiping down a glass surface in a modern office.",
     "hint": "office cleaning"
   },
   "officeSupplies": {
-    "src": "https://picsum.photos/seed/office-supplies/600/400",
-    "width": 600,
-    "height": 400,
-    "alt": "Desk organizer filled with pens and office supplies",
+    "src": "https://images.unsplash.com/photo-1600164627918-5233a9418392?q=80&w=1920",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Neatly organized shelves stocked with various office supplies.",
     "hint": "office supplies"
   },
   "corporateGifting": {
-    "src": "https://picsum.photos/seed/gifting/600/800",
-    "width": 600,
-    "height": 800,
-    "alt": "Hands exchanging a beautifully wrapped corporate gift",
-    "hint": "gift exchange"
+    "src": "https://images.unsplash.com/photo-1562620479-91696272b080?q=80&w=1920",
+    "width": 1920,
+    "height": 1280,
+    "alt": "A collection of elegantly wrapped corporate gift boxes.",
+    "hint": "corporate gifts"
   },
   "cta": {
     "src": "https://picsum.photos/seed/cta-bg/1200/400",
