@@ -21,11 +21,11 @@
     "hint": "desk stationery"
   },
   "corporateGifting": {
-    "src": "https://images.unsplash.com/photo-1606823573838-b638c5388557?q=80&w=1920",
+    "src": "https://images.unsplash.com/photo-1572026136534-053629562723?q=80&w=1920",
     "width": 1920,
     "height": 1280,
-    "alt": "A collection of curated corporate gifts ready for distribution.",
-    "hint": "corporate gifts"
+    "alt": "Elegantly wrapped corporate gift being presented.",
+    "hint": "corporate gift"
   },
   "cta": {
     "src": "https://picsum.photos/seed/cta-bg/1200/400",
@@ -45,8 +45,8 @@
     "hint": "desk stationery"
   },
   "giftingPage": {
-    "src": "https://images.unsplash.com/photo-1606823573838-b638c5388557?q=80&w=1920",
-    "alt": "A collection of curated corporate gifts",
+    "src": "https://images.unsplash.com/photo-1629905663901-b9942b04a43c?q=80&w=1920",
+    "alt": "A flat lay of beautifully wrapped corporate gifts and items.",
     "hint": "corporate gifts"
   }
 }
