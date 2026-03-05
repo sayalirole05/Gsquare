@@ -20,7 +20,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="dark bg-[#1B4F9C] text-muted-foreground">
+    <footer className="dark bg-secondary text-muted-foreground">
       <div className="container py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4 space-y-4">
