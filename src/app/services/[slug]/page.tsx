@@ -47,7 +47,6 @@ import { JsonLd } from '@/components/JsonLd';
 import { FadeIn } from '@/components/FadeIn';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Testimonials } from '@/components/Testimonials';
 import React from 'react';
 import placeholderImages from '@/lib/placeholder-images.json';
 import { LogoCloudSection } from '@/components/LogoCloudSection';
@@ -443,7 +442,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     </div>
                 </section>
             </FadeIn>
-            <Testimonials />
             <FadeIn>
                 <section className="bg-muted">
                     <div className="container px-4 md:px-6">
@@ -552,7 +550,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </div>
                     </section>
                 </FadeIn>
-                <Testimonials />
                 <FadeIn>
                     <section className="bg-muted">
                         <div className="container px-4 md:px-6">
@@ -633,7 +630,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </div>
                     </section>
                 </FadeIn>
-                <Testimonials />
                 <FadeIn>
                     <section className="bg-muted">
                         <div className="container px-4 md:px-6">
@@ -714,7 +710,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </div>
                     </section>
                 </FadeIn>
-                <Testimonials />
                 <FadeIn>
                     <section className="bg-muted">
                         <div className="container px-4 md:px-6">

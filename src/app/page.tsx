@@ -2,6 +2,7 @@
 
 
 
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -34,7 +35,6 @@ import { FadeIn } from '@/components/FadeIn';
 import placeholderImages from '@/lib/placeholder-images.json';
 import React from 'react';
 import { HomeContactForm } from '@/components/HomeContactForm';
-import { Testimonials } from '@/components/Testimonials';
 import { LogoCloudSection } from '@/components/LogoCloudSection';
 
 export default function Home() {
@@ -292,39 +292,29 @@ export default function Home() {
         <FadeIn>
           <section id="process" className="bg-white">
             <div className="container px-4 md:px-6">
-              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+              <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-secondary">
                   Our Structured Manpower Deployment Process
                 </h2>
-                <p className="max-w-3xl text-muted-foreground md:text-xl/relaxed">
+                <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed mt-4">
                   A proven methodology that ensures seamless onboarding and exceptional service delivery
                 </p>
               </div>
-
               <div className="relative">
-                <div
-                  className="hidden lg:block absolute left-0 top-1/2 w-full h-0.5 bg-border -translate-y-1/2"
-                  aria-hidden="true"
-                />
-                <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div className="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-border" aria-hidden="true"></div>
+                <div className="relative grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
                   {processSteps.map((step, index) => (
-                    <div
-                      key={index}
-                      className="relative flex flex-col items-center text-center p-4"
-                    >
-                      <div className="relative z-10">
-                        <div className="w-20 h-20 rounded-full bg-card border-2 border-secondary flex items-center justify-center">
-                          <span className="text-3xl font-extrabold text-primary">{`0${
-                            index + 1
-                          }`}</span>
+                    <div key={step.title} className="flex flex-col items-center text-center">
+                      <div className="relative">
+                        <div className="w-20 h-20 rounded-full bg-card border-2 border-secondary flex items-center justify-center relative z-10">
+                          <span className="text-3xl font-extrabold text-primary">{`0${index + 1}`}</span>
                         </div>
+                        {index < processSteps.length - 1 && (
+                          <div className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 bg-border -translate-y-1/2" aria-hidden="true" />
+                        )}
                       </div>
-                      <h3 className="font-bold text-lg mt-4 text-secondary">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mt-2 flex-grow">
-                        {step.description}
-                      </p>
+                      <h3 className="mt-6 text-lg font-bold text-secondary">{step.title}</h3>
+                      <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
                     </div>
                   ))}
                 </div>
@@ -335,10 +325,6 @@ export default function Home() {
 
         <FadeIn>
           <LogoCloudSection />
-        </FadeIn>
-
-        <FadeIn>
-          <Testimonials />
         </FadeIn>
 
         <FadeIn>
