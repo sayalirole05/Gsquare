@@ -3,7 +3,7 @@ import placeholderImages from './placeholder-images.json';
 export const siteConfig = {
   name: 'G SQUARE CORPORATE SERVICES',
   brandName: 'G SQUARE',
-  description: 'Premier Facility Management and Corporate Support Services in Pune, Maharashtra. We provide housekeeping, material supply, stationery, and corporate gifting solutions.',
+  description: 'Premier Facility Management and Corporate Support Services across India. We provide housekeeping, material supply, stationery, and corporate gifting solutions.',
   url: 'https://gsquarecorp.in',
   phone: '+917020813399',
   email: 'contact@gsquarecorp.in',
@@ -67,8 +67,8 @@ export const services = [
 export const servicePages = [
   {
     slug: 'housekeeping',
-    title: 'Corporate Housekeeping Services in Pune',
-    description: 'We provide top-tier corporate housekeeping and facility management services in Pune. Our trained professionals ensure your workspace is immaculate, safe, and hygienic, using industry-best practices and eco-friendly products.',
+    title: 'Corporate Housekeeping Services',
+    description: 'We provide top-tier corporate housekeeping and facility management services. Our trained professionals ensure your workspace is immaculate, safe, and hygienic, using industry-best practices and eco-friendly products.',
     features: [
       'Trained & Verified Staff',
       'Flexible Scheduling (Daily, Weekly, Monthly)',
@@ -85,8 +85,8 @@ export const servicePages = [
   },
   {
     slug: 'material-supply',
-    title: 'Cleaning Material Suppliers in Pune',
-    description: 'G Square is a leading supplier of cleaning, housekeeping, and pantry materials in Pune. We offer a comprehensive range of high-quality products at competitive prices, ensuring you never run out of essential supplies.',
+    title: 'Cleaning Material Suppliers',
+    description: 'G Square is a leading supplier of cleaning, housekeeping, and pantry materials. We offer a comprehensive range of high-quality products at competitive prices, ensuring you never run out of essential supplies.',
     features: [
       'Wide Range of Products',
       'Branded & Quality Assured Items',
@@ -103,8 +103,8 @@ export const servicePages = [
   },
   {
     slug: 'stationery',
-    title: 'Office Stationery Suppliers in Pune',
-    description: 'Streamline your office supplies with our complete stationery solutions. From basic pens and paper to custom-printed materials, we provide everything your Pune office needs to operate efficiently.',
+    title: 'Office Stationery Suppliers',
+    description: 'Streamline your office supplies with our complete stationery solutions. From basic pens and paper to custom-printed materials, we provide everything your office needs to operate efficiently.',
     features: [
       'One-Stop-Shop for All Stationery',
       'Custom Printing Services',
@@ -121,8 +121,8 @@ export const servicePages = [
   },
   {
     slug: 'corporate-gifting',
-    title: 'Corporate Gifting Solutions in Pune',
-    description: 'Strengthen client and employee relationships with our curated corporate gifting services in Pune. We provide thoughtful, customized gifts for festivals, milestones, and corporate events that reflect your brand\'s values.',
+    title: 'Corporate Gifting Solutions',
+    description: 'Strengthen client and employee relationships with our curated corporate gifting services. We provide thoughtful, customized gifts for festivals, milestones, and corporate events that reflect your brand\'s values.',
     features: [
       'Wide Range of Gift Options',
       'Custom Branding and Packaging',
@@ -142,11 +142,11 @@ export const servicePages = [
 export const industries = [
   {
     name: 'IT Parks',
-    description: 'Servicing major IT hubs in Hinjewadi, Baner, and across Pune with specialized cleaning and support.',
+    description: 'Servicing major IT hubs with specialized cleaning and support services.',
   },
   {
     name: 'Manufacturing Units',
-    description: 'Providing robust facility services for manufacturing units in Pimpri-Chinchwad and beyond.',
+    description: 'Providing robust facility services for manufacturing units and industrial zones.',
   },
   {
     name: 'Corporate Offices',
@@ -184,15 +184,15 @@ export const processSteps = [
 export const whyChooseUs = [
   {
     title: 'Operational Expertise',
-    description: 'Years of experience in managing facilities for Pune\'s top corporates ensures efficient and reliable service delivery.'
+    description: 'Years of experience in managing facilities for top corporates ensures efficient and reliable service delivery.'
   },
   {
     title: 'Compliance & Verification',
     description: 'We ensure 100% compliance with labor laws and conduct thorough background verification for all our staff.'
   },
   {
-    title: 'Local Focus',
-    description: 'Deep operational presence in key Pune areas like Hinjewadi, Baner, Wakad, and Pimpri-Chinchwad for rapid support.'
+    title: 'Nationwide Network',
+    description: 'With a robust network spanning across India, we deliver consistent services to multi-location offices and large campuses.'
   },
   {
     title: 'Client-Centric Approach',
@@ -214,7 +214,7 @@ export const newTestimonials = [
         "role": "Facility Manager"
     },
     {
-        "text": "From onboarding to supervision, Gsquare maintains strong compliance and operational discipline. A dependable partner in Pune.",
+        "text": "From onboarding to supervision, Gsquare maintains strong compliance and operational discipline. A dependable partner.",
         "image": "https://images.unsplash.com/photo-1604234898338-644a420959ed?w=150&h=150&fit=crop&crop=face&q=80",
         "name": "Neha Deshpande",
         "role": "Operations Director"
@@ -316,7 +316,7 @@ export const newTestimonials = [
         "role": "Procurement Manager"
     },
     {
-        "text": "A trusted facility management partner in Pune with professional execution and enterprise focus.",
+        "text": "A trusted facility management partner with professional execution and enterprise focus.",
         "image": "https://images.unsplash.com/photo-1605332152697-a41151d6e5a0?w=150&h=150&fit=crop&crop=face&q=80",
         "name": "Saurabh Kulkarni",
         "role": "Operations Director"

@@ -7,7 +7,7 @@ import { FadeIn } from '@/components/FadeIn';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: `Learn about G Square Corporate Services, our mission, operational expertise, and commitment to providing top-tier facility management in Pune.`,
+  description: `Learn about G Square Corporate Services, our mission, operational expertise, and commitment to providing top-tier facility management.`,
   openGraph: {
     title: 'About Us | G SQUARE CORPORATE SERVICES',
     description: 'Discover our commitment to excellence in facility management.',
@@ -16,15 +16,9 @@ export const metadata: Metadata = {
 };
 
 const aboutData = {
-  mission: "Our mission is to deliver exceptional facility management and corporate support services through reliability, integrity, and a client-first approach. We aim to create clean, safe, and efficient environments that empower businesses in Pune to thrive.",
+  mission: "Our mission is to deliver exceptional facility management and corporate support services through reliability, integrity, and a client-first approach. We aim to create clean, safe, and efficient environments that empower businesses to thrive.",
   expertise: "With years of hands-on experience, our leadership team possesses deep operational expertise in managing diverse facilities. We leverage proven processes, technology, and a highly trained workforce to deliver consistent, high-quality outcomes. Our proactive approach anticipates client needs and resolves issues before they impact operations.",
   compliance: "We are steadfast in our commitment to 100% statutory compliance. All our operations adhere to labor laws, safety regulations, and industry standards. Every member of our staff undergoes a rigorous background verification process, ensuring a trustworthy and secure service for your peace of mind.",
-  coverage: [
-    { name: 'Hinjewadi', description: 'Serving the heart of Pune\'s IT sector.' },
-    { name: 'Baner', description: 'Providing support to the growing corporate hub.' },
-    { name: 'Wakad', description: 'Catering to commercial and residential complexes.' },
-    { name: 'Pimpri-Chinchwad', description: 'Expertise in industrial and manufacturing zones.' },
-  ],
 };
 
 
@@ -93,18 +87,10 @@ export default function AboutPage() {
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h2 className="text-2xl font-bold font-headline">Geographic Coverage</h2>
+                      <h2 className="text-2xl font-bold font-headline">Nationwide Coverage</h2>
                       <p className="text-muted-foreground mt-2">
-                        Our strong presence across Pune ensures prompt and efficient service delivery. We have dedicated teams covering all major business districts:
+                        Our services span across India, providing consistent and high-quality facility management solutions to corporate clients in major metropolitan areas and industrial hubs. We support multi-location businesses with a unified service standard.
                       </p>
-                      <ul className="mt-4 grid grid-cols-2 gap-4">
-                        {aboutData.coverage.map((area) => (
-                          <li key={area.name} className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary" />
-                            <span className="font-semibold">{area.name}</span>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
                   </div>
                 </div>

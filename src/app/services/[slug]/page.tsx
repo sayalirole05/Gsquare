@@ -185,14 +185,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
   ];
   const materialWhyChooseUs = [
       { icon: <PackageCheck className="h-8 w-8 text-primary" />, title: "Guaranteed Quality", description: "We only supply genuine products from trusted brands to ensure effectiveness and safety." },
-      { icon: <Truck className="h-8 w-8 text-primary" />, title: "Reliable Delivery", description: "Our robust supply chain ensures timely, dependable delivery across Pune." },
+      { icon: <Truck className="h-8 w-8 text-primary" />, title: "Reliable Delivery", description: "Our robust supply chain ensures timely, dependable delivery across India." },
       { icon: <ScrollText className="h-8 w-8 text-primary" />, title: "Simplified Procurement", description: "One vendor for all your cleaning supply needs, reducing administrative overhead." }
   ];
   const materialFaqs = [
       { question: "What is your minimum order quantity for bulk supplies?", answer: "Minimum order quantities vary by product. Contact us with your requirements, and we'll provide a detailed quote and information." },
       { question: "Do you offer credit terms for corporate clients?", answer: "Yes, we offer flexible credit terms for clients with annual contracts or consistent bulk orders, subject to a credit check." },
       { question: "Can you help us choose the right products for our facility?", answer: "Absolutely. Our experts can assess your needs and recommend the most effective and cost-efficient products for your specific environment." },
-      { question: "What is your delivery timeframe within Pune?", answer: "We typically deliver within 24-48 hours for standard orders. Urgent delivery options are also available." }
+      { question: "What is your typical delivery timeframe?", answer: "We offer flexible delivery schedules across India. Standard orders are typically dispatched promptly, with expedited options available for urgent requirements." }
   ];
 
   // Stationery Supply data
@@ -254,8 +254,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             telephone: siteConfig.phone,
           },
           areaServed: {
-            '@type': 'City',
-            name: 'Pune'
+            '@type': 'Country',
+            name: 'IN'
           },
           description: service.description
         }}
@@ -540,7 +540,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             <div className="space-y-4 rounded-lg bg-card p-6 border">
                                 <div className="bg-primary/10 p-3 rounded-full w-max"><Truck className="h-8 w-8 text-primary"/></div>
                                 <h3 className="text-xl font-bold text-secondary">Logistics & Delivery</h3>
-                                <p className="text-muted-foreground">Our dedicated logistics network covers all of Pune, including Hinjewadi, PCMC, and MIDC areas, for prompt delivery.</p>
+                                <p className="text-muted-foreground">Our dedicated logistics network ensures prompt and reliable delivery to your locations across India.</p>
                             </div>
                             <div className="space-y-4 rounded-lg bg-card p-6 border">
                                 <div className="bg-primary/10 p-3 rounded-full w-max"><PackageCheck className="h-8 w-8 text-primary"/></div>
@@ -553,7 +553,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <FadeIn>
                     <section className="bg-muted">
                         <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">FAQs – Cleaning Supplies in Pune</h2></div>
+                            <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">FAQs – Cleaning Supplies</h2></div>
                             <div className="max-w-3xl mx-auto">
                                 <Accordion type="single" collapsible className="w-full">
                                     {materialFaqs.map((faq, index) => (
@@ -606,7 +606,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 <ul className="space-y-3 pt-4">
                                     <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Annual contracts for predictable pricing.</li>
                                     <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Inventory management to prevent stockouts.</li>
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Fast, reliable delivery across Pune.</li>
+                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Fast, reliable delivery across India.</li>
                                 </ul>
                             </div>
                         </div>
@@ -735,7 +735,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
           <section className="bg-background">
             <div className="container">
               <div className="rounded-lg bg-primary text-primary-foreground p-8 md:p-12 lg:p-16 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Interested in our {service.title.replace(' in Pune', '')} services?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Interested in our {service.title} services?</h2>
                 <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
                   Contact us today for a customized proposal and discover how we can add value to your business.
                 </p>

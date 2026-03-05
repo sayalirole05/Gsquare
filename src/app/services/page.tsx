@@ -15,7 +15,7 @@ import { FadeIn } from '@/components/FadeIn';
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: 'Explore our comprehensive facility management and corporate support services in Pune, including housekeeping, material supply, and corporate gifting.',
+  description: 'Explore our comprehensive facility management and corporate support services, including housekeeping, material supply, and corporate gifting.',
   openGraph: {
     title: 'Our Services | G Square Corporate Services',
     description: 'Comprehensive facility management and corporate support solutions.',
@@ -69,7 +69,7 @@ export default function ServicesHubPage() {
                         }
                       </div>
                       <div>
-                        <CardTitle className="text-2xl font-headline text-secondary group-hover:text-primary transition-colors">{service.title.replace(' in Pune', '')}</CardTitle>
+                        <CardTitle className="text-2xl font-headline text-secondary group-hover:text-primary transition-colors">{service.title}</CardTitle>
                         <CardDescription>Comprehensive solutions for your business.</CardDescription>
                       </div>
                     </CardHeader>
