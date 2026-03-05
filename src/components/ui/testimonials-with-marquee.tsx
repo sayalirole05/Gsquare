@@ -24,7 +24,11 @@ export function TestimonialsSection({
       "py-12 sm:py-24 md:py-32 px-0",
       className
     )}>
-      <div className="mx-auto flex max-w-container flex-col items-center gap-4 text-center sm:gap-16">
+      <div className="mx-auto flex max-w-container flex-col items-center gap-8 text-center">
+        <div className="flex flex-col gap-2">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">{title}</h2>
+            <p className="max-w-2xl text-muted-foreground md:text-lg">{description}</p>
+        </div>
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
           <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row [--duration:240s]">
             <div className="flex shrink-0 justify-start [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">

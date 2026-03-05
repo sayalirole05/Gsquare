@@ -201,124 +201,124 @@ export const whyChooseUs = [
 ];
 
 export const newTestimonials = [
-  {
-    "text": "Gsquare transformed our workplace operations with structured housekeeping and timely material supply. Their professionalism reflects true enterprise standards.",
-    "image": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Siddharth Rao",
-    "role": "Admin Head, IT Park Pune"
-  },
-  {
-    "text": "Their manpower deployment process is systematic and reliable. We’ve seen improved cleanliness standards across our corporate campus.",
-    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Rahul Mehta",
-    "role": "Facility Manager"
-  },
-  {
-    "text": "From onboarding to supervision, Gsquare maintains strong compliance and operational discipline. A dependable partner in Pune.",
-    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Neha Deshpande",
-    "role": "Operations Director"
-  },
-  {
-    "text": "Their corporate gifting solutions are thoughtfully curated and premium. Perfectly aligned with our brand standards.",
-    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Anita Kulkarni",
-    "role": "HR Manager"
-  },
-  {
-    "text": "We appreciate their structured reporting and daily supervision model. It gives us full operational visibility.",
-    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Priya Shah",
-    "role": "Corporate Administrator"
-  },
-  {
-    "text": "Their housekeeping team is well-trained, uniformed, and punctual. The service quality is consistent and dependable.",
-    "image": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Vikram Patil",
-    "role": "Plant Head"
-  },
-  {
-    "text": "Gsquare helped us consolidate multiple vendors into one structured solution, reducing operational complexity.",
-    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Karan Gupta",
-    "role": "Procurement Lead"
-  },
-  {
-    "text": "Their SLA-driven approach ensures performance accountability. A reliable facility management partner.",
-    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Meera Joshi",
-    "role": "Business Operations Manager"
-  },
-  {
-    "text": "Material supply is always timely with zero stock-out situations. Their supply chain reliability is commendable.",
-    "image": "https://images.unsplash.com/photo-1618641986557-1ecd230959aa?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Rohit Agarwal",
-    "role": "Warehouse Supervisor"
-  },
-  {
-    "text": "The transition from our previous vendor to Gsquare was smooth and professionally managed.",
-    "image": "https://images.unsplash.com/photo-1542157585-2c92c5a85b9b?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Amit Verma",
-    "role": "Facility Head"
-  },
-  {
-    "text": "Their integrated support model has significantly improved workplace hygiene and operational efficiency.",
-    "image": "https://images.unsplash.com/photo-1525022138615-32181b837072?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Sneha Kulkarni",
-    "role": "Admin Executive"
-  },
-  {
-    "text": "We value their responsiveness and structured communication. It makes coordination seamless.",
-    "image": "https://images.unsplash.com/photo-1605993439219-9d0e6d201c9e?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Nikhil Bhosale",
-    "role": "Corporate Services Manager"
-  },
-  {
-    "text": "Gsquare understands corporate expectations and delivers with consistency and discipline.",
-    "image": "https://images.unsplash.com/photo-1619438363782-b5659b8a3e47?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Divya Iyer",
-    "role": "HR Business Partner"
-  },
-  {
-    "text": "Their workforce training standards ensure professional behavior and quality service delivery.",
-    "image": "https://images.unsplash.com/photo-1614283234288-5bcc665e2646?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Arjun Nair",
-    "role": "Operations Supervisor"
-  },
-  {
-    "text": "We appreciate their structured engagement model and ongoing improvement initiatives.",
-    "image": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Pooja Sethi",
-    "role": "Corporate Admin Lead"
-  },
-  {
-    "text": "Corporate gifting campaigns were executed flawlessly during festive season. Highly professional.",
-    "image": "https://images.unsplash.com/photo-1557862921-37829c790f19?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Manish Khanna",
-    "role": "Marketing Head"
-  },
-  {
-    "text": "Their housekeeping manpower deployment has elevated workplace standards across our offices.",
-    "image": "https://images.unsplash.com/photo-1520423465829-d1a16a827535?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Shreya Patankar",
-    "role": "Office Manager"
-  },
-  {
-    "text": "Gsquare’s structured processes and supervisor oversight ensure consistent service quality.",
-    "image": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Aditya Deshmukh",
-    "role": "Facility Operations Head"
-  },
-  {
-    "text": "Their ability to manage multiple services under one umbrella simplifies vendor management.",
-    "image": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Kavita Rao",
-    "role": "Procurement Manager"
-  },
-  {
-    "text": "A trusted facility management partner in Pune with professional execution and enterprise focus.",
-    "image": "https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=150&h=150&fit=crop&crop=face&q=80",
-    "name": "Saurabh Kulkarni",
-    "role": "Operations Director"
-  }
+    {
+        "text": "Gsquare transformed our workplace operations with structured housekeeping and timely material supply. Their professionalism reflects true enterprise standards.",
+        "image": "https://images.unsplash.com/photo-1615109398623-88346a601842?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Siddharth Rao",
+        "role": "Admin Head, IT Park Pune"
+    },
+    {
+        "text": "Their manpower deployment process is systematic and reliable. We’ve seen improved cleanliness standards across our corporate campus.",
+        "image": "https://images.unsplash.com/photo-1593230594363-695a99d4e2f3?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Rahul Mehta",
+        "role": "Facility Manager"
+    },
+    {
+        "text": "From onboarding to supervision, Gsquare maintains strong compliance and operational discipline. A dependable partner in Pune.",
+        "image": "https://images.unsplash.com/photo-1604234898338-644a420959ed?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Neha Deshpande",
+        "role": "Operations Director"
+    },
+    {
+        "text": "Their corporate gifting solutions are thoughtfully curated and premium. Perfectly aligned with our brand standards.",
+        "image": "https://images.unsplash.com/photo-1619438363782-b5659b8a3e47?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Anita Kulkarni",
+        "role": "HR Manager"
+    },
+    {
+        "text": "We appreciate their structured reporting and daily supervision model. It gives us full operational visibility.",
+        "image": "https://images.unsplash.com/photo-1618751320367-1a7afa7a9b69?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Priya Shah",
+        "role": "Corporate Administrator"
+    },
+    {
+        "text": "Their housekeeping team is well-trained, uniformed, and punctual. The service quality is consistent and dependable.",
+        "image": "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Vikram Patil",
+        "role": "Plant Head"
+    },
+    {
+        "text": "Gsquare helped us consolidate multiple vendors into one structured solution, reducing operational complexity.",
+        "image": "https://images.unsplash.com/photo-1613040801198-a0852b41c640?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Karan Gupta",
+        "role": "Procurement Lead"
+    },
+    {
+        "text": "Their SLA-driven approach ensures performance accountability. A reliable facility management partner.",
+        "image": "https://images.unsplash.com/photo-1620021313245-8c76b26b45e8?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Meera Joshi",
+        "role": "Business Operations Manager"
+    },
+    {
+        "text": "Material supply is always timely with zero stock-out situations. Their supply chain reliability is commendable.",
+        "image": "https://images.unsplash.com/photo-1615995719343-6d33306d8717?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Rohit Agarwal",
+        "role": "Warehouse Supervisor"
+    },
+    {
+        "text": "The transition from our previous vendor to Gsquare was smooth and professionally managed.",
+        "image": "https://images.unsplash.com/photo-1549419683-16a85f52309f?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Amit Verma",
+        "role": "Facility Head"
+    },
+    {
+        "text": "Their integrated support model has significantly improved workplace hygiene and operational efficiency.",
+        "image": "https://images.unsplash.com/photo-1619290680197-2a83234d5884?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Sneha Kulkarni",
+        "role": "Admin Executive"
+    },
+    {
+        "text": "We value their responsiveness and structured communication. It makes coordination seamless.",
+        "image": "https://images.unsplash.com/photo-1609132718484-cc4f45a5a1e2?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Nikhil Bhosale",
+        "role": "Corporate Services Manager"
+    },
+    {
+        "text": "Gsquare understands corporate expectations and delivers with consistency and discipline.",
+        "image": "https://images.unsplash.com/photo-1624224999912-7c39981881a5?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Divya Iyer",
+        "role": "HR Business Partner"
+    },
+    {
+        "text": "Their workforce training standards ensure professional behavior and quality service delivery.",
+        "image": "https://images.unsplash.com/photo-1600600932598-1f1659a8c13f?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Arjun Nair",
+        "role": "Operations Supervisor"
+    },
+    {
+        "text": "We appreciate their structured engagement model and ongoing improvement initiatives.",
+        "image": "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Pooja Sethi",
+        "role": "Corporate Admin Lead"
+    },
+    {
+        "text": "Corporate gifting campaigns were executed flawlessly during festive season. Highly professional.",
+        "image": "https://images.unsplash.com/photo-1611064629479-b0c2a86b3a7a?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Manish Khanna",
+        "role": "Marketing Head"
+    },
+    {
+        "text": "Their housekeeping manpower deployment has elevated workplace standards across our offices.",
+        "image": "https://images.unsplash.com/photo-1544717404-4b5b6a7e02e3?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Shreya Patankar",
+        "role": "Office Manager"
+    },
+    {
+        "text": "Gsquare’s structured processes and supervisor oversight ensure consistent service quality.",
+        "image": "https://images.unsplash.com/photo-1613340641403-34444e277636?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Aditya Deshmukh",
+        "role": "Facility Operations Head"
+    },
+    {
+        "text": "Their ability to manage multiple services under one umbrella simplifies vendor management.",
+        "image": "https://images.unsplash.com/photo-1620802394236-47677843d4c3?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Kavita Rao",
+        "role": "Procurement Manager"
+    },
+    {
+        "text": "A trusted facility management partner in Pune with professional execution and enterprise focus.",
+        "image": "https://images.unsplash.com/photo-1605332152697-a41151d6e5a0?w=150&h=150&fit=crop&crop=face&q=80",
+        "name": "Saurabh Kulkarni",
+        "role": "Operations Director"
+    }
 ];
