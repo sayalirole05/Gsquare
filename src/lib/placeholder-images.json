@@ -14,17 +14,17 @@
     "hint": "office cleaning"
   },
   "officeSupplies": {
-    "src": "https://images.unsplash.com/photo-1600164627918-5233a9418392?q=80&w=1920",
+    "src": "https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1920",
     "width": 1920,
     "height": 1280,
-    "alt": "Neatly organized shelves stocked with various office supplies.",
-    "hint": "office supplies"
+    "alt": "A well-organized desk with stationery supplies.",
+    "hint": "desk stationery"
   },
   "corporateGifting": {
-    "src": "https://images.unsplash.com/photo-1562620479-91696272b080?q=80&w=1920",
+    "src": "https://images.unsplash.com/photo-1606823573838-b638c5388557?q=80&w=1920",
     "width": 1920,
     "height": 1280,
-    "alt": "A collection of elegantly wrapped corporate gift boxes.",
+    "alt": "A collection of curated corporate gifts ready for distribution.",
     "hint": "corporate gifts"
   },
   "cta": {
