@@ -147,7 +147,7 @@ export default function Home() {
           <section id="why-choose-us">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why Leading Companies Choose <span className="text-primary">G</span><span className="text-secondary">SQUARE</span></h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why Leading Companies Choose <span className="text-primary">G</span>SQUARE</h2>
                 <p className="max-w-3xl mx-auto text-muted-foreground md:text-lg">
                     We deliver enterprise-ready solutions that transform operational efficiency and enable your leadership to focus on strategic growth
                 </p>
@@ -293,24 +293,22 @@ export default function Home() {
                   A proven methodology that ensures seamless onboarding and exceptional service delivery
                 </p>
               </div>
-              <div className="relative">
-                <div className="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-border" aria-hidden="true"></div>
-                <div className="relative grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
-                  {processSteps.map((step, index) => (
-                    <div key={step.title} className="flex flex-col items-center text-center">
-                      <div className="relative">
-                        <div className="w-20 h-20 rounded-full bg-card border-2 border-neutral-300 flex items-center justify-center relative z-10">
-                          <span className="text-3xl font-extrabold text-primary">{`0${index + 1}`}</span>
-                        </div>
-                        {index < processSteps.length - 1 && (
-                          <div className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 bg-border -translate-y-1/2" aria-hidden="true" />
-                        )}
-                      </div>
-                      <h3 className="mt-6 text-lg font-bold text-secondary">{step.title}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-y-8 lg:gap-x-12">
+                {processSteps.map((step, index) => (
+                  <div key={step.title} className="relative">
+                    <div className="bg-card p-6 rounded-lg border border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                      <div className="text-5xl font-extrabold text-primary/20 mb-4">{`0${index + 1}`}</div>
+                      <h3 className="text-lg font-bold text-secondary mb-2">{step.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
                     </div>
-                  ))}
-                </div>
+                    {index < processSteps.length - 1 && (
+                      <ChevronRight 
+                        className="absolute top-1/2 -right-7 -translate-y-1/2 h-8 w-8 text-primary/40 hidden lg:block"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </section>
