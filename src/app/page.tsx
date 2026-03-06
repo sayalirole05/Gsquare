@@ -155,7 +155,7 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {whyChooseGsquareItems.map((item, index) => (
-                    <div key={index} className="group bg-card p-6 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                    <div key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
                         <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-accent mb-5 transition-colors duration-300 group-hover:bg-primary">
                             {item.icon}
                         </div>
@@ -189,7 +189,7 @@ export default function Home() {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Housekeeping Card */}
-                <div className="rounded-lg border-2 border-secondary group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
+                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
                   <div className="relative h-64">
                     <Image
                       src={placeholderImages.housekeeping.src}
@@ -214,7 +214,7 @@ export default function Home() {
                 </div>
 
                 {/* Office Supplies Card */}
-                <div className="rounded-lg border-2 border-secondary group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
+                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
                   <div className="relative h-64">
                     <Image
                       src={placeholderImages.officeSupplies.src}
@@ -239,7 +239,7 @@ export default function Home() {
                 </div>
 
                 {/* Corporate Gifting Card */}
-                <div className="rounded-lg border-2 border-secondary group text-card-foreground shadow-sm lg:col-span-2 overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
+                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm lg:col-span-2 overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
                   <div className="grid grid-cols-1 md:grid-cols-2 bg-card">
                     <div className="relative min-h-[300px] md:h-full">
                        <Image
@@ -299,7 +299,7 @@ export default function Home() {
                   {processSteps.map((step, index) => (
                     <div key={step.title} className="flex flex-col items-center text-center">
                       <div className="relative">
-                        <div className="w-20 h-20 rounded-full bg-card border-2 border-secondary flex items-center justify-center relative z-10">
+                        <div className="w-20 h-20 rounded-full bg-card border-2 border-neutral-300 flex items-center justify-center relative z-10">
                           <span className="text-3xl font-extrabold text-primary">{`0${index + 1}`}</span>
                         </div>
                         {index < processSteps.length - 1 && (
