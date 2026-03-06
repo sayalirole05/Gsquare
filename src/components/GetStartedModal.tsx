@@ -13,11 +13,11 @@ import Link from 'next/link';
 import { Phone, MessageSquare } from 'lucide-react';
 import React from 'react';
 
-export function GetStartedModal() {
+export function GetStartedModal({ children }: { children?: React.ReactNode }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>Get Started</Button>
+        {children || <Button>Get Started</Button>}
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>

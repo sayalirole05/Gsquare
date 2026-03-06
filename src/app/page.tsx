@@ -29,6 +29,7 @@ import { FadeIn } from '@/components/FadeIn';
 import placeholderImages from '@/lib/placeholder-images.json';
 import React from 'react';
 import { HomeContactForm } from '@/components/HomeContactForm';
+import { GetStartedModal } from '@/components/GetStartedModal';
 
 export default function Home() {
   const whyChooseGsquareItems = [
@@ -331,9 +332,9 @@ export default function Home() {
                   <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
                     Join leading organisations who trust <span className="text-primary">G</span>SQUARE for their operational excellence
                   </p>
-                  <Button asChild size="lg">
-                    <Link href="/#contact-us">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                  </Button>
+                  <GetStartedModal>
+                    <Button size="lg">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                  </GetStartedModal>
                 </div>
               </div>
             </div>
