@@ -9,38 +9,35 @@ export const Logo = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => 
       {...props}
     >
       <g transform="translate(242, 267)">
-        {/* Icon */}
-        <g>
-          {/* Left Square */}
-          <rect x="0" y="0" width="300" height="300" fill="#FF6A13" />
-          <text
-            x="150"
-            y="150"
-            fontFamily="Montserrat, sans-serif"
-            fontWeight="800"
-            fontSize="190"
-            fill="#FFFFFF"
-            textAnchor="middle"
-            dominantBaseline="central"
-          >
-            G
-          </text>
+        {/* Left Square */}
+        <rect x="0" y="0" width="300" height="300" fill="#FF6A13" />
+        <text
+          x="150"
+          y="150"
+          fontFamily="Montserrat, sans-serif"
+          fontWeight="800"
+          fontSize="190"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          G
+        </text>
 
-          {/* Right Square */}
-          <rect x="240" y="0" width="300" height="300" fill="#FFFFFF" stroke="#FF6A13" strokeWidth="12" />
-          <text
-            x="390"
-            y="150"
-            fontFamily="Montserrat, sans-serif"
-            fontWeight="800"
-            fontSize="190"
-            fill="#2F5597"
-            textAnchor="middle"
-            dominantBaseline="central"
-          >
-            G
-          </text>
-        </g>
+        {/* Right Square */}
+        <rect x="240" y="0" width="300" height="300" fill="#FFFFFF" stroke="#FF6A13" strokeWidth="12" />
+        <text
+          x="390"
+          y="150"
+          fontFamily="Montserrat, sans-serif"
+          fontWeight="800"
+          fontSize="190"
+          fill="#2F5597"
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          G
+        </text>
 
         {/* Brand Text */}
         <text
