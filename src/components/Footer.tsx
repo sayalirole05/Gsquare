@@ -26,7 +26,7 @@ export function Footer() {
           
           <div className="md:col-span-4 space-y-4">
             <Link href="/" className="inline-block">
-              <Logo className="h-16 w-auto" />
+              <Logo className="h-20 w-auto" />
             </Link>
             <p className="text-sm max-w-sm">
               Executive Corporate Support Partner for Organisations
@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-sm">
-          <p>&copy; {currentYear} <span className="font-semibold"><span className="text-primary">G</span><span className="text-secondary">SQUARE CORPORATE SERVICES</span></span>. All rights reserved.</p>
+          <p>&copy; {currentYear} <span className="font-semibold"><span className="text-primary">G</span><span className="text-secondary">SQUARE</span> CORPORATE SERVICES</span>. All rights reserved.</p>
         </div>
       </div>
     </footer>

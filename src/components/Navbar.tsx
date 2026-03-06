@@ -47,9 +47,9 @@ export function Navbar() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center gap-3">
-            <Logo className="h-10 w-auto" />
+            <Logo className="h-12 w-auto" />
             <span className="hidden font-bold tracking-wider text-sm lg:block">
-              <span className="text-primary">G</span><span className="text-secondary">SQUARE CORPORATE SERVICES</span>
+              <span className="text-primary">G</span><span className="text-secondary">SQUARE</span> CORPORATE SERVICES
             </span>
           </Link>
         </div>
@@ -114,7 +114,7 @@ export function Navbar() {
                       className="flex items-center gap-2 text-lg font-semibold my-6"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <Logo className="h-10 w-auto" />
+                      <Logo className="h-12 w-auto" />
                       <span className="sr-only">GSQUARE</span>
                     </Link>
                     <Accordion type="single" collapsible className="w-full">
