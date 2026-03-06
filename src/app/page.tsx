@@ -343,63 +343,46 @@ export default function Home() {
         <FadeIn>
           <section id="contact-us" className="bg-white">
             <div className="container px-4 md:px-6">
-              <div className="grid grid-cols-1 justify-items-center gap-16">
-                <div className="space-y-8">
-                  <div className="space-y-3">
-                    <h2 className="text-3xl md:text-4xl font-bold text-secondary font-headline">Let's Start a Conversation</h2>
-                    <p className="text-muted-foreground text-lg">
-                      Whether you're looking to streamline operations, ensure compliance, or scale your workforce, we're here to help. Get in touch with our team today.
-                    </p>
-                  </div>
-                  <div className="space-y-6">
-                    <div>
-                      <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-full">
-                          <Phone className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="text-sm text-secondary">Call Us</h4>
-                          <p className="font-semibold text-foreground text-lg">+91 97649 97648</p>
-                          <p className="font-semibold text-foreground text-lg">+91 70208 13399</p>
-                        </div>
-                      </div>
+              <div className="w-full max-w-6xl mx-auto space-y-12">
+                <div className="space-y-3 text-center">
+                  <h2 className="text-3xl md:text-4xl font-bold text-secondary font-headline">Let's Start a Conversation</h2>
+                  <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl">
+                    Whether you're looking to streamline operations, ensure compliance, or scale your workforce, we're here to help. Get in touch with our team today.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full flex-shrink-0">
+                      <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-full">
-                          <Mail className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="text-sm text-secondary">Email Us</h4>
-                          <a href="mailto:services@gsquarecorp.co.in" className="font-semibold text-foreground text-lg hover:underline">
-                            services@gsquarecorp.co.in
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-full">
-                          <MapPin className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="text-sm text-secondary">Registered Office</h4>
-                          <address className="not-italic font-semibold text-foreground text-lg">
-                            C/13, S NO 6, SHUBHAM COMPLEX,<br/>
-                            OLD JAKAT NAKA, CHINCHWAD,<br/>
-                            PUNE, India - 411033
-                          </address>
-                        </div>
-                      </div>
+                      <h4 className="text-lg font-bold text-secondary">Call Us</h4>
+                      <p className="font-semibold text-foreground">+91 97649 97648</p>
+                      <p className="font-semibold text-foreground">+91 70208 13399</p>
                     </div>
                   </div>
-                  <div className="bg-accent p-8 rounded-xl mt-12">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="bg-white p-4 rounded-full shadow-md mb-4">
-                        <Phone className="h-8 w-8 text-primary" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-secondary">Let's Connect</h3>
-                      <p className="text-muted-foreground mt-2">We're here to help transform your operations</p>
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full flex-shrink-0">
+                      <Mail className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-secondary">Email Us</h4>
+                      <a href="mailto:services@gsquarecorp.co.in" className="font-semibold text-foreground hover:underline break-all">
+                        services@gsquarecorp.co.in
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-secondary">Registered Office</h4>
+                      <address className="not-italic font-semibold text-foreground">
+                        C/13, S NO 6, SHUBHAM COMPLEX,<br/>
+                        OLD JAKAT NAKA, CHINCHWAD,<br/>
+                        PUNE, India - 411033
+                      </address>
                     </div>
                   </div>
                 </div>
