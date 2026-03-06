@@ -293,7 +293,7 @@ export default function Home() {
                   A proven methodology that ensures seamless onboarding and exceptional service delivery
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-y-8 lg:gap-x-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-x-12">
                 {processSteps.map((step, index) => (
                   <div key={step.title} className="relative">
                     <div className="bg-card p-6 rounded-lg border border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
@@ -329,7 +329,7 @@ export default function Home() {
                 <div className="relative space-y-6">
                   <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Ready to Transform Your Operations?</h2>
                   <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
-                    Join leading organisations who trust GSQUARE for their operational excellence
+                    Join leading organisations who trust <span className="text-primary">G</span>SQUARE for their operational excellence
                   </p>
                   <Button asChild size="lg">
                     <Link href="/#contact-us">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
