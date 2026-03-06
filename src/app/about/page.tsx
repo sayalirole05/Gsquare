@@ -168,7 +168,7 @@ export default function AboutPage() {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold text-secondary mb-2">Our Mission</h3>
-                                <p className="text-muted-foreground text-lg">To support businesses with dependable workplace services that enable efficient operations and productive work environments.</p>
+                                <p className="text-muted-foreground text-lg">To empower organizations with dependable workplace support services that create efficient, well-managed, and productive business environments.</p>
                             </div>
                         </div>
                          <div className="group bg-accent/50 p-8 rounded-lg border border-transparent hover:border-primary transition-all duration-300 flex items-start gap-6">
@@ -177,7 +177,7 @@ export default function AboutPage() {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold text-secondary mb-2">Our Vision</h3>
-                                <p className="text-muted-foreground text-lg">To become a trusted operational partner for organizations by delivering reliable services and long-term value.</p>
+                                <p className="text-muted-foreground text-lg">To be recognized as a reliable and innovative workplace solutions partner, helping organizations operate more efficiently and sustainably.</p>
                             </div>
                         </div>
                     </div>
@@ -253,8 +253,7 @@ export default function AboutPage() {
                         </Button>
                     </div>
                   </div>
-              </div>
-          </section>
+              </section>
         </FadeIn>
       </div>
     </>
