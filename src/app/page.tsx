@@ -346,7 +346,7 @@ export default function Home() {
             <div className="container px-4 md:px-6">
               <div className="w-full max-w-6xl mx-auto space-y-12">
                 <div className="space-y-3 text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-secondary font-headline">Let's Start a Conversation</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-secondary font-headline">Let’s Work Together</h2>
                   <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl">
                     Whether you're looking to streamline operations, ensure compliance, or scale your workforce, we're here to help. Get in touch with our team today.
                   </p>
