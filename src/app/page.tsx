@@ -183,7 +183,7 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-secondary">Our Corporate Solutions</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-                  Comprehensive solutions designed to streamline your operational excellence
+                  Integrated services designed to support modern workplaces with efficiency, reliability, and operational excellence.
                 </p>
               </div>
 
