@@ -1,26 +1,70 @@
-import { CheckCircle, MapPin, Users, Award, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle, Eye, Goal, Layers, Scaling, ThumbsUp, Briefcase, Factory, Users, School, Store, Laptop } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { JsonLd } from '@/components/JsonLd';
 import { siteConfig } from '@/lib/data';
 import { FadeIn } from '@/components/FadeIn';
+import { Button } from '@/components/ui/button';
+import placeholderImages from '@/lib/placeholder-images.json';
+import { Card } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: `Learn about GSQUARE Corporate Services, our mission, operational expertise, and commitment to providing top-tier facility management.`,
+  description: 'We partner with organizations to simplify workplace operations and create productive environments through reliable operational support services.',
   openGraph: {
     title: 'About Us | GSQUARE CORPORATE SERVICES',
-    description: 'Discover our commitment to excellence in facility management.',
+    description: 'Building Efficient Workplaces for Modern Businesses.',
     url: `${siteConfig.url}/about`,
   },
 };
 
-const aboutData = {
-  mission: "Our mission is to deliver exceptional facility management and corporate support services through reliability, integrity, and a client-first approach. We aim to create clean, safe, and efficient environments that empower businesses to thrive.",
-  expertise: "With years of hands-on experience, our leadership team possesses deep operational expertise in managing diverse facilities. We leverage proven processes, technology, and a highly trained workforce to deliver consistent, high-quality outcomes. Our proactive approach anticipates client needs and resolves issues before they impact operations.",
-  compliance: "We are steadfast in our commitment to 100% statutory compliance. All our operations adhere to labor laws, safety regulations, and industry standards. Every member of our staff undergoes a rigorous background verification process, ensuring a trustworthy and secure service for your peace of mind.",
-};
+const valueProps = [
+  {
+    icon: <ThumbsUp className="h-8 w-8 text-primary" />,
+    title: 'Reliable Operational Support',
+    description: 'Dependable services that ensure smooth workplace operations.',
+  },
+  {
+    icon: <CheckCircle className="h-8 w-8 text-primary" />,
+    title: 'Consistent Service Quality',
+    description: 'Structured processes that maintain professional service standards.',
+  },
+  {
+    icon: <Layers className="h-8 w-8 text-primary" />,
+    title: 'Simplified Vendor Management',
+    description: 'Integrated services that reduce operational complexity.',
+  },
+  {
+    icon: <Scaling className="h-8 w-8 text-primary" />,
+    title: 'Scalable Workplace Solutions',
+    description: 'Flexible support designed to grow with your organization.',
+  },
+];
 
+const approachSteps = [
+    {
+        title: 'Understanding Client Needs',
+        description: 'We analyze operational requirements and provide tailored support.'
+    },
+    {
+        title: 'Structured Service Delivery',
+        description: 'Our processes ensure consistent service quality and reliability.'
+    },
+    {
+        title: 'Long-Term Partnerships',
+        description: 'We focus on building trusted and lasting relationships with clients.'
+    }
+];
+
+const industries = [
+    { icon: <Laptop className="h-10 w-10 text-secondary" />, name: 'IT & Technology' },
+    { icon: <Briefcase className="h-10 w-10 text-secondary" />, name: 'Corporate Offices' },
+    { icon: <Users className="h-10 w-10 text-secondary" />, name: 'Co-working Spaces' },
+    { icon: <Factory className="h-10 w-10 text-secondary" />, name: 'Manufacturing' },
+    { icon: <School className="h-10 w-10 text-secondary" />, name: 'Educational Institutions' },
+    { icon: <Store className="h-10 w-10 text-secondary" />, name: 'Retail & Commercial' },
+];
 
 export default function AboutPage() {
   return (
@@ -39,77 +83,175 @@ export default function AboutPage() {
         }}
       />
       <div className="flex flex-col">
-        <section className="bg-primary/5 border-b">
-          <div className="container px-4 md:px-6 py-16 text-center">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">About <span className="text-primary">G</span><span className="text-secondary">SQUARE</span></h1>
-            <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl mt-4">
-              Your Partner in Creating Exceptional Work Environments
-            </p>
-          </div>
+        {/* Hero Section */}
+        <section className="relative w-full py-24 md:py-32 lg:py-40">
+           <Image
+            alt={placeholderImages.aboutHero.alt}
+            src={placeholderImages.aboutHero.src}
+            fill
+            priority
+            className="object-cover"
+            data-ai-hint={placeholderImages.aboutHero.hint}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+           <FadeIn className="container relative text-center">
+            <div className="max-w-3xl mx-auto">
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-headline">
+                Building Efficient Workplaces for Modern Businesses
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-gray-200">
+                We partner with organizations to simplify workplace operations and create productive environments through reliable operational support services.
+              </p>
+              <div className="mt-10">
+                <Button asChild size="lg">
+                  <Link href="/#contact-us">Contact Us</Link>
+                </Button>
+              </div>
+            </div>
+           </FadeIn>
         </section>
 
+        {/* Company Story Section */}
         <FadeIn>
           <section>
-            <div className="container px-4 md:px-6">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="container">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full mt-1">
-                      <Award className="h-6 w-6 text-primary" />
+                    <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Every Productive Workplace Needs a Strong Operational Foundation</h2>
+                    <div className="text-muted-foreground space-y-4 text-lg">
+                        <p>Behind every successful organization is a well-managed workplace environment. Clean facilities, organized workspaces, and reliable operational support contribute significantly to productivity and employee experience.</p>
+                        <p>Our focus is to help organizations streamline everyday workplace operations so teams can concentrate on growth and innovation.</p>
                     </div>
-                    <div>
-                      <h2 className="text-2xl font-bold font-headline">Our Mission</h2>
-                      <p className="text-muted-foreground mt-2">{aboutData.mission}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                     <div className="bg-primary/10 p-3 rounded-full mt-1">
-                      <Users className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl font-bold font-headline">Operational Expertise</h2>
-                      <p className="text-muted-foreground mt-2">{aboutData.expertise}</p>
-                    </div>
-                  </div>
                 </div>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full mt-1">
-                      <ShieldCheck className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl font-bold font-headline">Compliance & Background Verification</h2>
-                      <p className="text-muted-foreground mt-2">{aboutData.compliance}</p>
-                    </div>
-                  </div>
-                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full mt-1">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl font-bold font-headline">Nationwide Coverage</h2>
-                      <p className="text-muted-foreground mt-2">
-                        Our services span across India, providing consistent and high-quality facility management solutions to corporate clients in major metropolitan areas and industrial hubs. We support multi-location businesses with a unified service standard.
-                      </p>
-                    </div>
-                  </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+                    <Image
+                        src={placeholderImages.aboutStory.src}
+                        alt={placeholderImages.aboutStory.alt}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={placeholderImages.aboutStory.hint}
+                    />
                 </div>
               </div>
             </div>
           </section>
         </FadeIn>
         
+        {/* Value Proposition Section */}
         <FadeIn>
-          <section className="bg-muted">
-              <div className="container">
-                  <div className="rounded-lg bg-primary text-primary-foreground p-8 md:p-12 lg:p-16 text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Partner with the Experts</h2>
-                  <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
-                      Discover the difference that professional, compliant, and client-focused facility management can make.
-                  </p>
-                  <Link href="/#contact-us" className="inline-flex h-12 items-center justify-center rounded-md bg-secondary px-8 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
-                      Request a Consultation
-                  </Link>
+            <section className="bg-muted">
+                <div className="container">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Designed for Modern Enterprises</h2>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {valueProps.map((item, index) => (
+                            <Card key={index} className="bg-card text-left p-6 border-transparent shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                                <div className="bg-primary/10 p-3 rounded-lg w-max mb-4">{item.icon}</div>
+                                <h3 className="text-xl font-bold text-secondary mb-2">{item.title}</h3>
+                                <p className="text-muted-foreground">{item.description}</p>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </FadeIn>
+
+        {/* Mission & Vision Section */}
+        <FadeIn>
+            <section>
+                <div className="container">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div className="group bg-accent/50 p-8 rounded-lg border border-transparent hover:border-primary transition-all duration-300 flex items-start gap-6">
+                            <div className="bg-white p-3 rounded-lg shadow-sm mt-1">
+                                <Goal className="h-8 w-8 text-primary"/>
+                            </div>
+                            <div>
+                                <h3 className="text-2xl font-bold text-secondary mb-2">Our Mission</h3>
+                                <p className="text-muted-foreground text-lg">To support businesses with dependable workplace services that enable efficient operations and productive work environments.</p>
+                            </div>
+                        </div>
+                         <div className="group bg-accent/50 p-8 rounded-lg border border-transparent hover:border-primary transition-all duration-300 flex items-start gap-6">
+                             <div className="bg-white p-3 rounded-lg shadow-sm mt-1">
+                                <Eye className="h-8 w-8 text-primary"/>
+                            </div>
+                            <div>
+                                <h3 className="text-2xl font-bold text-secondary mb-2">Our Vision</h3>
+                                <p className="text-muted-foreground text-lg">To become a trusted operational partner for organizations by delivering reliable services and long-term value.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </FadeIn>
+
+        {/* Our Approach Section */}
+        <FadeIn>
+            <section className="bg-muted">
+                <div className="container">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">How We Work</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {approachSteps.map((step, index) => (
+                           <Card key={index} className="bg-card text-left p-8 border-transparent shadow-md hover:shadow-xl hover:border-primary transition-all duration-300">
+                                <div className="text-5xl font-extrabold text-primary/20 mb-4">0{index + 1}</div>
+                                <h3 className="text-xl font-bold text-secondary mb-2">{step.title}</h3>
+                                <p className="text-muted-foreground">{step.description}</p>
+                           </Card>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </FadeIn>
+
+         {/* Industries Section */}
+        <FadeIn>
+            <section>
+                <div className="container">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Industries We Support</h2>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
+                        {industries.map((industry) => (
+                            <div key={industry.name} className="flex flex-col items-center text-center gap-4">
+                                <div className="bg-muted p-5 rounded-lg border">
+                                    {industry.icon}
+                                </div>
+                                <p className="font-semibold text-secondary">{industry.name}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </FadeIn>
+
+        {/* Closing Statement Section */}
+        <FadeIn>
+            <section className="bg-muted">
+                <div className="container text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Supporting Workplaces That Drive Business Success</h2>
+                    <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                        Well-maintained workplaces create the foundation for productivity, collaboration, and growth. Our goal is to help organizations maintain efficient environments so teams can focus on delivering their best work.
+                    </p>
+                </div>
+            </section>
+        </FadeIn>
+
+        {/* Final CTA Section */}
+        <FadeIn>
+          <section className="bg-secondary">
+              <div className="container text-center">
+                  <div className="max-w-2xl mx-auto">
+                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-headline">Let’s Build Better Workplace Operations Together</h2>
+                    <div className="mt-10 flex items-center justify-center gap-x-6">
+                        <Button asChild size="lg">
+                            <Link href="/#contact-us">Contact Us</Link>
+                        </Button>
+                        <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-secondary">
+                            <Link href="/#contact-us">Request Consultation</Link>
+                        </Button>
+                    </div>
                   </div>
               </div>
           </section>

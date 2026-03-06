@@ -6,6 +6,16 @@
     "alt": "Modern office interior with glass walls",
     "hint": "office interior"
   },
+  "aboutHero": {
+    "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHw1fHxjb2xsYWJvcmF0aXZlJTIwb2ZmaWNlfGVufDB8fHx8MTcxMTU0ODk1Mnww&ixlib=rb-4.1.0&q=85",
+    "alt": "Team collaborating in a modern office environment with a whiteboard.",
+    "hint": "collaborative office"
+  },
+  "aboutStory": {
+    "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1920",
+    "alt": "A team discussing work around a table in a bright, modern office.",
+    "hint": "team discussion"
+  },
   "housekeeping": {
     "src": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1920",
     "width": 1920,
@@ -21,11 +31,11 @@
     "hint": "desk stationery"
   },
   "corporateGifting": {
-    "src": "https://images.unsplash.com/photo-1594903335559-07cf9302633d?q=80&w=1920",
+    "src": "https://images.unsplash.com/photo-1606821235339-b3b3c3773c3f?q=80&w=1920&h=1280&fit=crop",
     "width": 1920,
     "height": 1280,
-    "alt": "A beautiful corporate gift box with a reusable cup, a jar, and other items.",
-    "hint": "gift box"
+    "alt": "A curated corporate gift box with various items ready for sending.",
+    "hint": "curated gift"
   },
   "cta": {
     "src": "https://picsum.photos/seed/cta-bg/1200/400",
