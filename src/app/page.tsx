@@ -181,7 +181,7 @@ export default function Home() {
           <section id="services-portfolio" className="bg-muted">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-secondary">Our Integrated Corporate Service Portfolio</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-secondary">Our Corporate Solutions</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
                   Comprehensive solutions designed to streamline your operational excellence
                 </p>
@@ -293,7 +293,7 @@ export default function Home() {
                   A proven methodology that ensures seamless onboarding and exceptional service delivery
                 </p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-x-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-4 lg:gap-x-12">
                 {processSteps.map((step, index) => (
                   <div key={step.title} className="relative">
                     <div className="bg-card p-6 rounded-lg border border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
