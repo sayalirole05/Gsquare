@@ -253,7 +253,8 @@ export default function AboutPage() {
                         </Button>
                     </div>
                   </div>
-              </section>
+              </div>
+          </section>
         </FadeIn>
       </div>
     </>
