@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'Our Services',
   description: 'Explore our comprehensive facility management and corporate support services, including housekeeping, material supply, and corporate gifting.',
   openGraph: {
-    title: 'Our Services | G Square Corporate Services',
+    title: 'Our Services | GSQUARE CORPORATE SERVICES',
     description: 'Comprehensive facility management and corporate support solutions.',
     url: `${siteConfig.url}/services`,
   },
@@ -29,7 +29,7 @@ export default function ServicesHubPage() {
       <JsonLd data={{
           '@context': 'https://schema.org',
           '@type': 'WebPage',
-          name: 'G Square Services',
+          name: 'GSQUARE Services',
           description: metadata.description,
           url: `${siteConfig.url}/services`,
           isPartOf: {

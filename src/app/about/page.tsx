@@ -7,9 +7,9 @@ import { FadeIn } from '@/components/FadeIn';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: `Learn about G Square Corporate Services, our mission, operational expertise, and commitment to providing top-tier facility management.`,
+  description: `Learn about GSQUARE Corporate Services, our mission, operational expertise, and commitment to providing top-tier facility management.`,
   openGraph: {
-    title: 'About Us | G SQUARE CORPORATE SERVICES',
+    title: 'About Us | GSQUARE CORPORATE SERVICES',
     description: 'Discover our commitment to excellence in facility management.',
     url: `${siteConfig.url}/about`,
   },
@@ -28,7 +28,7 @@ export default function AboutPage() {
       <JsonLd data={{
           '@context': 'https://schema.org',
           '@type': 'WebPage',
-          name: 'About G SQUARE CORPORATE SERVICES',
+          name: 'About GSQUARE CORPORATE SERVICES',
           description: metadata.description,
           url: `${siteConfig.url}/about`,
           isPartOf: {
@@ -41,7 +41,7 @@ export default function AboutPage() {
       <div className="flex flex-col">
         <section className="bg-primary/5 border-b">
           <div className="container px-4 md:px-6 py-16 text-center">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">About G Square</h1>
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">About <span className="text-primary">G</span><span className="text-secondary">SQUARE</span></h1>
             <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl mt-4">
               Your Partner in Creating Exceptional Work Environments
             </p>

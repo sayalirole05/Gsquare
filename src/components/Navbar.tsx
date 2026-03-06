@@ -49,10 +49,7 @@ export function Navbar() {
           <Link href="/" className="mr-6 flex items-center gap-3">
             <Logo className="h-10 w-auto" />
             <span className="hidden font-bold tracking-wider text-sm lg:block">
-              <span className="text-primary">G</span>
-              <span className="text-secondary">
-                SQUARE CORPORATE SERVICES
-              </span>
+              <span className="text-primary">G</span><span className="text-secondary">SQUARE CORPORATE SERVICES</span>
             </span>
           </Link>
         </div>
@@ -118,7 +115,7 @@ export function Navbar() {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <Logo className="h-10 w-auto" />
-                      <span className="sr-only">GSquare</span>
+                      <span className="sr-only">GSQUARE</span>
                     </Link>
                     <Accordion type="single" collapsible className="w-full">
                       {mainNav.map((item) =>

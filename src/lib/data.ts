@@ -1,8 +1,8 @@
 import placeholderImages from './placeholder-images.json';
 
 export const siteConfig = {
-  name: 'G SQUARE CORPORATE SERVICES',
-  brandName: 'G SQUARE',
+  name: 'GSQUARE CORPORATE SERVICES',
+  brandName: 'GSQUARE',
   description: 'Premier Facility Management and Corporate Support Services across India. We provide housekeeping, material supply, stationery, and corporate gifting solutions.',
   url: 'https://gsquarecorp.in',
   phone: '+917020813399',
@@ -86,7 +86,7 @@ export const servicePages = [
   {
     slug: 'material-supply',
     title: 'Cleaning Material Suppliers',
-    description: 'G Square is a leading supplier of cleaning, housekeeping, and pantry materials. We offer a comprehensive range of high-quality products at competitive prices, ensuring you never run out of essential supplies.',
+    description: 'GSQUARE is a leading supplier of cleaning, housekeeping, and pantry materials. We offer a comprehensive range of high-quality products at competitive prices, ensuring you never run out of essential supplies.',
     features: [
       'Wide Range of Products',
       'Branded & Quality Assured Items',
@@ -142,11 +142,11 @@ export const servicePages = [
 export const industries = [
   {
     name: 'IT Parks',
-    description: 'Servicing major IT hubs with specialized cleaning and support services.',
+    description: 'Servicing major IT hubs with specialized cleaning and support services across India.',
   },
   {
     name: 'Manufacturing Units',
-    description: 'Providing robust facility services for manufacturing units and industrial zones.',
+    description: 'Providing robust facility services for manufacturing units and industrial zones nationwide.',
   },
   {
     name: 'Corporate Offices',
@@ -202,7 +202,7 @@ export const whyChooseUs = [
 
 export const newTestimonials = [
     {
-        "text": "Gsquare transformed our workplace operations with structured housekeeping and timely material supply. Their professionalism reflects true enterprise standards.",
+        "text": "GSQUARE transformed our workplace operations with structured housekeeping and timely material supply. Their professionalism reflects true enterprise standards.",
         "image": "https://images.unsplash.com/photo-1615109398623-88346a601842?w=150&h=150&fit=crop&crop=face&q=80",
         "name": "Siddharth Rao",
         "role": "Admin Head, IT Park Pune"
@@ -214,7 +214,7 @@ export const newTestimonials = [
         "role": "Facility Manager"
     },
     {
-        "text": "From onboarding to supervision, Gsquare maintains strong compliance and operational discipline. A dependable partner.",
+        "text": "From onboarding to supervision, GSQUARE maintains strong compliance and operational discipline. A dependable partner.",
         "image": "https://images.unsplash.com/photo-1604234898338-644a420959ed?w=150&h=150&fit=crop&crop=face&q=80",
         "name": "Neha Deshpande",
         "role": "Operations Director"
@@ -238,7 +238,7 @@ export const newTestimonials = [
         "role": "Plant Head"
     },
     {
-        "text": "Gsquare helped us consolidate multiple vendors into one structured solution, reducing operational complexity.",
+        "text": "GSQUARE helped us consolidate multiple vendors into one structured solution, reducing operational complexity.",
         "image": "https://images.unsplash.com/photo-1613040801198-a0852b41c640?w=150&h=150&fit=crop&crop=face&q=80",
         "name": "Karan Gupta",
         "role": "Procurement Lead"
@@ -256,7 +256,7 @@ export const newTestimonials = [
         "role": "Warehouse Supervisor"
     },
     {
-        "text": "The transition from our previous vendor to Gsquare was smooth and professionally managed.",
+        "text": "The transition from our previous vendor to GSQUARE was smooth and professionally managed.",
         "image": "https://images.unsplash.com/photo-1549419683-16a85f52309f?w=150&h=150&fit=crop&crop=face&q=80",
         "name": "Amit Verma",
         "role": "Facility Head"
@@ -274,7 +274,7 @@ export const newTestimonials = [
         "role": "Corporate Services Manager"
     },
     {
-        "text": "Gsquare understands corporate expectations and delivers with consistency and discipline.",
+        "text": "GSQUARE understands corporate expectations and delivers with consistency and discipline.",
         "image": "https://images.unsplash.com/photo-1624224999912-7c39981881a5?w=150&h=150&fit=crop&crop=face&q=80",
         "name": "Divya Iyer",
         "role": "HR Business Partner"
@@ -304,7 +304,7 @@ export const newTestimonials = [
         "role": "Office Manager"
     },
     {
-        "text": "Gsquare’s structured processes and supervisor oversight ensure consistent service quality.",
+        "text": "GSQUARE’s structured processes and supervisor oversight ensure consistent service quality.",
         "image": "https://images.unsplash.com/photo-1613340641403-34444e277636?w=150&h=150&fit=crop&crop=face&q=80",
         "name": "Aditya Deshmukh",
         "role": "Facility Operations Head"

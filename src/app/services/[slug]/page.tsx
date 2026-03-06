@@ -1,4 +1,3 @@
-
 import { servicePages, siteConfig, industries, processSteps, whyChooseUs, newTestimonials } from '@/lib/data';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -49,7 +48,6 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import React from 'react';
 import placeholderImages from '@/lib/placeholder-images.json';
-import { LogoCloudSection } from '@/components/LogoCloudSection';
 
 // Generate static pages for each service
 export async function generateStaticParams() {
@@ -380,7 +378,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <section>
                     <div className="container px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why GSquare for Housekeeping?</h2>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why <span className="text-primary">G</span><span className="text-secondary">SQUARE</span> for Housekeeping?</h2>
                             <p className="max-w-3xl mx-auto text-muted-foreground md:text-lg">
                                 Our commitment to excellence ensures a clean, safe, and productive environment for your business.
                             </p>
@@ -507,9 +505,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             </div>
                         </div>
                     </section>
-                </FadeIn>
-                <FadeIn>
-                    <LogoCloudSection />
                 </FadeIn>
                 <FadeIn>
                     <section>

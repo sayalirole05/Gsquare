@@ -1,13 +1,6 @@
-
-
-
-
-
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   CheckCircle,
   Building,
@@ -36,7 +29,6 @@ import { FadeIn } from '@/components/FadeIn';
 import placeholderImages from '@/lib/placeholder-images.json';
 import React from 'react';
 import { HomeContactForm } from '@/components/HomeContactForm';
-import { LogoCloudSection } from '@/components/LogoCloudSection';
 
 export default function Home() {
   const whyChooseGsquareItems = [
@@ -155,7 +147,7 @@ export default function Home() {
           <section id="why-choose-us">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why Leading Companies Choose GSquare</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why Leading Companies Choose <span className="text-primary">G</span><span className="text-secondary">SQUARE</span></h2>
                 <p className="max-w-3xl mx-auto text-muted-foreground md:text-lg">
                     We deliver enterprise-ready solutions that transform operational efficiency and enable your leadership to focus on strategic growth
                 </p>
@@ -339,7 +331,7 @@ export default function Home() {
                 <div className="relative space-y-6">
                   <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Ready to Transform Your Operations?</h2>
                   <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
-                    Join leading organisations who trust GSquare for their operational excellence
+                    Join leading organisations who trust GSQUARE for their operational excellence
                   </p>
                   <Button asChild size="lg">
                     <Link href="/#contact-us">Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>

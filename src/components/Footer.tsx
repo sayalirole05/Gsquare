@@ -22,9 +22,9 @@ export function Footer() {
   return (
     <footer className="dark bg-secondary text-muted-foreground">
       <div className="container py-12 md:py-16">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-8">
           
-          <div className="sm:col-span-2 md:col-span-4 space-y-4">
+          <div className="md:col-span-4 space-y-4">
             <Link href="/" className="inline-block">
               <Logo className="h-16 w-auto" />
             </Link>
@@ -59,7 +59,7 @@ export function Footer() {
             </ul>
           </div>
           
-          <div className="sm:col-span-2 md:col-span-4 space-y-4">
+          <div className="md:col-span-4 space-y-4">
             <h4 className="font-bold text-primary-foreground mb-4 tracking-wide">Stay Updated</h4>
             <p className="text-sm">Join our newsletter to stay up to date on features and releases.</p>
             <form className="flex w-full max-w-sm items-center space-x-2">
@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-sm">
-          <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
+          <p>&copy; {currentYear} <span className="font-semibold"><span className="text-primary">G</span><span className="text-secondary">SQUARE CORPORATE SERVICES</span></span>. All rights reserved.</p>
         </div>
       </div>
     </footer>
