@@ -287,10 +287,10 @@ export default function Home() {
             <div className="container px-4 md:px-6">
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-secondary">
-                  Our Structured Manpower Deployment Process
+                  Our Workforce Strategy
                 </h2>
                 <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed mt-4">
-                  A proven methodology that ensures seamless onboarding and exceptional service delivery
+                  A strategic framework for recruiting, training, and deploying the right talent to support seamless business operations.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-4 lg:gap-x-12">
