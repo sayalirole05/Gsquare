@@ -26,7 +26,7 @@ export function Footer() {
           
           <div className="md:col-span-4 space-y-4">
             <Link href="/" className="inline-block">
-              <Logo className="h-20 w-auto" />
+              <Logo style={{ height: '82px' }} className="w-auto" />
             </Link>
             <p className="text-sm max-w-sm">
               Executive Corporate Support Partner for Organisations
