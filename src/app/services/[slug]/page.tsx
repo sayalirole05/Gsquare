@@ -85,12 +85,25 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     notFound();
   }
 
-  const icons: { [key: string]: React.ReactNode } = {
-    'housekeeping': <ClipboardList className="h-16 w-16 text-primary" />,
-    'material-supply': <Truck className="h-16 w-16 text-primary" />,
-    'stationery': <Package className="h-16 w-16 text-primary" />,
-    'corporate-gifting': <Gift className="h-16 w-16 text-primary" />,
+  const serviceHeroImages: { [key: string]: { src: string; alt: string; } } = {
+    'housekeeping': {
+      src: (placeholderImages as any).housekeeping.src,
+      alt: (placeholderImages as any).housekeeping.alt,
+    },
+    'material-supply': {
+      src: placeholderImages.materialSupplyPage.src,
+      alt: placeholderImages.materialSupplyPage.alt,
+    },
+    'stationery': {
+      src: placeholderImages.stationeryPage.src,
+      alt: placeholderImages.stationeryPage.alt,
+    },
+    'corporate-gifting': {
+      src: placeholderImages.giftingPage.src,
+      alt: placeholderImages.giftingPage.alt,
+    },
   };
+  const heroImage = serviceHeroImages[service.slug as keyof typeof serviceHeroImages];
   
   const industryIcons = {
     'IT Parks': <Building className="h-10 w-10 text-primary group-hover:text-primary-foreground transition-colors" />,
@@ -260,20 +273,28 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       />
       <div className="flex flex-col">
         {/* Hero Section */}
-        <section className="bg-primary/5 border-b">
-          <div className="container px-4 md:px-6 py-16">
-            <div className="grid md:grid-cols-[auto_1fr] items-center gap-8">
-                <div className="bg-primary/10 p-4 rounded-full hidden md:block">
-                    {icons[service.slug]}
-                </div>
-                <div>
-                    <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">{service.title}</h1>
-                    <p className="max-w-[700px] text-muted-foreground md:text-xl mt-4">
-                        {service.description}
-                    </p>
-                </div>
+        <section
+            className="relative w-full bg-cover bg-center bg-fixed"
+            style={{
+                backgroundImage: `url(${heroImage.src})`,
+                height: '400px'
+            }}
+        >
+            <div className="absolute inset-0 bg-secondary/70" />
+            <div className="relative container h-full flex flex-col justify-center items-center text-center text-white">
+                <FadeIn>
+                    <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
+                        {service.title}
+                    </h1>
+                    <div className="mt-4 text-lg">
+                        <Link href="/" className="text-primary-foreground/80 hover:text-white transition-colors">Home</Link>
+                        <span className="mx-2 text-primary-foreground/50">&gt;</span>
+                        <Link href="/services" className="text-primary-foreground/80 hover:text-white transition-colors">Services</Link>
+                        <span className="mx-2 text-primary-foreground/50">&gt;</span>
+                        <span className="font-semibold">{service.title}</span>
+                    </div>
+                </FadeIn>
             </div>
-          </div>
         </section>
         
         {/* Housekeeping Page Content */}
