@@ -2,13 +2,13 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, ChevronDown } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { mainNav } from '@/lib/data';
 import { Button } from '@/components/ui/button';
-import { Logo } from '@/components/icons/Logo';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import {
   DropdownMenu,
@@ -46,9 +46,9 @@ export function Navbar() {
     >
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center gap-3">
-            <Logo style={{ height: '50px' }} className="w-auto" />
-            <span className="hidden font-bold tracking-wider text-sm lg:block">
+          <Link href="/" className="mr-6 flex items-center gap-0">
+            <Image src="/images/Logo-Final.png" alt="GSQUARE CORPORATE SERVICES Logo" width={150} height={75} style={{ height: '75px', width: 'auto' }} />
+            <span className="hidden tracking-wider text-md text-secondary lg:block">
               <span className="text-primary">G</span><span className="text-secondary">SQUARE</span> CORPORATE SERVICES
             </span>
           </Link>
@@ -114,7 +114,7 @@ export function Navbar() {
                       className="flex items-center gap-2 text-lg font-semibold my-6"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <Logo style={{ height: '50px' }} className="w-auto" />
+                      <Image src="/images/Logo-Final.png" alt="GSQUARE Logo" width={100} height={50} />
                       <span className="sr-only">GSQUARE</span>
                     </Link>
                     <Accordion type="single" collapsible className="w-full">

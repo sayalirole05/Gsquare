@@ -189,56 +189,6 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Housekeeping Card */}
-                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
-                  <div className="relative h-64">
-                    <Image
-                      src={placeholderImages.housekeeping.src}
-                      alt={placeholderImages.housekeeping.alt}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={placeholderImages.housekeeping.hint}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Housekeeping Services</h3>
-                  </div>
-                  <div className="p-6 space-y-4 bg-card">
-                    <div>
-                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Trained Manpower</h4>
-                      <p className="text-sm text-muted-foreground">Verified, uniformed workforce with dedicated supervisors ensuring consistent quality</p>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Premium Materials</h4>
-                      <p className="text-sm text-muted-foreground">High-quality chemicals, tools, and consumables for professional maintenance</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Office Supplies Card */}
-                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
-                  <div className="relative h-64">
-                    <Image
-                      src={placeholderImages.officeSupplies.src}
-                      alt={placeholderImages.officeSupplies.alt}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={placeholderImages.officeSupplies.hint}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Office Supplies</h3>
-                  </div>
-                  <div className="p-6 space-y-4 bg-card">
-                    <div>
-                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Stationery Management</h4>
-                      <p className="text-sm text-muted-foreground">End-to-end supply of desk essentials, print materials, and office consumables</p>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">General Supplies</h4>
-                      <p className="text-sm text-muted-foreground">Pantry items, utilities, and recurring operational materials with automated inventory</p>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Corporate Gifting Card */}
                 <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
                   <div className="relative h-64">
@@ -276,6 +226,57 @@ export default function Home() {
                     </ul>
                   </div>
                 </div>
+                
+                {/* Housekeeping Card */}
+                <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
+                  <div className="relative h-64">
+                    <Image
+                      src={placeholderImages.housekeeping.src}
+                      alt={placeholderImages.housekeeping.alt}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={placeholderImages.housekeeping.hint}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Housekeeping Services</h3>
+                  </div>
+                  <div className="p-6 space-y-4 bg-card">
+                    <div>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Trained Manpower</h4>
+                      <p className="text-sm text-muted-foreground">Verified, uniformed workforce with dedicated supervisors ensuring consistent quality</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Premium Materials</h4>
+                      <p className="text-sm text-muted-foreground">High-quality chemicals, tools, and consumables for professional maintenance</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Office Supplies Card */}
+                <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
+                  <div className="relative h-64">
+                    <Image
+                      src={placeholderImages.officeSupplies.src}
+                      alt={placeholderImages.officeSupplies.alt}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={placeholderImages.officeSupplies.hint}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Office Supplies</h3>
+                  </div>
+                  <div className="p-6 space-y-4 bg-card">
+                    <div>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Stationery Management</h4>
+                      <p className="text-sm text-muted-foreground">End-to-end supply of desk essentials, print materials, and office consumables</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">General Supplies</h4>
+                      <p className="text-sm text-muted-foreground">Pantry items, utilities, and recurring operational materials with automated inventory</p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </section>

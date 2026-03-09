@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Logo } from '@/components/icons/Logo';
+import Image from 'next/image';
 import { siteConfig } from '@/lib/data';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
@@ -27,7 +27,7 @@ export function Footer() {
           
           <div className="md:col-span-4 lg:col-span-5 space-y-4">
             <Link href="/" className="inline-block">
-              <Logo style={{ height: '52px' }} className="w-auto" />
+              <Image src="/images/Logo-Final.png" alt="GSQUARE CORPORATE SERVICES Logo" width={104} height={52} />
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
               Executive Corporate Support Partner for Organisations, delivering operational excellence and compliance-driven facility management services across India.
