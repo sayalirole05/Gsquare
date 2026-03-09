@@ -135,7 +135,7 @@ export default function AboutPage() {
         <FadeIn>
             <section className="bg-muted py-16">
                 <div className="container">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
+                    <div className="text-center max-w-3xl mx-auto mb-8">
                         <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Designed for Modern Enterprises</h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -179,6 +179,27 @@ export default function AboutPage() {
             </section>
         </FadeIn> */}
 
+         {/* Industries Section */}
+         <FadeIn>
+            <section className='py-16'>
+                <div className="container">
+                    <div className="text-center max-w-3xl mx-auto mb-8">
+                        <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Industries We Support</h2>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
+                        {industries.map((industry) => (
+                            <div key={industry.name} className="flex flex-col items-center text-center gap-4">
+                                <div className="bg-accent p-5 rounded-lg">
+                                    {industry.icon}
+                                </div>
+                                <p className="font-semibold text-secondary">{industry.name}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </FadeIn>
+
         {/* Our Approach Section */}
         <FadeIn>
             <section className="bg-muted py-16">
@@ -199,29 +220,9 @@ export default function AboutPage() {
             </section>
         </FadeIn>
 
-         {/* Industries Section */}
-        <FadeIn>
-            <section>
-                <div className="container">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Industries We Support</h2>
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
-                        {industries.map((industry) => (
-                            <div key={industry.name} className="flex flex-col items-center text-center gap-4">
-                                <div className="bg-accent p-5 rounded-lg">
-                                    {industry.icon}
-                                </div>
-                                <p className="font-semibold text-secondary">{industry.name}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </FadeIn>
 
         {/* Closing Statement Section */}
-        <FadeIn>
+        {/* <FadeIn>
             <section className="bg-muted">
                 <div className="container text-center max-w-3xl mx-auto">
                     <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Supporting Workplaces That Drive Business Success</h2>
@@ -230,14 +231,14 @@ export default function AboutPage() {
                     </p>
                 </div>
             </section>
-        </FadeIn>
+        </FadeIn> */}
 
         {/* Final CTA Section */}
         <FadeIn>
           <section className="bg-secondary">
               <div className="container text-center">
                   <div className="max-w-2xl mx-auto">
-                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-headline">Let’s Build Better Workplace Operations Together</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-headline">Let’s Build Better Workplace Operations</h2>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Button asChild size="lg">
                             <Link href="/#contact-us">Contact Us</Link>

@@ -190,7 +190,7 @@ export default function Home() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Corporate Gifting Card */}
-                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
+                <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
                   <div className="relative h-64">
                     <Image
                         src={placeholderImages.corporateGifting.src}
@@ -205,7 +205,7 @@ export default function Home() {
                    <div className="p-6 space-y-4 bg-card">
                     <div>
                       <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Customized Solutions</h4>
-                      <p className="text-sm text-muted-foreground">Custom festive and employee engagement kits that strengthen relationships.</p>
+                      <p className="text-sm text-muted-foreground">Custom festive and employee engagement kits with branded and non-branded products.                      </p>
                     </div>
                     <div>
                       <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Timely Delivery</h4>

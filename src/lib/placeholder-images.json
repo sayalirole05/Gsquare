@@ -17,14 +17,14 @@
     "hint": "team discussion"
   },
   "housekeeping": {
-    "src": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1920",
+    "src": "/images/house-keeping.jpeg",
     "width": 1920,
     "height": 1280,
     "alt": "Professional cleaning staff member wiping down a glass surface in a modern office.",
     "hint": "office cleaning"
   },
   "officeSupplies": {
-    "src": "https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1920",
+    "src": "/images/office-supply.jpeg",
     "width": 1920,
     "height": 1280,
     "alt": "A well-organized desk with stationery supplies.",
