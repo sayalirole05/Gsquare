@@ -188,7 +188,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Housekeeping Card */}
                 <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
                   <div className="relative h-64">
@@ -240,44 +240,42 @@ export default function Home() {
                 </div>
 
                 {/* Corporate Gifting Card */}
-                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm lg:col-span-2 overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
-                  <div className="grid grid-cols-1 md:grid-cols-2 bg-card">
-                    <div className="relative min-h-[300px] md:h-full">
-                       <Image
-                          src={placeholderImages.corporateGifting.src}
-                          alt={placeholderImages.corporateGifting.alt}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={placeholderImages.corporateGifting.hint}
-                       />
-                    </div>
-                    <div className="p-8 flex flex-col justify-center">
-                       <h3 className="text-2xl font-bold mb-2 text-secondary group-hover:text-primary transition-colors">Corporate Gifting</h3>
-                       <p className="text-muted-foreground mb-6">
-                         Customized festive and employee engagement kits that strengthen relationships and boost morale. From festival celebrations to employee milestones, we create memorable gifting experiences.
-                       </p>
-                       <ul className="space-y-3">
-                        <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span>Customized gift solutions</span>
-                        </li>
-                        <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span>Festival & occasion-based kits</span>
-                        </li>
-                        <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span>Employee engagement packages</span>
-                        </li>
-                        <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span>Bulk ordering & timely delivery</span>
-                        </li>
-                       </ul>
-                    </div>
+                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
+                  <div className="relative h-64">
+                    <Image
+                        src={placeholderImages.corporateGifting.src}
+                        alt={placeholderImages.corporateGifting.alt}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={placeholderImages.corporateGifting.hint}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Corporate Gifting</h3>
+                  </div>
+                  <div className="p-6 space-y-4 bg-card">
+                    <p className="text-sm text-muted-foreground">
+                      Customized festive and employee engagement kits that strengthen relationships and boost morale.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                          <span className="text-muted-foreground">Customized gift solutions</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                          <span className="text-muted-foreground">Festival & occasion-based kits</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                          <span className="text-muted-foreground">Employee engagement packages</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                          <span className="text-muted-foreground">Bulk ordering & timely delivery</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-
               </div>
             </div>
           </section>
