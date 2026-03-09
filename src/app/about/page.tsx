@@ -58,12 +58,12 @@ const approachSteps = [
 ];
 
 const industries = [
-    { icon: <Laptop className="h-10 w-10 text-secondary" />, name: 'IT & Technology' },
-    { icon: <Briefcase className="h-10 w-10 text-secondary" />, name: 'Corporate Offices' },
-    { icon: <Users className="h-10 w-10 text-secondary" />, name: 'Co-working Spaces' },
-    { icon: <Factory className="h-10 w-10 text-secondary" />, name: 'Manufacturing' },
-    { icon: <School className="h-10 w-10 text-secondary" />, name: 'Educational Institutions' },
-    { icon: <Store className="h-10 w-10 text-secondary" />, name: 'Retail & Commercial' },
+    { icon: <Laptop className="h-10 w-10 text-primary" />, name: 'IT & Technology' },
+    { icon: <Briefcase className="h-10 w-10 text-primary" />, name: 'Corporate Offices' },
+    { icon: <Users className="h-10 w-10 text-primary" />, name: 'Co-working Spaces' },
+    { icon: <Factory className="h-10 w-10 text-primary" />, name: 'Manufacturing' },
+    { icon: <School className="h-10 w-10 text-primary" />, name: 'Educational Institutions' },
+    { icon: <Store className="h-10 w-10 text-primary" />, name: 'Retail & Commercial' },
 ];
 
 export default function AboutPage() {
@@ -108,14 +108,13 @@ export default function AboutPage() {
 
         {/* Company Story Section */}
         <FadeIn>
-          <section>
+          <section className='py-16'>
             <div className="container">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center  lg:px-6">
                 <div className="space-y-6">
-                    <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Every Productive Workplace Needs a Strong Operational Foundation</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Strong Productive Workplaces</h2>
                     <div className="text-muted-foreground space-y-4 text-lg">
-                        <p>Behind every successful organization is a well-managed workplace environment. Clean facilities, organized workspaces, and reliable operational support contribute significantly to productivity and employee experience.</p>
-                        <p>Our focus is to help organizations streamline everyday workplace operations so teams can concentrate on growth and innovation.</p>
+                        <p>Every successful organization relies on well-managed workplace operations. Clean facilities, organized environments, and dependable operational support create the conditions where teams can focus on productivity, efficiency, and innovation. Our goal is to help businesses streamline daily workplace operations so employees can concentrate on what truly drives growth.</p>
                     </div>
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
@@ -134,7 +133,7 @@ export default function AboutPage() {
         
         {/* Value Proposition Section */}
         <FadeIn>
-            <section className="bg-muted">
+            <section className="bg-muted py-16">
                 <div className="container">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Designed for Modern Enterprises</h2>
@@ -153,7 +152,7 @@ export default function AboutPage() {
         </FadeIn>
 
         {/* Mission & Vision Section */}
-        <FadeIn>
+        {/* <FadeIn>
             <section>
                 <div className="container">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -178,13 +177,13 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
-        </FadeIn>
+        </FadeIn> */}
 
         {/* Our Approach Section */}
         <FadeIn>
-            <section className="bg-muted">
+            <section className="bg-muted py-16">
                 <div className="container">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
+                    <div className="text-center max-w-3xl mx-auto mb-8">
                         <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">How We Work</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -210,7 +209,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
                         {industries.map((industry) => (
                             <div key={industry.name} className="flex flex-col items-center text-center gap-4">
-                                <div className="bg-muted p-5 rounded-lg border">
+                                <div className="bg-accent p-5 rounded-lg">
                                     {industry.icon}
                                 </div>
                                 <p className="font-semibold text-secondary">{industry.name}</p>
