@@ -100,7 +100,7 @@ export default function Home() {
             className="object-cover"
             data-ai-hint={placeholderImages.hero.hint}
           />
-          <div className="absolute inset-0 bg-foreground/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#2B4A7C]/90 to-[#1a2d4d]/90" />
           <div className="container relative px-4 md:px-6 flex items-center">
             <div className="flex flex-col space-y-8 max-w-3xl py-0">
               <div>
@@ -202,28 +202,15 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Corporate Gifting</h3>
                   </div>
-                  <div className="p-6 space-y-4 bg-card">
-                    <p className="text-sm text-muted-foreground">
-                      Customized festive and employee engagement kits that strengthen relationships and boost morale.
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">Customized gift solutions</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">Festival & occasion-based kits</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">Employee engagement packages</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">Bulk ordering & timely delivery</span>
-                      </li>
-                    </ul>
+                   <div className="p-6 space-y-4 bg-card">
+                    <div>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Customized Solutions</h4>
+                      <p className="text-sm text-muted-foreground">Custom festive and employee engagement kits that strengthen relationships.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Timely Delivery</h4>
+                      <p className="text-sm text-muted-foreground">Bulk ordering and timely delivery to ensure your gifts arrive on schedule.</p>
+                    </div>
                   </div>
                 </div>
                 
