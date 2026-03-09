@@ -138,13 +138,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     <TrendingUp key={5} className="h-8 w-8 text-primary" />,
   ];
 
-  const stats = [
-    { value: '500+', label: 'Organisations Served' },
-    { value: '50+', label: 'Multi-Location Offices' },
-    { value: '99.5%', label: 'SLA Compliance' },
-    { value: '10+', label: 'Years of Excellence' },
-  ];
-
   // Housekeeping data
   const housekeepingServiceBreakdown = [
       {
@@ -300,20 +293,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         {/* Housekeeping Page Content */}
         {service.slug === 'housekeeping' && (
           <>
-            <FadeIn>
-                <section className="bg-white">
-                    <div className="container px-4 md:px-6">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 text-center">
-                            {stats.map((stat, index) => (
-                                <div key={index}>
-                                    <p className="text-4xl lg:text-5xl font-bold text-primary">{stat.value}</p>
-                                    <p className="text-muted-foreground mt-2 text-sm sm:text-base">{stat.label}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            </FadeIn>
             <FadeIn>
               <section className="bg-muted">
                 <div className="container px-4 md:px-6">

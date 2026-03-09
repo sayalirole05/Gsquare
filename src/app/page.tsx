@@ -65,14 +65,6 @@ export default function Home() {
     },
   ];
 
-  const stats = [
-      { value: '500+', label: 'Organisations Served' },
-      { value: '50+', label: 'Multi-Location Offices' },
-      { value: '99.5%', label: 'SLA Compliance' },
-      { value: '10+', label: 'Years of Excellence' },
-  ];
-
-
   return (
     <>
      <JsonLd data={{
@@ -162,15 +154,6 @@ export default function Home() {
                         </div>
                         <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                    </div>
-                ))}
-              </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 mt-20 text-center">
-                {stats.map((stat, index) => (
-                    <div key={index}>
-                        <p className="text-4xl lg:text-5xl font-bold text-primary">{stat.value}</p>
-                        <p className="text-muted-foreground mt-2 text-sm sm:text-base">{stat.label}</p>
                     </div>
                 ))}
               </div>
