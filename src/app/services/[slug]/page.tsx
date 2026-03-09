@@ -95,12 +95,12 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       alt: placeholderImages.materialSupplyPage.alt,
     },
     'stationery': {
-      src: placeholderImages.stationeryPage.src,
-      alt: placeholderImages.stationeryPage.alt,
+      src: placeholderImages.officeSupplies.src,
+      alt: placeholderImages.officeSupplies.alt,
     },
     'corporate-gifting': {
-      src: placeholderImages.giftingPage.src,
-      alt: placeholderImages.giftingPage.alt,
+      src: placeholderImages.corporateGifting.src,
+      alt: placeholderImages.corporateGifting.alt,
     },
   };
   const heroImage = serviceHeroImages[service.slug as keyof typeof serviceHeroImages];
