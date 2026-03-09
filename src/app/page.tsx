@@ -100,7 +100,7 @@ export default function Home() {
             className="object-cover"
             data-ai-hint={placeholderImages.hero.hint}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#2B4A7C]/90 to-[#1a2d4d]/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#2B4A7C]/95 via-[#2B4A7C]/90 to-[#1a2d4d]/95" />
           <div className="container relative px-4 md:px-6 flex items-center">
             <div className="flex flex-col space-y-8 max-w-3xl py-0">
               <div>
@@ -312,7 +312,7 @@ export default function Home() {
                   className="object-cover"
                   data-ai-hint={placeholderImages.cta.hint}
                 />
-                <div className="absolute inset-0 bg-foreground/80" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#2B4A7C]/95 to-[#2B4A7C]/85" />
                 <div className="relative space-y-6">
                   <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Ready to Transform Your Operations?</h2>
                   <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
