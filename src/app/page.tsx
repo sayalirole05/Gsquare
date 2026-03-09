@@ -125,9 +125,6 @@ export default function Home() {
                 <Button asChild size="lg">
                   <Link href="/#contact-us">Request Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="bg-transparent border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground">
-                  <Link href="/services">Explore Services</Link>
-                </Button>
               </div>
             </div>
           </div>
