@@ -46,9 +46,9 @@ export function Navbar() {
     >
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center gap-0">
-            <Image src="/images/Logo-Final.png" alt="GSQUARE CORPORATE SERVICES Logo" width={150} height={75} style={{ height: '75px', width: 'auto' }} />
-            <span className="hidden tracking-wider text-md text-secondary lg:block">
+          <Link href="/" className="mr-6 flex items-center gap-2">
+            <Image src="/images/Logo-Final.png" alt="GSQUARE CORPORATE SERVICES Logo" width={100} height={50} style={{ height: '50px', width: 'auto' }} />
+            <span className="hidden tracking-wider text-md font-bold text-secondary lg:block">
               <span className="text-primary">G</span><span className="text-secondary">SQUARE</span> CORPORATE SERVICES
             </span>
           </Link>
@@ -60,10 +60,10 @@ export function Navbar() {
                 <DropdownMenu key={item.href}>
                   <DropdownMenuTrigger
                     className={cn(
-                      'flex items-center gap-1 outline-none transition-colors hover:text-primary',
+                      'flex items-center gap-1 outline-none font-bold transition-colors hover:text-primary',
                       pathname.startsWith(item.href)
                         ? 'text-primary'
-                        : 'text-navlink'
+                        : 'text-secondary'
                     )}
                   >
                     {item.title}
@@ -82,10 +82,10 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'transition-colors hover:text-primary',
+                    'transition-colors font-bold hover:text-primary',
                     pathname === item.href
                       ? 'text-primary'
-                      : 'text-navlink'
+                      : 'text-secondary'
                   )}
                 >
                   {item.title}
