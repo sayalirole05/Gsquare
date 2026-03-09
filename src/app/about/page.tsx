@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Eye, Goal, Layers, Scaling, ThumbsUp, Briefcase, Factory, Users, School, Store, Laptop } from 'lucide-react';
+import { CheckCircle, Eye, Goal, Layers, Scaling, ThumbsUp, Briefcase, Factory, Users, School, Store, Laptop } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -84,31 +84,26 @@ export default function AboutPage() {
       />
       <div className="flex flex-col">
         {/* Hero Section */}
-        <section className="relative w-full py-24 md:py-32 lg:py-40">
-           <Image
-            alt={placeholderImages.aboutHero.alt}
-            src={placeholderImages.aboutHero.src}
-            fill
-            priority
-            className="object-cover"
-            data-ai-hint={placeholderImages.aboutHero.hint}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-           <FadeIn className="container relative text-center">
-            <div className="max-w-3xl mx-auto">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-headline">
-                Building Efficient Workplaces for Modern Businesses
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-200">
-                We partner with organizations to simplify workplace operations and create productive environments through reliable operational support services.
-              </p>
-              <div className="mt-10">
-                <Button asChild size="lg">
-                  <Link href="/#contact-us">Contact Us</Link>
-                </Button>
-              </div>
+        <section 
+            className="relative w-full bg-cover bg-center bg-fixed" 
+            style={{ 
+                backgroundImage: `url(${placeholderImages.aboutHero.src})`,
+                height: '400px' 
+            }}
+        >
+            <div className="absolute inset-0 bg-secondary/70" />
+            <div className="relative container h-full flex flex-col justify-center items-center text-center text-white">
+                <FadeIn>
+                    <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
+                        About Us
+                    </h1>
+                    <div className="mt-4 text-lg">
+                        <Link href="/" className="text-primary-foreground/80 hover:text-white transition-colors">Home</Link>
+                        <span className="mx-2 text-primary-foreground/50">&gt;</span>
+                        <span className="font-semibold">About Us</span>
+                    </div>
+                </FadeIn>
             </div>
-           </FadeIn>
         </section>
 
         {/* Company Story Section */}
