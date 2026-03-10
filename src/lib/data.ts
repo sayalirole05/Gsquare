@@ -22,12 +22,17 @@ export const mainNav = [
     href: '/services',
     children: [
       {
-        title: 'Corporate Housekeeping',
-        href: '/services/housekeeping',
-      },
-      {
-        title: 'Cleaning Material Supply',
-        href: '/services/material-supply',
+        title: 'Housekeeping Services',
+        children: [
+          {
+            title: 'Corporate Housekeeping',
+            href: '/services/housekeeping',
+          },
+          {
+            title: 'Cleaning Material Supply',
+            href: '/services/material-supply',
+          },
+        ],
       },
       {
         title: 'Office Stationery',
