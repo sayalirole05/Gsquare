@@ -90,10 +90,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       src: (placeholderImages as any).housekeeping.src,
       alt: (placeholderImages as any).housekeeping.alt,
     },
-    'material-supply': {
-      src: placeholderImages.materialSupplyPage.src,
-      alt: placeholderImages.materialSupplyPage.alt,
-    },
     'stationery': {
       src: placeholderImages.officeSupplies.src,
       alt: placeholderImages.officeSupplies.alt,
@@ -179,25 +175,12 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       answer: "Absolutely. We offer flexible scheduling options, including after-hours and weekend services, to minimize disruption to your business operations. We work with you to create a cleaning schedule that best suits your needs."
     }
   ];
-  
-  // Material Supply data
   const cleaningProductRange = [
-      { icon: <FlaskConical className="h-8 w-8 text-primary" />, title: "Chemicals & Disinfectants", description: "Floor cleaners, glass cleaners, sanitizers, and specialty chemicals." },
-      { icon: <Droplets className="h-8 w-8 text-primary" />, title: "Paper & Dispensers", description: "Tissues, paper towels, toilet rolls, and dispenser units." },
-      { icon: <Sparkles className="h-8 w-8 text-primary" />, title: "Cleaning Tools", description: "Mops, brushes, wipers, dusters, and cleaning trolleys." },
-      { icon: <Trash2 className="h-8 w-8 text-primary" />, title: "Waste Management", description: "Garbage bags, bins, and waste segregation solutions." }
-  ];
-  const materialWhyChooseUs = [
-      { icon: <PackageCheck className="h-8 w-8 text-primary" />, title: "Guaranteed Quality", description: "We only supply genuine products from trusted brands to ensure effectiveness and safety." },
-      { icon: <Truck className="h-8 w-8 text-primary" />, title: "Reliable Delivery", description: "Our robust supply chain ensures timely, dependable delivery across India." },
-      { icon: <ScrollText className="h-8 w-8 text-primary" />, title: "Simplified Procurement", description: "One vendor for all your cleaning supply needs, reducing administrative overhead." }
-  ];
-  const materialFaqs = [
-      { question: "What is your minimum order quantity for bulk supplies?", answer: "Minimum order quantities vary by product. Contact us with your requirements, and we'll provide a detailed quote and information." },
-      { question: "Do you offer credit terms for corporate clients?", answer: "Yes, we offer flexible credit terms for clients with annual contracts or consistent bulk orders, subject to a credit check." },
-      { question: "Can you help us choose the right products for our facility?", answer: "Absolutely. Our experts can assess your needs and recommend the most effective and cost-efficient products for your specific environment." },
-      { question: "What is your typical delivery timeframe?", answer: "We offer flexible delivery schedules across India. Standard orders are typically dispatched promptly, with expedited options available for urgent requirements." }
-  ];
+    { icon: <FlaskConical className="h-8 w-8 text-primary" />, title: "Chemicals & Disinfectants", description: "Floor cleaners, glass cleaners, sanitizers, and specialty chemicals." },
+    { icon: <Droplets className="h-8 w-8 text-primary" />, title: "Paper & Dispensers", description: "Tissues, paper towels, toilet rolls, and dispenser units." },
+    { icon: <Sparkles className="h-8 w-8 text-primary" />, title: "Cleaning Tools", description: "Mops, brushes, wipers, dusters, and cleaning trolleys." },
+    { icon: <Trash2 className="h-8 w-8 text-primary" />, title: "Waste Management", description: "Garbage bags, bins, and waste segregation solutions." }
+];
 
   // Stationery Supply data
   const stationeryRange = [
@@ -350,7 +333,28 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </section>
             </FadeIn>
             <FadeIn>
-              <section className='bg-muted'>
+                <section className="bg-muted">
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Integrated Material Supply</h2>
+                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We provide a complete range of professional-grade cleaning supplies and consumables to complement our housekeeping services.</p>
+                        </div>
+                        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                            {cleaningProductRange.map(item => (
+                                <Card key={item.title} className="text-center border-secondary/20">
+                                    <CardHeader className="items-center">
+                                        <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
+                                        <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent><p className="text-muted-foreground">{item.description}</p></CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </FadeIn>
+            <FadeIn>
+              <section>
                 <div className="container px-4 md:px-6">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Tailored for Every Industry</h2>
@@ -375,7 +379,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
               </section>
             </FadeIn>
             <FadeIn>
-                <section>
+                <section className='bg-muted'>
                     <div className="container px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why <span className="text-primary">G</span><span className="text-secondary">SQUARE</span> for Housekeeping?</h2>
@@ -398,7 +402,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </section>
             </FadeIn>
             <FadeIn>
-                <section className="bg-muted">
+                <section>
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Our Structured Engagement Process</h2>
@@ -424,7 +428,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </section>
             </FadeIn>
             <FadeIn>
-                <section>
+                <section className='bg-muted'>
                     <div className="container px-4 md:px-6">
                          <div className="text-center">
                             <div className="inline-block bg-primary/10 p-4 rounded-full mb-4">
@@ -441,7 +445,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </section>
             </FadeIn>
             <FadeIn>
-                <section className="bg-muted">
+                <section>
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Frequently Asked Questions</h2>
@@ -462,107 +466,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </section>
             </FadeIn>
           </>
-        )}
-
-        {/* Material Supply Page Content */}
-        {service.slug === 'material-supply' && (
-            <>
-                <FadeIn>
-                    <section>
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Our Cleaning Product Range</h2>
-                                <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">A complete inventory of professional-grade supplies to keep your facility operational.</p>
-                            </div>
-                            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                                {cleaningProductRange.map(item => (
-                                    <Card key={item.title} className="text-center border-secondary/20">
-                                        <CardHeader className="items-center">
-                                            <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
-                                            <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
-                                        </CardHeader>
-                                        <CardContent><p className="text-muted-foreground">{item.description}</p></CardContent>
-                                    </Card>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section className="bg-muted">
-                        <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-16 items-center">
-                            <div className="space-y-4">
-                                <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Industrial & Corporate Cleaning Supplies</h2>
-                                <p className="text-muted-foreground md:text-lg">We cater to the heavy-duty requirements of manufacturing plants and the specific needs of modern corporate offices. Our range includes everything from industrial degreasers to gentle, eco-friendly office cleaning solutions.</p>
-                                <ul className="space-y-3 pt-4">
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Specialized chemicals for various surfaces.</li>
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Pantry supplies including tea, coffee, and snacks.</li>
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Safety equipment like gloves and masks.</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <Image src={placeholderImages.materialSupplyPage.src} alt={placeholderImages.materialSupplyPage.alt} width={600} height={400} className="rounded-lg shadow-xl" />
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section>
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Choose Us as Your Cleaning Material Partner?</h2>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {materialWhyChooseUs.map((item, index) => (
-                                    <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
-                                        <div className="bg-primary/10 p-4 rounded-full mb-4 w-max">{item.icon}</div>
-                                        <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
-                                        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                                    </Card>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section className="bg-muted">
-                        <div className="container px-4 md:px-6 grid lg:grid-cols-3 gap-8">
-                            <div className="space-y-4 rounded-lg bg-card p-6 border">
-                                <div className="bg-primary/10 p-3 rounded-full w-max"><ShieldCheck className="h-8 w-8 text-primary"/></div>
-                                <h3 className="text-xl font-bold text-secondary">Quality Assurance</h3>
-                                <p className="text-muted-foreground">All products are genuine and accompanied by Material Safety Data Sheets (MSDS) where applicable, ensuring safety and compliance.</p>
-                            </div>
-                            <div className="space-y-4 rounded-lg bg-card p-6 border">
-                                <div className="bg-primary/10 p-3 rounded-full w-max"><Truck className="h-8 w-8 text-primary"/></div>
-                                <h3 className="text-xl font-bold text-secondary">Logistics & Delivery</h3>
-                                <p className="text-muted-foreground">Our dedicated logistics network ensures prompt and reliable delivery to your locations across India.</p>
-                            </div>
-                            <div className="space-y-4 rounded-lg bg-card p-6 border">
-                                <div className="bg-primary/10 p-3 rounded-full w-max"><PackageCheck className="h-8 w-8 text-primary"/></div>
-                                <h3 className="text-xl font-bold text-secondary">Custom & Private Label</h3>
-                                <p className="text-muted-foreground">We offer custom sourcing and private labeling solutions for large-volume requirements, tailored to your brand standards.</p>
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section className="bg-muted">
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">FAQs – Cleaning Supplies</h2></div>
-                            <div className="max-w-3xl mx-auto">
-                                <Accordion type="single" collapsible className="w-full">
-                                    {materialFaqs.map((faq, index) => (
-                                        <AccordionItem key={index} value={`item-${index}`}>
-                                            <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
-                                            <AccordionContent className="text-lg text-muted-foreground">{faq.answer}</AccordionContent>
-                                        </AccordionItem>
-                                    ))}
-                                </Accordion>
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-            </>
         )}
 
         {/* Stationery Supply Page Content */}

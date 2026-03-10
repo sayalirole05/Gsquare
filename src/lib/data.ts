@@ -23,16 +23,7 @@ export const mainNav = [
     children: [
       {
         title: 'Housekeeping Services',
-        children: [
-          {
-            title: 'Corporate Housekeeping',
-            href: '/services/housekeeping',
-          },
-          {
-            title: 'Cleaning Material Supply',
-            href: '/services/material-supply',
-          },
-        ],
+        href: '/services/housekeeping',
       },
       {
         title: 'Office Stationery',
@@ -49,13 +40,8 @@ export const mainNav = [
 export const services = [
   {
     slug: 'housekeeping',
-    title: 'Corporate Housekeeping',
-    shortDescription: 'Professional cleaning services for a pristine corporate environment.',
-  },
-  {
-    slug: 'material-supply',
-    title: 'Cleaning Material Supply',
-    shortDescription: 'Reliable supply of high-quality cleaning and pantry materials.',
+    title: 'Housekeeping Services',
+    shortDescription: 'Professional cleaning services and material supply for a pristine corporate environment.',
   },
   {
     slug: 'stationery',
@@ -72,38 +58,20 @@ export const services = [
 export const servicePages = [
   {
     slug: 'housekeeping',
-    title: 'Corporate Housekeeping Services',
-    description: 'We provide top-tier corporate housekeeping and facility management services. Our trained professionals ensure your workspace is immaculate, safe, and hygienic, using industry-best practices and eco-friendly products.',
+    title: 'Corporate Housekeeping & Material Supply',
+    description: 'We provide top-tier corporate housekeeping, facility management, and material supply services. Our trained professionals and quality products ensure your workspace is immaculate, safe, and hygienic.',
     features: [
       'Trained & Verified Staff',
       'Flexible Scheduling (Daily, Weekly, Monthly)',
-      'Use of Eco-Friendly Chemicals',
+      'Quality Cleaning Material Supply',
       'Advanced Cleaning Equipment',
       'Supervision & Quality Checks',
     ],
     benefits: [
       'Enhances corporate image and brand reputation.',
       'Promotes a healthy and productive work environment.',
-      'Reduces administrative burden of in-house cleaning.',
+      'Reduces administrative burden of in-house staff and procurement.',
       'Ensures compliance with health and safety standards.',
-    ],
-  },
-  {
-    slug: 'material-supply',
-    title: 'Cleaning Material Suppliers',
-    description: 'GSQUARE is a leading supplier of cleaning, housekeeping, and pantry materials. We offer a comprehensive range of high-quality products at competitive prices, ensuring you never run out of essential supplies.',
-    features: [
-      'Wide Range of Products',
-      'Branded & Quality Assured Items',
-      'Scheduled & On-Demand Delivery',
-      'Inventory Management Support',
-      'Competitive Pricing',
-    ],
-    benefits: [
-      'Consolidate procurement with a single, reliable vendor.',
-      'Save time and resources on sourcing materials.',
-      'Ensure consistent quality of supplies.',
-      'Optimize inventory levels and reduce wastage.',
     ],
   },
   {

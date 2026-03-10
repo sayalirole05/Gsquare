@@ -7,10 +7,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerServices = [
-    { title: 'Housekeeping Manpower', href: '/services/housekeeping' },
-    { title: 'Housekeeping Materials', href: '/services/material-supply' },
+    { title: 'Housekeeping Services', href: '/services/housekeeping' },
     { title: 'Office Stationery', href: '/services/stationery' },
-    { title: 'General Supplies', href: '/services/material-supply' },
     { title: 'Corporate Gifting', href: '/services/corporate-gifting' },
   ];
 
