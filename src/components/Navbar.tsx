@@ -51,7 +51,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center gap-2">
-            <Image src="/images/Logo-Final.png" alt="GSQUARE CORPORATE SERVICES Logo" width={100} height={75} style={{ height: '75px', width: 'auto' }} />
+            <Image src="/images/Logo-Final.png" alt="GSQUARE CORPORATE SERVICES Logo" width={100} height={75} className="h-[55px] w-auto" />
             <span className="hidden tracking-wider text-md font-bold text-secondary lg:block">
               <span className="text-primary">G</span><span className="text-secondary">SQUARE</span> CORPORATE SERVICES
             </span>

@@ -382,7 +382,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         {/* Housekeeping Page Content */}
         {service.slug === 'housekeeping' && (
           <>
-            <FadeIn>
+            {/* <FadeIn>
               <section className="bg-muted">
                 <div className="container px-4 md:px-6">
                   <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
@@ -412,12 +412,12 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                   </div>
                 </div>
               </section>
-            </FadeIn>
+            </FadeIn> */}
             <FadeIn>
                 <section>
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">A Breakdown of Our Housekeeping Services</h2>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Our Services Overview</h2>
                             <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We offer a comprehensive suite of services to ensure every corner of your workspace is pristine.</p>
                         </div>
                         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -442,8 +442,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <section className="bg-muted">
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Cleaning Equipment & Materials We Use</h2>
-                            <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl mt-4">We use professional-grade cleaning equipment and high-quality materials to ensure consistent hygiene standards across workplaces. Our housekeeping teams are equipped with modern cleaning tools and safe cleaning products designed for corporate environments.</p>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Cleaning Equipment & Materials</h2>
+                            <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl mt-4">We use professional cleaning equipment and safe materials to maintain consistent workplace hygiene.</p>
                         </div>
                         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-12">
                             {cleaningEquipment.map(item => (
@@ -456,7 +456,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </Card>
                             ))}
                         </div>
-                         <div className="text-center mb-12">
+                         {/* <div className="text-center mb-12">
                             <h3 className="text-2xl font-bold tracking-tighter font-headline text-secondary">Cleaning Materials</h3>
                         </div>
                         <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
@@ -468,11 +468,11 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     <p className="font-semibold text-secondary">{item.title}</p>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </section>
             </FadeIn>
-             <FadeIn>
+             {/* <FadeIn>
               <section>
                 <div className="container px-4 md:px-6">
                   <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
@@ -497,8 +497,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                   </div>
                 </div>
               </section>
-            </FadeIn>
-            <FadeIn>
+            </FadeIn> */}
+            {/* <FadeIn>
               <section className="bg-muted">
                 <div className="container px-4 md:px-6">
                    <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
@@ -523,7 +523,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                   </div>
                 </div>
               </section>
-            </FadeIn>
+            </FadeIn> */}
             <FadeIn>
                 <section>
                     <div className="container px-4 md:px-6">
@@ -623,11 +623,11 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             </FadeIn>
 
             <FadeIn>
-              <section className="bg-muted">
-                <div className="container px-4 md:px-6">
-                  <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+              <section className="bg-muted py-16">
+                <div className="container px-4 md:px-6 lg:px-12">
+                  <div className="grid gap-5 lg:grid-cols-2 lg:gap-16 items-center">
                     <div className="space-y-4">
-                      <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Request a Free Site Inspection</h2>
+                      <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary mb-0">Request a Free Site Inspection</h2>
                       <p className="text-muted-foreground md:text-lg">
                         Our experts can assess your workplace and recommend the most suitable housekeeping plan for your organization. Understanding the facility layout is essential for designing an effective housekeeping plan.
                       </p>
@@ -644,9 +644,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                           <GetStartedModal>
                               <Button size="lg">Schedule Site Inspection</Button>
                           </GetStartedModal>
-                          <GetStartedModal>
+                          {/* <GetStartedModal>
                               <Button size="lg" variant="outline">Request a Housekeeping Quote</Button>
-                          </GetStartedModal>
+                          </GetStartedModal> */}
                        </div>
                     </div>
                     <div className="relative aspect-video">
@@ -656,7 +656,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </div>
               </section>
             </FadeIn>
-            <FadeIn>
+            {/* <FadeIn>
               <section>
                 <div className="container px-4 md:px-6">
                     <div className="text-center mb-12">
@@ -680,8 +680,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                   </div>
                 </div>
               </section>
-            </FadeIn>
-            <FadeIn>
+            </FadeIn> */}
+            {/* <FadeIn>
                 <section className='bg-muted'>
                     <div className="container px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
@@ -703,8 +703,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </div>
                     </div>
                 </section>
-            </FadeIn>
-            <FadeIn>
+            </FadeIn> */}
+            {/* <FadeIn>
                 <section id="process" className="bg-white">
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-16">
@@ -730,9 +730,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </div>
                     </div>
                 </section>
-            </FadeIn>
+            </FadeIn> */}
             <FadeIn>
-                <section>
+                <section className='mb-0 pb-0'>
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Frequently Asked Questions</h2>
@@ -1177,7 +1177,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <div className="relative space-y-6">
                   {service.slug === 'housekeeping' ? (
                     <>
-                      <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Need Reliable Housekeeping for Your Workplace?</h2>
+                      <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Book Professional Housekeeping Services?</h2>
                       <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
                         Our team can help maintain a clean, professional environment for your employees and visitors.
                       </p>
