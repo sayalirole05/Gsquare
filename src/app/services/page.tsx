@@ -62,8 +62,7 @@ export default function ServicesHubPage() {
                         {
                           {
                             'housekeeping': <ClipboardList className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
-                            'material-supply': <Truck className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
-                            'stationery': <Package className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
+                            'office-supplies': <Package className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
                             'corporate-gifting': <Gift className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />
                           }[service.slug]
                         }

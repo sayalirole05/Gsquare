@@ -3,7 +3,7 @@ import placeholderImages from './placeholder-images.json';
 export const siteConfig = {
   name: 'GSQUARE CORPORATE SERVICES',
   brandName: 'GSQUARE',
-  description: 'Premier Facility Management and Corporate Support Services across India. We provide housekeeping, material supply, stationery, and corporate gifting solutions.',
+  description: 'Premier Facility Management and Corporate Support Services across India. We provide housekeeping, material supply, office supplies, and corporate gifting solutions.',
   url: 'https://gsquarecorp.in',
   phone: '+917020813399',
   email: 'contact@gsquarecorp.in',
@@ -26,8 +26,8 @@ export const mainNav = [
         href: '/services/housekeeping',
       },
       {
-        title: 'Office Stationery',
-        href: '/services/stationery',
+        title: 'Office Supplies',
+        href: '/services/office-supplies',
       },
       {
         title: 'Corporate Gifting',
@@ -44,9 +44,9 @@ export const services = [
     shortDescription: 'Professional cleaning services and material supply for a pristine corporate environment.',
   },
   {
-    slug: 'stationery',
-    title: 'Office Stationery',
-    shortDescription: 'Comprehensive solutions for all your office stationery needs.',
+    slug: 'office-supplies',
+    title: 'Office Supplies',
+    shortDescription: 'Comprehensive solutions for all your office supply needs.',
   },
   {
     slug: 'corporate-gifting',
@@ -75,11 +75,11 @@ export const servicePages = [
     ],
   },
   {
-    slug: 'stationery',
-    title: 'Office Stationery Suppliers',
-    description: 'Streamline your office supplies with our complete stationery solutions. From basic pens and paper to custom-printed materials, we provide everything your office needs to operate efficiently.',
+    slug: 'office-supplies',
+    title: 'Office Supplies',
+    description: 'Streamline your office procurement with our complete office supply solutions. From basic pens and paper to custom-printed materials, we provide everything your office needs to operate efficiently.',
     features: [
-      'One-Stop-Shop for All Stationery',
+      'One-Stop-Shop for All Office Supplies',
       'Custom Printing Services',
       'Bulk Order Discounts',
       'Reliable and Timely Delivery',

@@ -8,7 +8,7 @@ export function Footer() {
 
   const footerServices = [
     { title: 'Housekeeping Services', href: '/services/housekeeping' },
-    { title: 'Office Stationery', href: '/services/stationery' },
+    { title: 'Office Supplies', href: '/services/office-supplies' },
     { title: 'Corporate Gifting', href: '/services/corporate-gifting' },
   ];
 

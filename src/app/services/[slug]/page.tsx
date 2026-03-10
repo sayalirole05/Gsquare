@@ -90,7 +90,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       src: (placeholderImages as any).housekeeping.src,
       alt: (placeholderImages as any).housekeeping.alt,
     },
-    'stationery': {
+    'office-supplies': {
       src: placeholderImages.officeSupplies.src,
       alt: placeholderImages.officeSupplies.alt,
     },
@@ -182,20 +182,20 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     { icon: <Trash2 className="h-8 w-8 text-primary" />, title: "Waste Management", description: "Garbage bags, bins, and waste segregation solutions." }
 ];
 
-  // Stationery Supply data
-  const stationeryRange = [
+  // Office Supplies data
+  const officeSuppliesRange = [
       { icon: <PenSquare className="h-8 w-8 text-primary" />, title: "Writing Instruments", description: "Pens, pencils, markers, highlighters, and more." },
       { icon: <FileText className="h-8 w-8 text-primary" />, title: "Paper Products", description: "A4 paper, notepads, sticky notes, and registers." },
       { icon: <Archive className="h-8 w-8 text-primary" />, title: "Filing & Storage", description: "Files, folders, binders, and document organizers." },
       { icon: <Printer className="h-8 w-8 text-primary" />, title: "Office Consumables", description: "Printer cartridges, toners, and other machine supplies." }
   ];
-  const stationeryWhyChooseUs = [
-      { icon: <Boxes className="h-8 w-8 text-primary" />, title: "Comprehensive Catalog", description: "A single source for every stationery item your office could possibly need." },
+  const officeSuppliesWhyChooseUs = [
+      { icon: <Boxes className="h-8 w-8 text-primary" />, title: "Comprehensive Catalog", description: "A single source for every office supply item your office could possibly need." },
       { icon: <PackageCheck className="h-8 w-8 text-primary" />, title: "Assured Availability", description: "We maintain high stock levels to ensure your essential supplies are always available." },
       { icon: <TrendingUp className="h-8 w-8 text-primary" />, title: "Cost-Effective Solutions", description: "Benefit from competitive pricing, bulk discounts, and annual contract options." }
   ];
-  const stationeryFaqs = [
-      { question: "Can you print our company logo on notebooks and other items?", answer: "Yes, we offer full customization and branding services for a wide range of stationery products. This is great for enhancing your brand identity." },
+  const officeSuppliesFaqs = [
+      { question: "Can you print our company logo on notebooks and other items?", answer: "Yes, we offer full customization and branding services for a wide range of office supplies. This is great for enhancing your brand identity." },
       { question: "What are the benefits of an annual supply contract?", answer: "Annual contracts offer locked-in pricing, priority service, scheduled deliveries, and simplified budgeting and procurement processes." },
       { question: "Do you supply original printer cartridges?", answer: "Yes, we supply 100% original and genuine cartridges and consumables for all major printer brands." },
       { question: "How can your inventory management support help us?", answer: "We can work with your admin team to forecast needs, set reorder points, and automate the ordering process to prevent stockouts and reduce manual effort." }
@@ -468,18 +468,18 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
           </>
         )}
 
-        {/* Stationery Supply Page Content */}
-        {service.slug === 'stationery' && (
+        {/* Office Supplies Page Content */}
+        {service.slug === 'office-supplies' && (
             <>
                 <FadeIn>
                     <section>
                         <div className="container px-4 md:px-6">
                             <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Complete Office Stationery Range</h2>
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Complete Office Supplies Range</h2>
                                 <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">From the front desk to the boardroom, we equip your entire office for productivity.</p>
                             </div>
                             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                                {stationeryRange.map(item => (
+                                {officeSuppliesRange.map(item => (
                                     <Card key={item.title} className="text-center border-secondary/20">
                                         <CardHeader className="items-center">
                                             <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
@@ -499,8 +499,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 <Image src={placeholderImages.stationeryPage.src} alt={placeholderImages.stationeryPage.alt} width={600} height={400} className="rounded-lg shadow-xl" />
                             </div>
                             <div className="space-y-4">
-                                <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Bulk Procurement & Customized Stationery</h2>
-                                <p className="text-muted-foreground md:text-lg">Empower your brand with custom-printed stationery. We provide high-quality printing of your logo and brand elements on notebooks, pens, letterheads, and more, ensuring a consistent and professional image in all your communications.</p>
+                                <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Bulk Procurement & Customized Supplies</h2>
+                                <p className="text-muted-foreground md:text-lg">Empower your brand with custom-printed supplies. We provide high-quality printing of your logo and brand elements on notebooks, pens, letterheads, and more, ensuring a consistent and professional image in all your communications.</p>
                                 <ul className="space-y-3 pt-4">
                                     <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Annual contracts for predictable pricing.</li>
                                     <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Inventory management to prevent stockouts.</li>
@@ -514,10 +514,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     <section>
                         <div className="container px-4 md:px-6">
                             <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Choose Our Stationery Supply Services?</h2>
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Choose Our Office Supply Services?</h2>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {stationeryWhyChooseUs.map((item, index) => (
+                                {officeSuppliesWhyChooseUs.map((item, index) => (
                                     <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
                                         <div className="bg-primary/10 p-4 rounded-full mb-4 w-max">{item.icon}</div>
                                         <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
@@ -531,10 +531,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <FadeIn>
                     <section className="bg-muted">
                         <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">FAQs – Office Stationery Supply</h2></div>
+                            <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">FAQs – Office Supplies</h2></div>
                             <div className="max-w-3xl mx-auto">
                                 <Accordion type="single" collapsible className="w-full">
-                                    {stationeryFaqs.map((faq, index) => (
+                                    {officeSuppliesFaqs.map((faq, index) => (
                                         <AccordionItem key={index} value={`item-${index}`}>
                                             <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
                                             <AccordionContent className="text-lg text-muted-foreground">{faq.answer}</AccordionContent>
