@@ -53,5 +53,27 @@
     "src": "https://images.unsplash.com/photo-1594903335559-07cf9302633d?q=80&w=1920",
     "alt": "A curated corporate gift box with various items ready for sending.",
     "hint": "curated gift"
-  }
+  },
+  "giftShowcase": [
+    {
+      "src": "https://images.unsplash.com/photo-1572240359941-026b7b3b3a3c?q=80&w=600&h=450&fit=crop",
+      "alt": "Curated gift hamper",
+      "hint": "gift hamper"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1606820854416-439b3305ff39?q=80&w=600&h=450&fit=crop",
+      "alt": "Employee welcome kit",
+      "hint": "welcome kit"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1580828723985-35e6a25a07c4?q=80&w=600&h=450&fit=crop",
+      "alt": "Premium branded merchandise",
+      "hint": "branded merchandise"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1571212879368-a1458102a9e3?q=80&w=600&h=450&fit=crop",
+      "alt": "Event gifting kit",
+      "hint": "event kit"
+    }
+  ]
 }

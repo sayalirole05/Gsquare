@@ -326,13 +326,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       { question: "Do you handle delivery to multiple addresses for remote employees?", answer: "Yes, we provide end-to-end logistics, including secure packaging and PAN-India delivery to individual employee or client addresses. We ensure every gift arrives safely and on time." }
   ];
 
-  const giftShowcaseImages = [
-    { src: 'https://picsum.photos/seed/gift1/600/400', alt: 'Curated gift hamper', hint: 'gift hamper' },
-    { src: 'https://picsum.photos/seed/gift2/600/400', alt: 'Employee welcome kit', hint: 'welcome kit' },
-    { src: 'https://picsum.photos/seed/gift3/600/400', alt: 'Premium branded merchandise', hint: 'branded merchandise' },
-    { src: 'https://picsum.photos/seed/gift4/600/400', alt: 'Event gifting kit', hint: 'event kit' },
-  ];
-
 
   return (
     <>
@@ -1032,7 +1025,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                               <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Get inspired by our collection of curated corporate gifts.</p>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                              {giftShowcaseImages.map(image => (
+                              {(placeholderImages as any).giftShowcase.map((image: { src: string; alt: string; hint: string }) => (
                                   <div key={image.src} className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg group">
                                       <Image src={image.src} alt={image.alt} fill className="object-cover transition-transform duration-300 group-hover:scale-105" data-ai-hint={image.hint} />
                                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
