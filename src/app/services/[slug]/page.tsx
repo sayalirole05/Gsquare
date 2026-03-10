@@ -280,22 +280,57 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
   ];
 
   // Corporate Gifting data
-  const giftCategories = [
-      { icon: <Rocket className="h-8 w-8 text-primary" />, title: "Employee Welcome Kits", description: "Curated kits to make new hires feel valued from day one." },
-      { icon: <PartyPopper className="h-8 w-8 text-primary" />, title: "Festive & Seasonal Gifts", description: "Thoughtful hampers for Diwali, New Year, and other celebrations." },
-      { icon: <Award className="h-8 w-8 text-primary" />, title: "Rewards & Recognition", description: "Premium gifts to celebrate employee milestones and achievements." },
-      { icon: <Leaf className="h-8 w-8 text-primary" />, title: "Eco-Friendly & Sustainable", description: "Green gifting options that align with your CSR goals." }
+  const giftOccasions = [
+      { icon: <Rocket className="h-8 w-8 text-primary" />, title: "Employee Onboarding", description: "Curated kits to make new hires feel valued from day one." },
+      { icon: <PartyPopper className="h-8 w-8 text-primary" />, title: "Festive Gifts", description: "Thoughtful hampers for Diwali, New Year, and other celebrations." },
+      { icon: <Award className="h-8 w-8 text-primary" />, title: "Employee Milestones", description: "Celebrate work anniversaries, promotions, and achievements." },
+      { icon: <Handshake className="h-8 w-8 text-primary" />, title: "Client Appreciation", description: "Strengthen business relationships with elegant and memorable gifts." },
+      { icon: <Briefcase className="h-8 w-8 text-primary" />, title: "Corporate Events", description: "Branded merchandise and kits for conferences and seminars." },
+      { icon: <Crown className="h-8 w-8 text-primary" />, title: "Leadership & Executive Gifts", description: "Exclusive gifts for senior management and board members." },
   ];
-  const giftingWhyChooseUs = [
+
+  const customBrandingOptions = [
+    { icon: <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />, text: "Logo printing on a wide range of products and merchandise." },
+    { icon: <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />, text: "Custom-designed packaging and gift boxes with your brand identity." },
+    { icon: <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />, text: "Personalized notes, greeting cards, and messages." },
+    { icon: <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />, text: "Branded ribbons, stickers, and other finishing touches." },
+  ];
+
+  const giftingProcessSteps = [
+    { title: 'Consultation', description: "We start by understanding your gifting occasion, budget, and branding requirements." },
+    { title: 'Gift Selection', description: "Our team presents a curated selection of gift options and concepts for your review." },
+    { title: 'Customization', description: "We handle all aspects of branding, from logo printing to personalized messaging." },
+    { title: 'Packaging & Prep', description: "Gifts are elegantly packaged in premium materials and prepared for bulk dispatch." },
+    { title: 'Delivery', description: "We manage PAN-India delivery to single or multiple locations, ensuring timely arrival." },
+  ];
+
+  const ecoGifts = [
+      { icon: <Leaf className="h-8 w-8 text-primary" />, title: "Sustainable Materials", description: "Gifts made from bamboo, cork, recycled paper, and other eco-friendly materials." },
+      { icon: <Recycle className="h-8 w-8 text-primary" />, title: "Reusable Products", description: "Items like reusable coffee cups, durable tote bags, and plantable stationery." },
+      { icon: <Package className="h-8 w-8 text-primary" />, title: "Green Packaging", description: "We use minimalist, recyclable, and biodegradable packaging options." },
+  ];
+
+  const whyChooseGifting = [
       { icon: <PackageSearch className="h-8 w-8 text-primary" />, title: "Creative Curation", description: "Our team designs unique gifting concepts that leave a lasting impression." },
-      { icon: <Crown className="h-8 w-8 text-primary" />, title: "Premium Quality", description: "We source high-quality products and focus on elegant, professional packaging." },
-      { icon: <Handshake className="h-8 w-8 text-primary" />, title: "End-to-End Management", description: "From sourcing to final delivery, we handle the entire process for a hassle-free experience." }
+      { icon: <Crown className="h-8 w-8 text-primary" />, title: "Premium Quality & Packaging", description: "We source high-quality products and focus on elegant, professional presentation." },
+      { icon: <Handshake className="h-8 w-8 text-primary" />, title: "End-to-End Management", description: "From sourcing to final delivery, we handle the entire process for a hassle-free experience." },
+      { icon: <Truck className="h-8 w-8 text-primary" />, title: "PAN-India Logistics", description: "Reliable, timely delivery to single or multiple locations across the country." },
+      { icon: <Settings2 className="h-8 w-8 text-primary" />, title: "Full Customization", description: "Extensive branding and personalization options to align with your brand." },
+      { icon: <Layers className="h-8 w-8 text-primary" />, title: "Scalable Solutions", description: "Efficiently managing bulk orders for large enterprises and corporate events." },
   ];
+  
   const giftingFaqs = [
-      { question: "What is the minimum order quantity for customized gifts?", answer: "MOQs depend on the product and level of customization. We can accommodate a wide range of needs, from small batches for executive gifts to large volumes for company-wide distribution." },
-      { question: "Can we include our own branded materials in the gift boxes?", answer: "Absolutely. We can incorporate your company's merchandise, marketing materials, or personalized notes into the gift packages." },
-      { question: "How long does it take to deliver bulk gift orders?", answer: "Lead times vary based on customization and product availability. We recommend planning 3-4 weeks in advance for festive or large orders to ensure a smooth process." },
-      { question: "Do you handle delivery to multiple addresses?", answer: "Yes, we provide end-to-end logistics, including packaging and PAN-India delivery to individual employee or client addresses." }
+      { question: "What is the minimum order quantity for customized gifts?", answer: "Minimum Order Quantities (MOQs) depend on the product and the level of customization required. We work with you to find solutions for both small and large-scale orders." },
+      { question: "Can we include our own company's branded materials in the gift boxes?", answer: "Absolutely. We encourage you to include your own merchandise, marketing materials, or personalized notes, and we can seamlessly integrate them into the gift packages." },
+      { question: "What is the typical lead time for bulk corporate gift orders?", answer: "Lead times vary based on product selection and customization complexity. We generally recommend planning 3-4 weeks in advance, especially for festive seasons or large orders, to ensure a smooth process from production to delivery." },
+      { question: "Do you handle delivery to multiple addresses for remote employees?", answer: "Yes, we provide end-to-end logistics, including secure packaging and PAN-India delivery to individual employee or client addresses. We ensure every gift arrives safely and on time." }
+  ];
+
+  const giftShowcaseImages = [
+    { src: 'https://picsum.photos/seed/gift1/600/400', alt: 'Curated gift hamper', hint: 'gift hamper' },
+    { src: 'https://picsum.photos/seed/gift2/600/400', alt: 'Employee welcome kit', hint: 'welcome kit' },
+    { src: 'https://picsum.photos/seed/gift3/600/400', alt: 'Premium branded merchandise', hint: 'branded merchandise' },
+    { src: 'https://picsum.photos/seed/gift4/600/400', alt: 'Event gifting kit', hint: 'event kit' },
   ];
 
 
@@ -639,7 +674,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     {industries.map((industry) => (
                       <Card key={industry.name} className="group text-center transition-all duration-300 border-2 border-neutral-300 hover:border-primary hover:shadow-xl">
                         <CardHeader className="flex flex-col items-center">
-                          <div className="bg-primary/10 group-hover:bg-primary p-4 rounded-full mb-4 transition-colors">
+                          <div className="bg-primary/10 group-hover:bg-primary p-4 rounded-full transition-colors">
                             {industryIcons[industry.name as keyof typeof industryIcons]}
                           </div>
                           <CardTitle className="text-2xl font-headline text-secondary group-hover:text-primary transition-colors">{industry.name}</CardTitle>
@@ -916,82 +951,221 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         
         {/* Corporate Gifting Page Content */}
         {service.slug === 'corporate-gifting' && (
-            <>
-                <FadeIn>
-                    <section>
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Our Corporate Gift Categories</h2>
-                                <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Memorable gifting experiences designed to strengthen relationships and build brand loyalty.</p>
+          <>
+            <FadeIn>
+                <section>
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Gifting for Every Business Moment</h2>
+                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We create memorable gifting experiences designed to strengthen relationships and build brand loyalty.</p>
+                        </div>
+                        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                            {giftOccasions.map(item => (
+                                <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
+                                    <CardHeader className="items-center">
+                                        <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
+                                        <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent><p className="text-muted-foreground">{item.description}</p></CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </FadeIn>
+            <FadeIn>
+                <section className="bg-muted">
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Corporate Gifts by Budget</h2>
+                             <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Find the perfect gifts that align with your budget and impress your recipients.</p>
+                        </div>
+                        <div className="max-w-4xl mx-auto bg-card rounded-lg border-2 border-neutral-300 overflow-hidden">
+                            <div className="grid grid-cols-2 text-left">
+                                <div className="p-4 font-bold text-secondary bg-accent/50 text-lg">Budget Range</div>
+                                <div className="p-4 font-bold text-secondary bg-accent/50 border-l text-lg">Ideal For</div>
                             </div>
-                            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                                {giftCategories.map(item => (
-                                    <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
-                                        <CardHeader className="items-center">
-                                            <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
-                                            <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
-                                        </CardHeader>
-                                        <CardContent><p className="text-muted-foreground">{item.description}</p></CardContent>
-                                    </Card>
+                            <div className="grid grid-cols-2 text-left border-t items-center">
+                                <div className="p-4 font-semibold text-secondary">₹500 – ₹999</div>
+                                <div className="p-4 text-muted-foreground border-l">Large-scale employee gifting, event giveaways</div>
+                            </div>
+                            <div className="grid grid-cols-2 text-left border-t items-center">
+                                <div className="p-4 font-semibold text-secondary">₹1000 – ₹1999</div>
+                                <div className="p-4 text-muted-foreground border-l">Festive hampers, new hire welcome kits, team rewards</div>
+                            </div>
+                            <div className="grid grid-cols-2 text-left border-t items-center">
+                                <div className="p-4 font-semibold text-secondary">₹2000 – ₹5000</div>
+                                <div className="p-4 text-muted-foreground border-l">Client appreciation, key employee milestones</div>
+                            </div>
+                             <div className="grid grid-cols-2 text-left border-t items-center">
+                                <div className="p-4 font-semibold text-secondary">Premium (₹5000+)</div>
+                                <div className="p-4 text-muted-foreground border-l">Executive gifts, leadership recognition, top-tier clients</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </FadeIn>
+
+            <FadeIn>
+                <section>
+                    <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="space-y-4">
+                            <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Custom Branding & Premium Packaging</h2>
+                            <p className="text-muted-foreground md:text-lg">We transform gifts into powerful branding tools. Our team works with you to create custom packaging, branded merchandise, and personalized messages that make your gifts truly unique and reflective of your company's identity.</p>
+                            <ul className="space-y-3 pt-4">
+                                {customBrandingOptions.map((item) => (
+                                  <li key={item.text} className="flex items-start gap-3">{item.icon}<span>{item.text}</span></li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section className="bg-muted">
-                        <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-16 items-center">
-                            <div className="space-y-4">
-                                <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Customized & Branded Gift Solutions</h2>
-                                <p className="text-muted-foreground md:text-lg">We transform gifts into powerful branding tools. Our team works with you to create custom packaging, branded merchandise, and personalized messages that make your gifts truly unique and reflective of your company's identity.</p>
-                                <ul className="space-y-3 pt-4">
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Premium packaging with logo branding.</li>
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>End-to-end logistics and PAN-India delivery.</li>
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Wide range of products for all budgets.</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <Image src={placeholderImages.giftingPage.src} alt={placeholderImages.giftingPage.alt} width={600} height={400} className="rounded-lg shadow-xl" />
-                            </div>
+                        <div className="relative aspect-video">
+                            <Image src={placeholderImages.giftingPage.src} alt={placeholderImages.giftingPage.alt} fill className="rounded-lg shadow-xl object-cover" data-ai-hint="custom branded gifts" />
                         </div>
-                    </section>
-                </FadeIn>
-                 <FadeIn>
-                    <section>
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Choose Us for Corporate Gifting?</h2>
+                    </div>
+                </section>
+            </FadeIn>
+            <FadeIn>
+                  <section className="bg-muted">
+                      <div className="container px-4 md:px-6">
+                          <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Corporate Gift Showcase</h2>
+                              <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Get inspired by our collection of curated corporate gifts.</p>
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                              {giftShowcaseImages.map(image => (
+                                  <div key={image.src} className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg group">
+                                      <Image src={image.src} alt={image.alt} fill className="object-cover transition-transform duration-300 group-hover:scale-105" data-ai-hint={image.hint} />
+                                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                                      <p className="absolute bottom-4 left-4 text-white font-bold">{image.alt}</p>
+                                  </div>
+                              ))}
+                          </div>
+                      </div>
+                  </section>
+            </FadeIn>
+            <FadeIn>
+              <section>
+                  <div className="container px-4 md:px-6">
+                      <div className="text-center mb-16">
+                          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-secondary">Our Corporate Gifting Process</h2>
+                          <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed mt-4">A clear and efficient process from order to delivery, ensuring trust and transparency.</p>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-4 lg:gap-x-12">
+                        {giftingProcessSteps.map((step, index) => (
+                          <div key={step.title} className="relative">
+                            <div className="bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary">
+                              <div className="text-5xl font-extrabold text-primary/20 mb-4">{`0${index + 1}`}</div>
+                              <h3 className="text-lg font-bold text-secondary mb-2">{step.title}</h3>
+                              <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
                             </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {giftingWhyChooseUs.map((item, index) => (
-                                    <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
-                                        <div className="bg-primary/10 p-4 rounded-full mb-4 w-max">{item.icon}</div>
-                                        <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
-                                        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                                    </Card>
+                            {index < giftingProcessSteps.length - 1 && (
+                              <ChevronRight 
+                                className="absolute top-1/2 -right-7 -translate-y-1/2 h-8 w-8 text-primary/40 hidden lg:block"
+                                aria-hidden="true"
+                              />
+                            )}
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+              </section>
+            </FadeIn>
+
+            <FadeIn>
+              <section className="bg-muted">
+                <div className="container px-4 md:px-6">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Eco-Friendly Corporate Gifts</h2>
+                        <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Align your brand with modern corporate values by choosing from our range of sustainable and eco-friendly gifting options.</p>
+                    </div>
+                    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        {ecoGifts.map(item => (
+                            <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
+                                <CardHeader className="items-center">
+                                    <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
+                                    <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
+                                </CardHeader>
+                                <CardContent><p className="text-muted-foreground">{item.description}</p></CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+              </section>
+            </FadeIn>
+            
+             <FadeIn>
+                <section>
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Businesses Choose GSQUARE for Gifting</h2>
+                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We are more than a supplier; we are a strategic partner in strengthening your corporate relationships.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {whyChooseGifting.map((item, index) => (
+                                <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                                    <div className="bg-primary/10 p-4 rounded-full mb-4 w-max">{item.icon}</div>
+                                    <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
+                                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </FadeIn>
+            <FadeIn>
+                <section className="bg-muted">
+                    <div className="container">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Logistics & Bulk Order Management</h2>
+                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We provide end-to-end logistics for bulk corporate gifting, ensuring timely and reliable delivery across India.</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <Card className="border-2 border-neutral-300">
+                                <CardHeader>
+                                    <CardTitle className="flex items-center gap-2"><Truck className="h-6 w-6 text-primary" />PAN-India Delivery</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">We manage delivery to single or multiple office locations, as well as individual employee addresses nationwide.</p>
+                                </CardContent>
+                            </Card>
+                            <Card className="border-2 border-neutral-300">
+                                <CardHeader>
+                                    <CardTitle className="flex items-center gap-2"><Boxes className="h-6 w-6 text-primary" />Bulk Order Fulfillment</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">Our experienced team efficiently handles large-scale orders, from procurement and packaging to dispatch.</p>
+                                </CardContent>
+                            </Card>
+                             <Card className="border-2 border-neutral-300">
+                                <CardHeader>
+                                    <CardTitle className="flex items-center gap-2"><PackageCheck className="h-6 w-6 text-primary" />Quality Control</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">Every gift is inspected for quality before being dispatched to ensure it meets your brand standards.</p>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
+                </section>
+            </FadeIn>
+             <FadeIn>
+                <section>
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Frequently Asked Questions</h2></div>
+                        <div className="max-w-3xl mx-auto">
+                            <Accordion type="single" collapsible className="w-full">
+                                {giftingFaqs.map((faq, index) => (
+                                    <AccordionItem key={index} value={`item-${index}`}>
+                                        <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
+                                        <AccordionContent className="text-lg text-muted-foreground">{faq.answer}</AccordionContent>
+                                    </AccordionItem>
                                 ))}
-                            </div>
+                            </Accordion>
                         </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section className="bg-muted">
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">FAQs – Corporate Gifting Services</h2></div>
-                            <div className="max-w-3xl mx-auto">
-                                <Accordion type="single" collapsible className="w-full">
-                                    {giftingFaqs.map((faq, index) => (
-                                        <AccordionItem key={index} value={`item-${index}`}>
-                                            <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
-                                            <AccordionContent className="text-lg text-muted-foreground">{faq.answer}</AccordionContent>
-                                        </AccordionItem>
-                                    ))}
-                                </Accordion>
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-            </>
+                    </div>
+                </section>
+            </FadeIn>
+        </>
         )}
 
         {/* CTA */}
@@ -1026,6 +1200,16 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                       </p>
                       <GetStartedModal>
                         <Button size="lg">Request a Quote<ArrowRight className="ml-2 h-4 w-4" /></Button>
+                      </GetStartedModal>
+                    </>
+                  ) : service.slug === 'corporate-gifting' ? (
+                    <>
+                      <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Need Help Choosing Corporate Gifts?</h2>
+                      <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
+                        Our team can help you select the right gifts based on your budget, audience, occasion, and branding requirements.
+                      </p>
+                      <GetStartedModal>
+                        <Button size="lg">Book Gifting Consultation<ArrowRight className="ml-2 h-4 w-4" /></Button>
                       </GetStartedModal>
                     </>
                   ) : (
