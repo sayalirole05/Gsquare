@@ -86,7 +86,7 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
     title: serviceTitle,
     description: service.description,
     openGraph: {
-      title: serviceTitle,
+      title: `${serviceTitle} | ${siteConfig.name}`,
       description: service.description,
       url: `${siteConfig.url}/services/${service.slug}`,
       type: 'article',
@@ -926,44 +926,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     </div>
                 </section>
             </FadeIn>
-            <FadeIn>
-                <section className="bg-muted">
-                    <div className="container">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Logistics & Bulk Order Management</h2>
-                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We provide end-to-end logistics for bulk corporate gifting, ensuring timely and reliable delivery across India.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <Card className="border-2 border-neutral-300">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2"><Truck className="h-6 w-6 text-primary" />PAN-India Delivery</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">We manage delivery to single or multiple office locations, as well as individual employee addresses nationwide.</p>
-                                </CardContent>
-                            </Card>
-                            <Card className="border-2 border-neutral-300">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2"><Boxes className="h-6 w-6 text-primary" />Bulk Order Fulfillment</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">Our experienced team efficiently handles large-scale orders, from procurement and packaging to dispatch.</p>
-                                </CardContent>
-                            </Card>
-                             <Card className="border-2 border-neutral-300">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2"><PackageCheck className="h-6 w-6 text-primary" />Quality Control</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">Every gift is inspected for quality before being dispatched to ensure it meets your brand standards.</p>
-                                </CardContent>
-                            </Card>
-                        </div>
-                    </div>
-                </section>
-            </FadeIn>
              <FadeIn>
-                <section>
+                <section className="bg-muted">
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Frequently Asked Questions</h2></div>
                         <div className="max-w-3xl mx-auto">
