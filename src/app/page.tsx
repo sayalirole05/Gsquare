@@ -96,7 +96,7 @@ export default function Home() {
           <div className="container relative px-4 md:px-6 flex items-center">
             <div className="flex flex-col space-y-8 max-w-3xl py-0">
               <div>
-                <div className="inline-block bg-primary text-primary-foreground text-xs font-medium px-4 py-1.5 rounded-full mb-6">
+                <div className="inline-block bg-white/20 border border-white/30 text-primary-foreground text-xs font-medium px-4 py-1.5 rounded-full mb-6">
                   Executive Corporate Support Partner
                 </div>
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight">
