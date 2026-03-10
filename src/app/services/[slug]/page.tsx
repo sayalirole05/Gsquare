@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
     };
   }
 
-  const serviceTitle = service.title === 'Corporate Housekeeping & Material Supply' ? 'Housekeeping Services' : service.title;
+  const serviceTitle = service.slug === 'housekeeping' ? 'Housekeeping Services' : service.title;
 
   return {
     title: serviceTitle,
@@ -98,7 +98,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     notFound();
   }
   
-  const serviceTitle = service.title === 'Corporate Housekeeping & Material Supply' ? 'Housekeeping Services' : service.title;
+  const serviceTitle = service.slug === 'housekeeping' ? 'Housekeeping Services' : service.title;
 
   const serviceHeroImages: { [key: string]: { src: string; alt: string; } } = {
     'housekeeping': {
@@ -463,6 +463,83 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     <div className="relative aspect-video">
                         <Image src="https://images.unsplash.com/photo-1554435493-93422e8a142b?q=80&w=1920" alt="Supervisor with checklist" fill className="rounded-lg shadow-xl object-cover" />
                     </div>
+                  </div>
+                </div>
+              </section>
+            </FadeIn>
+            <FadeIn>
+                <section>
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Eco-Friendly Cleaning Practices</h2>
+                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We are committed to sustainability and use environmentally responsible cleaning methods.</p>
+                        </div>
+                        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                            <Card className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
+                                <CardHeader className="items-center">
+                                    <div className="bg-primary/10 p-4 rounded-full mb-4">
+                                        <Wind className="h-8 w-8 text-primary" />
+                                    </div>
+                                    <CardTitle className="text-xl font-headline text-secondary">Low-Chemical Methods</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">Using microfiber systems to reduce reliance on harsh chemicals.</p>
+                                </CardContent>
+                            </Card>
+                            <Card className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
+                                <CardHeader className="items-center">
+                                    <div className="bg-primary/10 p-4 rounded-full mb-4">
+                                        <Recycle className="h-8 w-8 text-primary" />
+                                    </div>
+                                    <CardTitle className="text-xl font-headline text-secondary">Waste Segregation</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">Implementing proper waste segregation for recycling and responsible disposal.</p>
+                                </CardContent>
+                            </Card>
+                            <Card className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
+                                <CardHeader className="items-center">
+                                    <div className="bg-primary/10 p-4 rounded-full mb-4">
+                                        <Leaf className="h-8 w-8 text-primary" />
+                                    </div>
+                                    <CardTitle className="text-xl font-headline text-secondary">Sustainable Products</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">Prioritizing the use of biodegradable and eco-friendly cleaning agents.</p>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
+                </section>
+            </FadeIn>
+            <FadeIn>
+              <section className="bg-muted">
+                <div className="container px-4 md:px-6">
+                  <div className="text-center mb-12">
+                      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Outsource Housekeeping?</h2>
+                      <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Making the right choice for your facility management can impact efficiency, costs, and overall workplace quality.</p>
+                  </div>
+                  <div className="max-w-4xl mx-auto bg-card rounded-lg border-2 border-neutral-300 overflow-hidden">
+                      <div className="grid grid-cols-3 text-left">
+                          <div className="p-4 font-bold text-secondary bg-accent/50 text-lg">Feature</div>
+                          <div className="p-4 font-bold text-secondary bg-accent/50 border-l text-lg">In-House Staff</div>
+                          <div className="p-4 font-bold text-secondary bg-accent/50 border-l text-lg">Professional Housekeeping</div>
+                      </div>
+                      <div className="grid grid-cols-3 text-left border-t items-center">
+                          <div className="p-4 font-semibold text-secondary">Training</div>
+                          <div className="p-4 text-muted-foreground border-l">Training required</div>
+                          <div className="p-4 text-muted-foreground border-l">Trained professionals</div>
+                      </div>
+                      <div className="grid grid-cols-3 text-left border-t items-center">
+                          <div className="p-4 font-semibold text-secondary">Management Overhead</div>
+                          <div className="p-4 text-muted-foreground border-l">Management overhead</div>
+                          <div className="p-4 text-muted-foreground border-l">Managed services</div>
+                      </div>
+                      <div className="grid grid-cols-3 text-left border-t items-center">
+                          <div className="p-4 font-semibold text-secondary">Equipment Investment</div>
+                          <div className="p-4 text-muted-foreground border-l">Equipment investment</div>
+                          <div className="p-4 text-muted-foreground border-l">Provided by vendor</div>
+                      </div>
                   </div>
                 </div>
               </section>
