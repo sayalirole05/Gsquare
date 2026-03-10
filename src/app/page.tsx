@@ -170,8 +170,8 @@ export default function Home() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Housekeeping Card */}
-                <Link href="/services/housekeeping">
-                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full">
+                <Link href="/services/housekeeping" className="flex">
+                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full w-full">
                     <div className="relative h-64">
                       <Image
                         src={placeholderImages.housekeeping.src}
@@ -197,8 +197,8 @@ export default function Home() {
                 </Link>
 
                 {/* Office Supplies Card */}
-                <Link href="/services/office-supplies">
-                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full">
+                <Link href="/services/office-supplies" className="flex">
+                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full w-full">
                     <div className="relative h-64">
                       <Image
                         src={placeholderImages.officeSupplies.src}
@@ -224,8 +224,8 @@ export default function Home() {
                 </Link>
 
                 {/* Corporate Gifting Card */}
-                <Link href="/services/corporate-gifting">
-                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full">
+                <Link href="/services/corporate-gifting" className="flex">
+                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full w-full">
                     <div className="relative h-64">
                       <Image
                           src={placeholderImages.corporateGifting.src}
@@ -268,7 +268,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-4 lg:gap-x-12">
                 {processSteps.map((step, index) => (
                   <div key={step.title} className="relative">
-                    <div className="bg-card p-6 rounded-lg border border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div className="bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary">
                       <div className="text-5xl font-extrabold text-primary/20 mb-4">{`0${index + 1}`}</div>
                       <h3 className="text-lg font-bold text-secondary mb-2">{step.title}</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>

@@ -140,7 +140,7 @@ export default function AboutPage() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {valueProps.map((item, index) => (
-                            <Card key={index} className="bg-card text-left p-6 border-transparent shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <Card key={index} className="bg-card text-left p-6 border-2 border-neutral-300 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-primary">
                                 <div className="bg-primary/10 p-3 rounded-lg w-max mb-4">{item.icon}</div>
                                 <h3 className="text-xl font-bold text-secondary mb-2">{item.title}</h3>
                                 <p className="text-muted-foreground">{item.description}</p>
@@ -209,7 +209,7 @@ export default function AboutPage() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {approachSteps.map((step, index) => (
-                           <Card key={index} className="bg-card text-left p-8 border-transparent shadow-md hover:shadow-xl hover:border-primary transition-all duration-300">
+                           <Card key={index} className="bg-card text-left p-8 border-2 border-neutral-300 shadow-md hover:shadow-xl hover:border-primary transition-all duration-300">
                                 <div className="text-5xl font-extrabold text-primary/20 mb-4">0{index + 1}</div>
                                 <h3 className="text-xl font-bold text-secondary mb-2">{step.title}</h3>
                                 <p className="text-muted-foreground">{step.description}</p>

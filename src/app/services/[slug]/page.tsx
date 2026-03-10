@@ -316,7 +316,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </div>
                         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                             {housekeepingServiceBreakdown.map(item => (
-                                <Card key={item.title} className="text-center border-secondary/20">
+                                <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
                                     <CardHeader className="items-center">
                                         <div className="bg-primary/10 p-4 rounded-full mb-4">
                                             {item.icon}
@@ -341,7 +341,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </div>
                         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                             {cleaningProductRange.map(item => (
-                                <Card key={item.title} className="text-center border-secondary/20">
+                                <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
                                     <CardHeader className="items-center">
                                         <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
                                         <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
@@ -362,7 +362,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     </div>
                   <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     {industries.map((industry) => (
-                      <Card key={industry.name} className="group text-center transition-all duration-300 border-2 border-secondary hover:border-primary hover:shadow-xl">
+                      <Card key={industry.name} className="group text-center transition-all duration-300 border-2 border-neutral-300 hover:border-primary hover:shadow-xl">
                         <CardHeader className="flex flex-col items-center">
                           <div className="bg-primary/10 group-hover:bg-primary p-4 rounded-full mb-4 transition-colors">
                             {industryIcons[industry.name as keyof typeof industryIcons]}
@@ -389,7 +389,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                             {whyChooseGsquareItems.map((item, index) => (
-                                <div key={index} className="group bg-card p-6 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                                <div key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
                                     <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-accent mb-5 transition-colors duration-300 group-hover:bg-primary">
                                         {item.icon}
                                     </div>
@@ -480,7 +480,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             </div>
                             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                                 {officeSuppliesRange.map(item => (
-                                    <Card key={item.title} className="text-center border-secondary/20">
+                                    <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
                                         <CardHeader className="items-center">
                                             <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
                                             <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
@@ -518,7 +518,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {officeSuppliesWhyChooseUs.map((item, index) => (
-                                    <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                                    <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
                                         <div className="bg-primary/10 p-4 rounded-full mb-4 w-max">{item.icon}</div>
                                         <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
                                         <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
@@ -560,7 +560,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             </div>
                             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                                 {giftCategories.map(item => (
-                                    <Card key={item.title} className="text-center border-secondary/20">
+                                    <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
                                         <CardHeader className="items-center">
                                             <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
                                             <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
@@ -598,7 +598,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {giftingWhyChooseUs.map((item, index) => (
-                                    <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-secondary shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                                    <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
                                         <div className="bg-primary/10 p-4 rounded-full mb-4 w-max">{item.icon}</div>
                                         <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
                                         <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
