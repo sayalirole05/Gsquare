@@ -40,6 +40,14 @@ import {
   Award,
   ArrowRight,
   ChevronRight,
+  Wind,
+  WashingMachine,
+  GlassWater,
+  ShowerHead,
+  ClipboardCheck,
+  CalendarDays,
+  Settings2,
+  Building2,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -69,11 +77,13 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
     };
   }
 
+  const serviceTitle = service.title === 'Corporate Housekeeping & Material Supply' ? 'Housekeeping Services' : service.title;
+
   return {
-    title: service.title === 'Corporate Housekeeping & Material Supply' ? 'Housekeeping Services' : service.title,
+    title: serviceTitle,
     description: service.description,
     openGraph: {
-      title: service.title === 'Corporate Housekeeping & Material Supply' ? 'Housekeeping Services' : service.title,
+      title: serviceTitle,
       description: service.description,
       url: `${siteConfig.url}/services/${service.slug}`,
       type: 'article',
@@ -172,12 +182,54 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       answer: "Absolutely. We offer flexible scheduling options, including after-hours and weekend services, to minimize disruption to your business operations. We work with you to create a cleaning schedule that best suits your needs."
     }
   ];
-  const cleaningProductRange = [
-    { icon: <FlaskConical className="h-8 w-8 text-primary" />, title: "Chemicals & Disinfectants", description: "Floor cleaners, glass cleaners, sanitizers, and specialty chemicals." },
-    { icon: <Droplets className="h-8 w-8 text-primary" />, title: "Paper & Dispensers", description: "Tissues, paper towels, toilet rolls, and dispenser units." },
-    { icon: <Sparkles className="h-8 w-8 text-primary" />, title: "Cleaning Tools", description: "Mops, brushes, wipers, dusters, and cleaning trolleys." },
-    { icon: <Trash2 className="h-8 w-8 text-primary" />, title: "Waste Management", description: "Garbage bags, bins, and waste segregation solutions." }
-];
+
+  const cleaningEquipment = [
+    { icon: <Wind className="h-8 w-8 text-primary" />, title: "Industrial Vacuum Cleaners", description: "High-performance machines to remove dust from carpets, workstations, and common areas." },
+    { icon: <WashingMachine className="h-8 w-8 text-primary" />, title: "Floor Scrubbing Machines", description: "For deep cleaning and maintaining large floor surfaces in lobbies and corridors." },
+    { icon: <Layers className="h-8 w-8 text-primary" />, title: "Microfiber Cleaning Systems", description: "Effectively trap dust and bacteria while minimizing chemical usage." },
+    { icon: <GlassWater className="h-8 w-8 text-primary" />, title: "Glass Cleaning Tools", description: "Professional tools for streak-free cleaning of glass panels and windows." },
+  ];
+
+  const cleaningMaterials = [
+      { icon: <Leaf className="h-8 w-8 text-primary" />, title: "Eco-friendly solutions" },
+      { icon: <ShieldCheck className="h-8 w-8 text-primary" />, title: "Surface disinfectants" },
+      { icon: <FlaskConical className="h-8 w-8 text-primary" />, title: "Floor cleaning chemicals" },
+      { icon: <Droplets className="h-8 w-8 text-primary" />, title: "Glass cleaning liquids" },
+      { icon: <ShowerHead className="h-8 w-8 text-primary" />, title: "Washroom hygiene products" },
+  ];
+  
+  const safetyPractices = [
+    'All staff members receive training on safe cleaning practices and proper equipment usage.',
+    'Housekeeping staff use gloves, masks, and safety gear while performing cleaning tasks.',
+    'Cleaning chemicals are used according to safety guidelines to avoid risks to employees and workplace infrastructure.',
+    'Special attention is given to high-touch surfaces such as door handles, desks, and shared workspaces.',
+    'Cleaning processes are designed to comply with corporate safety and facility management standards.',
+  ];
+
+  const qualityProcess = [
+    'Each cleaning activity follows a structured checklist to ensure all areas are properly maintained.',
+    'Dedicated supervisors conduct regular inspections to monitor cleaning quality and staff performance.',
+    'Regular service evaluations help maintain high standards and identify areas for improvement.',
+    'We actively collect client feedback to continuously improve service delivery.',
+    'Housekeeping staff receive regular training updates to maintain service quality.',
+  ];
+
+  const serviceModels = [
+    'Full-time housekeeping personnel deployed at your workplace for daily cleaning operations.',
+    'Multiple cleaning shifts for offices with extended working hours.',
+    'Cleaning services performed on daily, weekly, or periodic schedules.',
+    'Special cleaning support for corporate events, office renovations, or seasonal cleaning.',
+    'Service plans tailored to specific workplace requirements.',
+  ];
+
+  const siteInspectionPoints = [
+    'Workplace size and layout',
+    'Cleaning frequency requirements',
+    'Washroom and pantry maintenance needs',
+    'Workforce deployment requirements',
+    'Specialized cleaning requirements',
+  ];
+
 
   // Office Supplies data
   const officeSuppliesRange = [
@@ -333,11 +385,11 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <section className="bg-muted">
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Integrated Material Supply</h2>
-                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We provide a complete range of professional-grade cleaning supplies and consumables to complement our housekeeping services.</p>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Cleaning Equipment & Materials We Use</h2>
+                            <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl mt-4">We use professional-grade cleaning equipment and high-quality materials to ensure consistent hygiene standards across workplaces. Our housekeeping teams are equipped with modern cleaning tools and safe cleaning products designed for corporate environments.</p>
                         </div>
-                        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                            {cleaningProductRange.map(item => (
+                        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+                            {cleaningEquipment.map(item => (
                                 <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
                                     <CardHeader className="items-center">
                                         <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
@@ -347,8 +399,128 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </Card>
                             ))}
                         </div>
+                         <div className="text-center mb-12">
+                            <h3 className="text-2xl font-bold tracking-tighter font-headline text-secondary">Cleaning Materials</h3>
+                        </div>
+                        <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+                            {cleaningMaterials.map(item => (
+                                <div key={item.title} className="flex flex-col items-center text-center gap-4">
+                                    <div className="bg-accent p-5 rounded-lg">
+                                        {item.icon}
+                                    </div>
+                                    <p className="font-semibold text-secondary">{item.title}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
+            </FadeIn>
+             <FadeIn>
+              <section>
+                <div className="container px-4 md:px-6">
+                  <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+                     <div className="relative aspect-video">
+                        <Image src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1920" alt="Cleaning staff with protective gear" fill className="rounded-lg shadow-xl object-cover" />
+                    </div>
+                    <div className="space-y-4">
+                      <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Safety & Compliance Standards</h2>
+                      <p className="text-muted-foreground md:text-lg">
+                        We follow strict safety and hygiene practices to ensure safe workplace environments for both employees and visitors. Maintaining safety during cleaning operations is essential in corporate environments.
+                      </p>
+                       <h3 className="text-xl font-bold tracking-tighter font-headline text-secondary pt-4">Our Safety Practices</h3>
+                       <ul className="space-y-3">
+                        {safetyPractices.map((practice, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                            <span>{practice}</span>
+                          </li>
+                        ))}
+                       </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </FadeIn>
+            <FadeIn>
+              <section className="bg-muted">
+                <div className="container px-4 md:px-6">
+                   <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+                    <div className="space-y-4">
+                      <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Our Quality Assurance Process</h2>
+                      <p className="text-muted-foreground md:text-lg">
+                        We follow a structured monitoring process to maintain consistent housekeeping standards across all client locations. Quality and consistency are critical in housekeeping services.
+                      </p>
+                       <h3 className="text-xl font-bold tracking-tighter font-headline text-secondary pt-4">Our Quality Monitoring Process</h3>
+                       <ul className="space-y-3">
+                        {qualityProcess.map((item, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                       </ul>
+                    </div>
+                    <div className="relative aspect-video">
+                        <Image src="https://images.unsplash.com/photo-1554435493-93422e8a142b?q=80&w=1920" alt="Supervisor with checklist" fill className="rounded-lg shadow-xl object-cover" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </FadeIn>
+             <FadeIn>
+                <section>
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Flexible Service Plans & Staffing Models</h2>
+                            <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl mt-4">We offer flexible housekeeping service models designed to meet the operational needs of different workplace environments. Every workplace has different operational requirements.</p>
+                        </div>
+                        <div className="max-w-4xl mx-auto">
+                            <ul className="space-y-4">
+                                {serviceModels.map((item, index) => (
+                                    <li key={index} className="flex items-start gap-4 p-4 border-2 border-neutral-300 rounded-lg">
+                                        <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </FadeIn>
+
+            <FadeIn>
+              <section className="bg-muted">
+                <div className="container px-4 md:px-6">
+                  <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+                    <div className="space-y-4">
+                      <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Request a Free Site Inspection</h2>
+                      <p className="text-muted-foreground md:text-lg">
+                        Our experts can assess your workplace and recommend the most suitable housekeeping plan for your organization. Understanding the facility layout is essential for designing an effective housekeeping plan.
+                      </p>
+                       <h3 className="text-xl font-bold tracking-tighter font-headline text-secondary pt-4">During the Site Inspection, We Assess:</h3>
+                       <ul className="space-y-3">
+                        {siteInspectionPoints.map((point, index) => (
+                          <li key={index} className="flex items-center gap-3">
+                            <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                       </ul>
+                       <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                          <GetStartedModal>
+                              <Button size="lg">Schedule Site Inspection</Button>
+                          </GetStartedModal>
+                          <GetStartedModal>
+                              <Button size="lg" variant="outline">Request a Housekeeping Quote</Button>
+                          </GetStartedModal>
+                       </div>
+                    </div>
+                    <div className="relative aspect-video">
+                        <Image src="https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=1920" alt="Team having a discussion" fill className="rounded-lg shadow-xl object-cover" />
+                    </div>
+                  </div>
+                </div>
+              </section>
             </FadeIn>
             <FadeIn>
               <section>
@@ -421,23 +593,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 )}
                               </div>
                             ))}
-                        </div>
-                    </div>
-                </section>
-            </FadeIn>
-            <FadeIn>
-                <section className='bg-muted'>
-                    <div className="container px-4 md:px-6">
-                         <div className="text-center">
-                            <div className="inline-block bg-primary/10 p-4 rounded-full mb-4">
-                                <ShieldCheck className="h-10 w-10 text-primary" />
-                            </div>
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">
-                                Committed to Compliance & Security
-                            </h2>
-                            <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl mt-4">
-                                We are steadfast in our commitment to 100% statutory compliance. All our operations adhere to labor laws, safety regulations, and industry standards. Every member of our staff undergoes a rigorous background verification process, ensuring a trustworthy and secure service for your peace of mind.
-                            </p>
                         </div>
                     </div>
                 </section>
