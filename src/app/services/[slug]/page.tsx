@@ -883,34 +883,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                       </div>
                   </section>
               </FadeIn>
-              <FadeIn>
-                <section className="bg-muted">
-                    <div className="container px-4 md:px-6">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Office Supply Packages</h2>
-                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Choose from our curated packages to simplify your purchasing decisions.</p>
-                        </div>
-                        <div className="max-w-4xl mx-auto bg-card rounded-lg border-2 border-neutral-300 overflow-hidden">
-                            <div className="grid grid-cols-2 text-left">
-                                <div className="p-4 font-bold text-secondary bg-accent/50 text-lg">Package</div>
-                                <div className="p-4 font-bold text-secondary bg-accent/50 border-l text-lg">Ideal For</div>
-                            </div>
-                            <div className="grid grid-cols-2 text-left border-t items-center">
-                                <div className="p-4 font-semibold text-secondary">Basic Office Pack</div>
-                                <div className="p-4 text-muted-foreground border-l">Small teams and startups (up to 10 employees)</div>
-                            </div>
-                            <div className="grid grid-cols-2 text-left border-t items-center">
-                                <div className="p-4 font-semibold text-secondary">Standard Office Pack</div>
-                                <div className="p-4 text-muted-foreground border-l">Medium-sized offices (10-50 employees)</div>
-                            </div>
-                            <div className="grid grid-cols-2 text-left border-t items-center">
-                                <div className="p-4 font-semibold text-secondary">Enterprise Supply Pack</div>
-                                <div className="p-4 text-muted-foreground border-l">Large corporates and multi-location offices</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-              </FadeIn>
           </>
         )}
         
