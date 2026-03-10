@@ -38,6 +38,7 @@ import {
   Leaf,
   PackageSearch,
   Award,
+  ArrowRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -48,6 +49,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import React from 'react';
 import placeholderImages from '@/lib/placeholder-images.json';
+import { GetStartedModal } from '@/components/GetStartedModal';
 
 // Generate static pages for each service
 export async function generateStaticParams() {
@@ -632,30 +634,40 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
         {/* CTA */}
         <FadeIn>
-          <section className="bg-background">
+          <section>
             <div className="container">
-              <div className="rounded-lg bg-primary text-primary-foreground p-8 md:p-12 lg:p-16 text-center">
-                {service.slug === 'housekeeping' ? (
-                  <>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Need Reliable Housekeeping for Your Workplace?</h2>
-                    <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
-                      Our team can help maintain a clean, professional environment for your employees and visitors.
-                    </p>
-                    <Button asChild size="lg" variant="secondary">
-                      <Link href="/#contact-us">Request a Service Quote</Link>
-                    </Button>
-                  </>
-                ) : (
-                  <>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Interested in our {serviceTitle} services?</h2>
-                    <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
-                      Contact us today for a customized proposal and discover how we can add value to your business.
-                    </p>
-                    <Button asChild size="lg" variant="secondary">
-                      <Link href="/#contact-us">Get a Quote</Link>
-                    </Button>
-                  </>
-                )}
+              <div className="relative rounded-lg overflow-hidden p-8 md:p-12 lg:p-20 text-center">
+                <Image
+                  alt={placeholderImages.cta.alt}
+                  src={placeholderImages.cta.src}
+                  fill
+                  className="object-cover"
+                  data-ai-hint={placeholderImages.cta.hint}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#2B4A7C]/95 to-[#2B4A7C]/85" />
+                <div className="relative space-y-6">
+                  {service.slug === 'housekeeping' ? (
+                    <>
+                      <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Need Reliable Housekeeping for Your Workplace?</h2>
+                      <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
+                        Our team can help maintain a clean, professional environment for your employees and visitors.
+                      </p>
+                      <GetStartedModal>
+                        <Button size="lg">Request a Service Quote<ArrowRight className="ml-2 h-4 w-4" /></Button>
+                      </GetStartedModal>
+                    </>
+                  ) : (
+                    <>
+                      <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Interested in our {serviceTitle} services?</h2>
+                      <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
+                        Contact us today for a customized proposal and discover how we can add value to your business.
+                      </p>
+                      <GetStartedModal>
+                        <Button size="lg">Get a Quote<ArrowRight className="ml-2 h-4 w-4" /></Button>
+                      </GetStartedModal>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </section>
