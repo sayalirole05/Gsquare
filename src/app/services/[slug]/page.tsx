@@ -67,10 +67,10 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
   }
 
   return {
-    title: service.title,
+    title: service.title === 'Corporate Housekeeping & Material Supply' ? 'Housekeeping Services' : service.title,
     description: service.description,
     openGraph: {
-      title: service.title,
+      title: service.title === 'Corporate Housekeeping & Material Supply' ? 'Housekeeping Services' : service.title,
       description: service.description,
       url: `${siteConfig.url}/services/${service.slug}`,
       type: 'article',
@@ -84,6 +84,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
   if (!service) {
     notFound();
   }
+  
+  const serviceTitle = service.title === 'Corporate Housekeeping & Material Supply' ? 'Housekeeping Services' : service.title;
 
   const serviceHeroImages: { [key: string]: { src: string; alt: string; } } = {
     'housekeeping': {
@@ -226,7 +228,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
        <JsonLd data={{
           '@context': 'https://schema.org',
           '@type': 'Service',
-          serviceType: service.title,
+          serviceType: serviceTitle,
           provider: {
             '@type': 'LocalBusiness',
             name: siteConfig.name,
@@ -260,14 +262,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             <div className="relative container h-full flex flex-col justify-center items-center text-center text-white">
                 <FadeIn>
                     <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
-                        {service.title}
+                        {serviceTitle}
                     </h1>
                     <div className="mt-4 text-lg">
                         <Link href="/" className="text-primary-foreground/80 hover:text-white transition-colors">Home</Link>
                         <span className="mx-2 text-primary-foreground/50">&gt;</span>
                         <Link href="/services" className="text-primary-foreground/80 hover:text-white transition-colors">Services</Link>
                         <span className="mx-2 text-primary-foreground/50">&gt;</span>
-                        <span className="font-semibold">{service.title}</span>
+                        <span className="font-semibold">{serviceTitle}</span>
                     </div>
                 </FadeIn>
             </div>
@@ -633,13 +635,27 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
           <section className="bg-background">
             <div className="container">
               <div className="rounded-lg bg-primary text-primary-foreground p-8 md:p-12 lg:p-16 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Interested in our {service.title} services?</h2>
-                <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
-                  Contact us today for a customized proposal and discover how we can add value to your business.
-                </p>
-                <Button asChild size="lg" variant="secondary">
-                  <Link href="/#contact-us">Get a Quote</Link>
-                </Button>
+                {service.slug === 'housekeeping' ? (
+                  <>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Need Reliable Housekeeping for Your Workplace?</h2>
+                    <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
+                      Our team can help maintain a clean, professional environment for your employees and visitors.
+                    </p>
+                    <Button asChild size="lg" variant="secondary">
+                      <Link href="/#contact-us">Request a Service Quote</Link>
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">Interested in our {serviceTitle} services?</h2>
+                    <p className="max-w-2xl mx-auto mb-8 text-primary-foreground/80">
+                      Contact us today for a customized proposal and discover how we can add value to your business.
+                    </p>
+                    <Button asChild size="lg" variant="secondary">
+                      <Link href="/#contact-us">Get a Quote</Link>
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </section>
