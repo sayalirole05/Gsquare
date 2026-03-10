@@ -39,6 +39,7 @@ import {
   PackageSearch,
   Award,
   ArrowRight,
+  ChevronRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -128,14 +129,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       title: 'Enterprise Scalability',
       description: 'Seamless staffing solutions for large campuses and multi-location offices across India',
     },
-  ];
-
-  const processIcons = [
-    <Search key={1} className="h-8 w-8 text-primary" />,
-    <FileText key={2} className="h-8 w-8 text-primary" />,
-    <Rocket key={3} className="h-8 w-8 text-primary" />,
-    <ShieldCheck key={4} className="h-8 w-8 text-primary" />,
-    <TrendingUp key={5} className="h-8 w-8 text-primary" />,
   ];
 
   // Housekeeping data
@@ -406,26 +399,27 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </section>
             </FadeIn>
             <FadeIn>
-                <section>
+                <section id="process" className="bg-white">
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Our Structured Engagement Process</h2>
-                             <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">A transparent and collaborative approach guarantees service excellence.</p>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-secondary">Our Structured Engagement Process</h2>
+                            <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed mt-4">A transparent and collaborative approach guarantees service excellence.</p>
                         </div>
-                         <div className="relative max-w-3xl mx-auto">
-                            <div className="absolute left-9 top-0 h-full w-0.5 bg-border -translate-x-1/2" />
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-4 lg:gap-x-12">
                             {processSteps.map((step, index) => (
-                            <div key={index} className="relative pl-20 pb-16">
-                                <div className="absolute left-9 top-1 -translate-x-1/2">
-                                <div className="bg-background border-2 border-primary rounded-full h-10 w-10 flex items-center justify-center">
-                                    {processIcons[index]}
+                              <div key={step.title} className="relative">
+                                <div className="bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary">
+                                  <div className="text-5xl font-extrabold text-primary/20 mb-4">{`0${index + 1}`}</div>
+                                  <h3 className="text-lg font-bold text-secondary mb-2">{step.title}</h3>
+                                  <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
                                 </div>
-                                </div>
-                                <div className="pt-1">
-                                <h3 className="text-xl font-bold font-headline">{index + 1}. {step.title}</h3>
-                                <p className="mt-2 text-muted-foreground">{step.description}</p>
-                                </div>
-                            </div>
+                                {index < processSteps.length - 1 && (
+                                  <ChevronRight 
+                                    className="absolute top-1/2 -right-7 -translate-y-1/2 h-8 w-8 text-primary/40 hidden lg:block"
+                                    aria-hidden="true"
+                                  />
+                                )}
+                              </div>
                             ))}
                         </div>
                     </div>
