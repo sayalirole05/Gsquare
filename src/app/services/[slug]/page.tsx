@@ -272,6 +272,49 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       "Simplified billing and payment with consolidated invoicing."
   ];
 
+  const officeSuppliesFaqs = [
+    {
+        question: "What types of office supplies do you provide?",
+        answer: "We supply a wide range of office essentials including writing instruments, printing paper, files, desk accessories, printer cartridges, notebooks, and meeting supplies."
+    },
+    {
+        question: "Do you supply office materials in bulk?",
+        answer: "Yes. We specialize in bulk supply for corporate offices and businesses, ensuring consistent product availability and competitive pricing."
+    },
+    {
+        question: "Do you deliver office supplies across Pune?",
+        answer: "Yes, we provide organized and timely delivery of office supplies to businesses across Pune and nearby areas."
+    },
+    {
+        question: "Can we request a customized office supply package?",
+        answer: "Yes. We can create customized office supply kits based on your workplace requirements, team size, and operational needs."
+    },
+    {
+        question: "What brands of office stationery do you supply?",
+        answer: "We provide quality products from trusted brands such as Camlin, Classmate, Kangaro, Reynolds, Faber-Castell, and JK Paper."
+    },
+    {
+        question: "How can we place an order for office supplies?",
+        answer: "You can request a quotation through our website or contact our team to discuss your office supply requirements."
+    },
+    {
+        question: "Do you offer corporate supply contracts?",
+        answer: "Yes. We offer long-term office supply solutions for businesses that require regular deliveries and bulk procurement support."
+    },
+    {
+        question: "What is the minimum order quantity?",
+        answer: "Minimum order quantities may vary depending on the product type and supply requirements. Our team can guide you during the quotation process."
+    },
+    {
+        question: "How quickly can office supplies be delivered?",
+        answer: "Delivery timelines depend on the order size and product availability, but most orders are processed and delivered within a short turnaround time."
+    },
+    {
+        question: "Do you supply office welcome kits or employee kits?",
+        answer: "Yes. We provide customized employee onboarding kits and office supply kits that include essential workstation items."
+    }
+  ];
+
   // Corporate Gifting data
   const giftOccasions = [
       { icon: <Rocket className="h-8 w-8 text-primary" />, title: "Employee Onboarding", description: "Curated kits to make new hires feel valued from day one." },
@@ -375,37 +418,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         {/* Housekeeping Page Content */}
         {service.slug === 'housekeeping' && (
           <>
-            {/* <FadeIn>
-              <section className="bg-muted">
-                <div className="container px-4 md:px-6">
-                  <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-                    <div className="space-y-4">
-                      <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">The Silent Cost of a Subpar Workplace</h2>
-                      <p className="text-muted-foreground md:text-lg">
-                        A neglected workplace environment does more than just look unprofessional. It can directly impact employee morale, hinder productivity, and even pose health risks. Dust, clutter, and unhygienic facilities create distractions and signal a lack of care, affecting your team's focus and your company's reputation.
-                      </p>
-                       <ul className="space-y-3">
-                        <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span>First impressions for clients and visitors are compromised.</span>
-                        </li>
-                        <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span>Reduced employee well-being and increased sick days.</span>
-                        </li>
-                        <li className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span>Difficulty in attracting and retaining top talent.</span>
-                        </li>
-                       </ul>
-                    </div>
-                    <div className="relative">
-                        <Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHw1fHxjb2xsYWJvcmF0aXZlJTIwb2ZmaWNlfGVufDB8fHx8MTcxMTU0ODk1Mnww&ixlib=rb-4.1.0&q=85" alt="Clean and modern office" width={600} height={400} className="rounded-lg shadow-xl" />
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </FadeIn> */}
             <FadeIn>
                 <section>
                     <div className="container px-4 md:px-6">
@@ -449,74 +461,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </Card>
                             ))}
                         </div>
-                         {/* <div className="text-center mb-12">
-                            <h3 className="text-2xl font-bold tracking-tighter font-headline text-secondary">Cleaning Materials</h3>
-                        </div>
-                        <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-                            {cleaningMaterials.map(item => (
-                                <div key={item.title} className="flex flex-col items-center text-center gap-4">
-                                    <div className="bg-accent p-5 rounded-lg">
-                                        {item.icon}
-                                    </div>
-                                    <p className="font-semibold text-secondary">{item.title}</p>
-                                </div>
-                            ))}
-                        </div> */}
                     </div>
                 </section>
             </FadeIn>
-             {/* <FadeIn>
-              <section>
-                <div className="container px-4 md:px-6">
-                  <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-                     <div className="relative aspect-video">
-                        <Image src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1920" alt="Cleaning staff with protective gear" fill className="rounded-lg shadow-xl object-cover" />
-                    </div>
-                    <div className="space-y-4">
-                      <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Safety & Compliance Standards</h2>
-                      <p className="text-muted-foreground md:text-lg">
-                        We follow strict safety and hygiene practices to ensure safe workplace environments for both employees and visitors. Maintaining safety during cleaning operations is essential in corporate environments.
-                      </p>
-                       <h3 className="text-xl font-bold tracking-tighter font-headline text-secondary pt-4">Our Safety Practices</h3>
-                       <ul className="space-y-3">
-                        {safetyPractices.map((practice, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-                            <span>{practice}</span>
-                          </li>
-                        ))}
-                       </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </FadeIn> */}
-            {/* <FadeIn>
-              <section className="bg-muted">
-                <div className="container px-4 md:px-6">
-                   <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-                    <div className="space-y-4">
-                      <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Our Quality Assurance Process</h2>
-                      <p className="text-muted-foreground md:text-lg">
-                        We follow a structured monitoring process to maintain consistent housekeeping standards across all client locations. Quality and consistency are critical in housekeeping services.
-                      </p>
-                       <h3 className="text-xl font-bold tracking-tighter font-headline text-secondary pt-4">Our Quality Monitoring Process</h3>
-                       <ul className="space-y-3">
-                        {qualityProcess.map((item, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                       </ul>
-                    </div>
-                    <div className="relative aspect-video">
-                        <Image src="https://images.unsplash.com/photo-1554435493-93422e8a142b?q=80&w=1920" alt="Supervisor with checklist" fill className="rounded-lg shadow-xl object-cover" />
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </FadeIn> */}
             <FadeIn>
                 <section>
                     <div className="container px-4 md:px-6">
@@ -637,9 +584,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                           <GetStartedModal>
                               <Button size="lg">Schedule Site Inspection</Button>
                           </GetStartedModal>
-                          {/* <GetStartedModal>
-                              <Button size="lg" variant="outline">Request a Housekeeping Quote</Button>
-                          </GetStartedModal> */}
                        </div>
                     </div>
                     <div className="relative aspect-video">
@@ -649,83 +593,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </div>
               </section>
             </FadeIn>
-            {/* <FadeIn>
-              <section>
-                <div className="container px-4 md:px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Tailored for Every Industry</h2>
-                        <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We understand the unique cleaning requirements of different business environments.</p>
-                    </div>
-                  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                    {industries.map((industry) => (
-                      <Card key={industry.name} className="group text-center transition-all duration-300 border-2 border-neutral-300 hover:border-primary hover:shadow-xl">
-                        <CardHeader className="flex flex-col items-center">
-                          <div className="bg-primary/10 group-hover:bg-primary p-4 rounded-full transition-colors">
-                            {industryIcons[industry.name as keyof typeof industryIcons]}
-                          </div>
-                          <CardTitle className="text-2xl font-headline text-secondary group-hover:text-primary transition-colors">{industry.name}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                          <p className="text-muted-foreground">{industry.description}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            </FadeIn> */}
-            {/* <FadeIn>
-                <section className='bg-muted'>
-                    <div className="container px-4 md:px-6">
-                        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-secondary">Why <span className="text-primary">G</span><span className="text-secondary">SQUARE</span> for Housekeeping?</h2>
-                            <p className="max-w-3xl mx-auto text-muted-foreground md:text-lg">
-                                Our commitment to excellence ensures a clean, safe, and productive environment for your business.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {whyChooseGsquareItems.map((item, index) => (
-                                <div key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
-                                    <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-accent mb-5 transition-colors duration-300 group-hover:bg-primary">
-                                        {item.icon}
-                                    </div>
-                                    <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            </FadeIn> */}
-            {/* <FadeIn>
-                <section id="process" className="bg-white">
-                    <div className="container px-4 md:px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-secondary">Our Structured Engagement Process</h2>
-                            <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed mt-4">A transparent and collaborative approach guarantees service excellence.</p>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-4 lg:gap-x-12">
-                            {processSteps.map((step, index) => (
-                              <div key={step.title} className="relative">
-                                <div className="bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary">
-                                  <div className="text-5xl font-extrabold text-primary/20 mb-4">{`0${index + 1}`}</div>
-                                  <h3 className="text-lg font-bold text-secondary mb-2">{step.title}</h3>
-                                  <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
-                                </div>
-                                {index < processSteps.length - 1 && (
-                                  <ChevronRight 
-                                    className="absolute top-1/2 -right-7 -translate-y-1/2 h-8 w-8 text-primary/40 hidden lg:block"
-                                    aria-hidden="true"
-                                  />
-                                )}
-                              </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            </FadeIn> */}
             <FadeIn>
-                <section className='mb-0 pb-0'>
+                <section>
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Frequently Asked Questions</h2>
@@ -856,7 +725,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                   </section>
               </FadeIn>
               <FadeIn>
-                  <section>
+                  <section className='bg-muted'>
                       <div className="container px-4 md:px-6">
                            <div className="text-center mb-12">
                               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Trusted Brands & Reliable Delivery</h2>
@@ -883,6 +752,27 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                       </div>
                   </section>
               </FadeIn>
+              <FadeIn>
+                <section>
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12">
+                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Frequently Asked Questions</h2>
+                        </div>
+                        <div className="max-w-3xl mx-auto">
+                            <Accordion type="single" collapsible className="w-full">
+                                {officeSuppliesFaqs.map((faq, index) => (
+                                    <AccordionItem key={index} value={`item-${index}`}>
+                                        <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
+                                        <AccordionContent className="text-lg text-muted-foreground">
+                                            {faq.answer}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </div>
+                    </div>
+                </section>
+            </FadeIn>
           </>
         )}
         
@@ -1121,7 +1011,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <div className="relative space-y-6">
                   {service.slug === 'housekeeping' ? (
                     <>
-                      <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Book Professional Housekeeping Services?</h2>
+                      <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Need Reliable Housekeeping for Your Workplace?</h2>
                       <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
                         Our team can help maintain a clean, professional environment for your employees and visitors.
                       </p>
