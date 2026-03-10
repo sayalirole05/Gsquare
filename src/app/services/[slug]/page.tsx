@@ -48,6 +48,9 @@ import {
   CalendarDays,
   Settings2,
   Building2,
+  Coffee,
+  BadgePercent,
+  CalendarClock,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -230,24 +233,50 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     'Specialized cleaning requirements',
   ];
 
-
   // Office Supplies data
-  const officeSuppliesRange = [
-      { icon: <PenSquare className="h-8 w-8 text-primary" />, title: "Writing Instruments", description: "Pens, pencils, markers, highlighters, and more." },
-      { icon: <FileText className="h-8 w-8 text-primary" />, title: "Paper Products", description: "A4 paper, notepads, sticky notes, and registers." },
-      { icon: <Archive className="h-8 w-8 text-primary" />, title: "Filing & Storage", description: "Files, folders, binders, and document organizers." },
-      { icon: <Printer className="h-8 w-8 text-primary" />, title: "Office Consumables", description: "Printer cartridges, toners, and other machine supplies." }
+  const officeSupplyCategories = [
+    { icon: <PenSquare className="h-8 w-8 text-primary" />, title: "Writing Instruments" },
+    { icon: <FileText className="h-8 w-8 text-primary" />, title: "Paper & Notebooks" },
+    { icon: <Printer className="h-8 w-8 text-primary" />, title: "Printer & Copier Supplies" },
+    { icon: <Archive className="h-8 w-8 text-primary" />, title: "Desk Accessories" },
+    { icon: <Boxes className="h-8 w-8 text-primary" />, title: "Files & Storage" },
+    { icon: <Coffee className="h-8 w-8 text-primary" />, title: "Pantry Supplies" },
+    { icon: <Trash2 className="h-8 w-8 text-primary" />, title: "Cleaning & Utility" },
+    { icon: <Package className="h-8 w-8 text-primary" />, title: "Packaging & Shipping" },
   ];
-  const officeSuppliesWhyChooseUs = [
-      { icon: <Boxes className="h-8 w-8 text-primary" />, title: "Comprehensive Catalog", description: "A single source for every office supply item your office could possibly need." },
-      { icon: <PackageCheck className="h-8 w-8 text-primary" />, title: "Assured Availability", description: "We maintain high stock levels to ensure your essential supplies are always available." },
-      { icon: <TrendingUp className="h-8 w-8 text-primary" />, title: "Cost-Effective Solutions", description: "Benefit from competitive pricing, bulk discounts, and annual contract options." }
+
+  const supplyProcessSteps = [
+      { title: 'Requirement Assessment', description: 'Consultation to map your complete office supply needs.' },
+      { title: 'Product & Brand Selection', description: 'Choose from our catalog of trusted brands and products.' },
+      { title: 'Contract & Order Processing', description: 'Finalize bulk orders or annual supply contracts with ease.' },
+      { title: 'Scheduled Packaging & Dispatch', description: 'Supplies are packaged and dispatched as per the agreed schedule.' },
+      { title: 'Timely Delivery & Confirmation', description: 'Reliable delivery to your office with confirmation.' },
   ];
-  const officeSuppliesFaqs = [
-      { question: "Can you print our company logo on notebooks and other items?", answer: "Yes, we offer full customization and branding services for a wide range of office supplies. This is great for enhancing your brand identity." },
-      { question: "What are the benefits of an annual supply contract?", answer: "Annual contracts offer locked-in pricing, priority service, scheduled deliveries, and simplified budgeting and procurement processes." },
-      { question: "Do you supply original printer cartridges?", answer: "Yes, we supply 100% original and genuine cartridges and consumables for all major printer brands." },
-      { question: "How can your inventory management support help us?", answer: "We can work with your admin team to forecast needs, set reorder points, and automate the ordering process to prevent stockouts and reduce manual effort." }
+
+  const whyChooseSupplies = [
+      { icon: <PackageCheck className="h-8 w-8 text-primary" />, title: "Reliable Product Availability", description: "Robust inventory to ensure you never run out of essential supplies." },
+      { icon: <BadgePercent className="h-8 w-8 text-primary" />, title: "Competitive Bulk Pricing", description: "Benefit from corporate pricing and annual contracts for significant savings." },
+      { icon: <Award className="h-8 w-8 text-primary" />, title: "Quality Branded Products", description: "We supply 100% genuine products from nationally recognized brands." },
+      { icon: <CalendarClock className="h-8 w-8 text-primary" />, title: "Scheduled & On-Demand Delivery", description: "Flexible delivery schedules tailored to your procurement cycle." },
+      { icon: <Users className="h-8 w-8 text-primary" />, title: "Single Vendor Advantage", description: "Simplify your supply chain with a single, trusted partner for all office needs." },
+      { icon: <Settings2 className="h-8 w-8 text-primary" />, title: "Custom Solutions", description: "From branded stationery to custom kits, we tailor solutions for you." },
+  ];
+
+  const customKits = [
+      { icon: <Package className="h-8 w-8 text-primary" />, title: "Employee Welcome Kits", description: "Equip new hires with all the essentials from day one." },
+      { icon: <Building2 className="h-8 w-8 text-primary" />, title: "Workstation Starter Kits", description: "A complete set of supplies for a new desk or office setup." },
+      { icon: <Users className="h-8 w-8 text-primary" />, title: "Conference & Meeting Kits", description: "Notepads, pens, and folders for your meetings." },
+      { icon: <ClipboardCheck className="h-8 w-8 text-primary" />, title: "Training Program Kits", description: "Custom kits with materials for training sessions." },
+  ];
+
+  const supplyBrands = [ "Camlin", "Classmate", "Reynolds", "Kangaro", "Faber-Castell", "BILT", "JK Paper", "HP", "Canon" ];
+
+  const contractBenefits = [
+      "Long-term supply agreements with locked-in corporate pricing.",
+      "Priority stock availability for all your essential items.",
+      "Scheduled monthly or quarterly deliveries to streamline procurement.",
+      "Dedicated account support for all your queries and requirements.",
+      "Simplified billing and payment with consolidated invoicing."
   ];
 
   // Corporate Gifting data
@@ -700,82 +729,189 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
         {/* Office Supplies Page Content */}
         {service.slug === 'office-supplies' && (
-            <>
-                <FadeIn>
-                    <section>
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Complete Office Supplies Range</h2>
-                                <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">From the front desk to the boardroom, we equip your entire office for productivity.</p>
+           <>
+              <FadeIn>
+                  <section>
+                      <div className="container px-4 md:px-6">
+                          <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Our Complete Office Supply Categories</h2>
+                              <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">From stationery and pantry items to cleaning utilities, we are your single source for all office supplies.</p>
+                          </div>
+                          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                              {officeSupplyCategories.map(item => (
+                                  <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
+                                      <CardHeader className="items-center">
+                                          <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
+                                          <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
+                                      </CardHeader>
+                                  </Card>
+                              ))}
+                          </div>
+                      </div>
+                  </section>
+              </FadeIn>
+              <FadeIn>
+                  <section className="bg-muted">
+                      <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-16 items-center">
+                           <div className="relative aspect-video">
+                              <Image src={placeholderImages.stationeryPage.src} alt={placeholderImages.stationeryPage.alt} fill className="rounded-lg shadow-xl object-cover" />
+                          </div>
+                          <div className="space-y-4">
+                              <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Bulk Procurement & Customized Supplies</h2>
+                              <p className="text-muted-foreground md:text-lg">We specialize in bulk order fulfillment and corporate supply contracts, positioning us as an ideal partner for large enterprises. Empower your brand with custom-printed supplies like notebooks, pens, and letterheads.</p>
+                              <ul className="space-y-3 pt-4">
+                                  <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1"/><span>Most requested items include A4 paper, pens, staplers, and printer ink.</span></li>
+                                  <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1"/><span>Annual contracts for predictable pricing and simplified budgeting.</span></li>
+                                  <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1"/><span>Fast, reliable delivery schedules tailored to your inventory cycle.</span></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </section>
+              </FadeIn>
+              <FadeIn>
+                  <section>
+                      <div className="container px-4 md:px-6">
+                          <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Businesses Choose Our Office Supplies</h2>
+                               <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We are more than a supplier; we are a strategic partner in your operational efficiency.</p>
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                              {whyChooseSupplies.map((item, index) => (
+                                  <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
+                                      <div className="bg-primary/10 p-4 rounded-full mb-4 w-max">{item.icon}</div>
+                                      <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
+                                      <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                                  </Card>
+                              ))}
+                          </div>
+                      </div>
+                  </section>
+              </FadeIn>
+               <FadeIn>
+                  <section className="bg-muted">
+                      <div className="container px-4 md:px-6">
+                          <div className="text-center mb-16">
+                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-secondary">Our Streamlined Supply Process</h2>
+                              <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed mt-4">A clear and efficient process from order to delivery, ensuring trust and transparency.</p>
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-4 lg:gap-x-12">
+                            {supplyProcessSteps.map((step, index) => (
+                              <div key={step.title} className="relative">
+                                <div className="bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary">
+                                  <div className="text-5xl font-extrabold text-primary/20 mb-4">{`0${index + 1}`}</div>
+                                  <h3 className="text-lg font-bold text-secondary mb-2">{step.title}</h3>
+                                  <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                                </div>
+                                {index < supplyProcessSteps.length - 1 && (
+                                  <ChevronRight 
+                                    className="absolute top-1/2 -right-7 -translate-y-1/2 h-8 w-8 text-primary/40 hidden lg:block"
+                                    aria-hidden="true"
+                                  />
+                                )}
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                  </section>
+              </FadeIn>
+              <FadeIn>
+                  <section>
+                      <div className="container px-4 md:px-6">
+                          <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Corporate Office Supply Contracts</h2>
+                              <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl mt-4">For large organizations, our corporate contracts offer a seamless and cost-effective procurement solution.</p>
+                          </div>
+                          <div className="max-w-4xl mx-auto">
+                              <ul className="space-y-4">
+                                  {contractBenefits.map((item, index) => (
+                                      <li key={index} className="flex items-start gap-4 p-4 border-2 border-neutral-300 rounded-lg bg-card">
+                                          <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                                          <span>{item}</span>
+                                      </li>
+                                  ))}
+                              </ul>
+                          </div>
+                      </div>
+                  </section>
+              </FadeIn>
+              <FadeIn>
+                  <section className="bg-muted">
+                      <div className="container px-4 md:px-6">
+                          <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Customized Office Supply Kits</h2>
+                              <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We create tailored supply kits that serve specific corporate needs, from onboarding to events.</p>
+                          </div>
+                          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                              {customKits.map(item => (
+                                  <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
+                                      <CardHeader className="items-center">
+                                          <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
+                                          <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
+                                      </CardHeader>
+                                      <CardContent><p className="text-muted-foreground">{item.description}</p></CardContent>
+                                  </Card>
+                              ))}
+                          </div>
+                      </div>
+                  </section>
+              </FadeIn>
+              <FadeIn>
+                  <section>
+                      <div className="container px-4 md:px-6">
+                           <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Trusted Brands & Reliable Delivery</h2>
+                              <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl mt-4">We ensure quality by supplying products from recognized brands, delivered reliably to your office.</p>
+                          </div>
+                          <div className="grid lg:grid-cols-2 gap-12 items-center">
+                              <div>
+                                  <h3 className="text-2xl font-bold text-secondary mb-4">Brands We Supply</h3>
+                                  <div className="flex flex-wrap gap-4">
+                                      {supplyBrands.map(brand => (
+                                          <div key={brand} className="bg-accent text-accent-foreground font-semibold px-4 py-2 rounded-md">{brand}</div>
+                                      ))}
+                                  </div>
+                              </div>
+                               <div>
+                                  <h3 className="text-2xl font-bold text-secondary mb-4">Delivery & Logistics</h3>
+                                  <ul className="space-y-3">
+                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1"/><span>Scheduled office deliveries to match your inventory cycle.</span></li>
+                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1"/><span>Organized packaging for easy distribution within your office.</span></li>
+                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-primary mt-1"/><span>Fast dispatch and reliable supply chain management.</span></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+              </FadeIn>
+              <FadeIn>
+                <section className="bg-muted">
+                    <div className="container px-4 md:px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Office Supply Packages</h2>
+                            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Choose from our curated packages to simplify your purchasing decisions.</p>
+                        </div>
+                        <div className="max-w-4xl mx-auto bg-card rounded-lg border-2 border-neutral-300 overflow-hidden">
+                            <div className="grid grid-cols-2 text-left">
+                                <div className="p-4 font-bold text-secondary bg-accent/50 text-lg">Package</div>
+                                <div className="p-4 font-bold text-secondary bg-accent/50 border-l text-lg">Ideal For</div>
                             </div>
-                            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                                {officeSuppliesRange.map(item => (
-                                    <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
-                                        <CardHeader className="items-center">
-                                            <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
-                                            <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
-                                        </CardHeader>
-                                        <CardContent><p className="text-muted-foreground">{item.description}</p></CardContent>
-                                    </Card>
-                                ))}
+                            <div className="grid grid-cols-2 text-left border-t items-center">
+                                <div className="p-4 font-semibold text-secondary">Basic Office Pack</div>
+                                <div className="p-4 text-muted-foreground border-l">Small teams and startups (up to 10 employees)</div>
+                            </div>
+                            <div className="grid grid-cols-2 text-left border-t items-center">
+                                <div className="p-4 font-semibold text-secondary">Standard Office Pack</div>
+                                <div className="p-4 text-muted-foreground border-l">Medium-sized offices (10-50 employees)</div>
+                            </div>
+                            <div className="grid grid-cols-2 text-left border-t items-center">
+                                <div className="p-4 font-semibold text-secondary">Enterprise Supply Pack</div>
+                                <div className="p-4 text-muted-foreground border-l">Large corporates and multi-location offices</div>
                             </div>
                         </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section className="bg-muted">
-                        <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-16 items-center">
-                             <div>
-                                <Image src={placeholderImages.stationeryPage.src} alt={placeholderImages.stationeryPage.alt} width={600} height={400} className="rounded-lg shadow-xl" />
-                            </div>
-                            <div className="space-y-4">
-                                <h2 className="text-3xl font-bold tracking-tighter font-headline text-secondary">Bulk Procurement & Customized Supplies</h2>
-                                <p className="text-muted-foreground md:text-lg">Empower your brand with custom-printed supplies. We provide high-quality printing of your logo and brand elements on notebooks, pens, letterheads, and more, ensuring a consistent and professional image in all your communications.</p>
-                                <ul className="space-y-3 pt-4">
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Annual contracts for predictable pricing.</li>
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Inventory management to prevent stockouts.</li>
-                                    <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary"/>Fast, reliable delivery across India.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section>
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Choose Our Office Supply Services?</h2>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {officeSuppliesWhyChooseUs.map((item, index) => (
-                                    <Card key={index} className="group bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left transition-all duration-300 hover:border-primary hover:shadow-xl">
-                                        <div className="bg-primary/10 p-4 rounded-full mb-4 w-max">{item.icon}</div>
-                                        <h3 className="text-lg font-bold mb-2 text-secondary transition-colors duration-300 group-hover:text-primary">{item.title}</h3>
-                                        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                                    </Card>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-                <FadeIn>
-                    <section className="bg-muted">
-                        <div className="container px-4 md:px-6">
-                            <div className="text-center mb-12"><h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">FAQs – Office Supplies</h2></div>
-                            <div className="max-w-3xl mx-auto">
-                                <Accordion type="single" collapsible className="w-full">
-                                    {officeSuppliesFaqs.map((faq, index) => (
-                                        <AccordionItem key={index} value={`item-${index}`}>
-                                            <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
-                                            <AccordionContent className="text-lg text-muted-foreground">{faq.answer}</AccordionContent>
-                                        </AccordionItem>
-                                    ))}
-                                </Accordion>
-                            </div>
-                        </div>
-                    </section>
-                </FadeIn>
-            </>
+                    </div>
+                </section>
+              </FadeIn>
+          </>
         )}
         
         {/* Corporate Gifting Page Content */}
@@ -880,6 +1016,16 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                       </p>
                       <GetStartedModal>
                         <Button size="lg">Request a Service Quote<ArrowRight className="ml-2 h-4 w-4" /></Button>
+                      </GetStartedModal>
+                    </>
+                  ) : service.slug === 'office-supplies' ? (
+                     <>
+                      <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Request an Office Supply Quote</h2>
+                      <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
+                        Let us handle your office supply needs. Contact us for a bulk pricing quote or to set up a corporate contract.
+                      </p>
+                      <GetStartedModal>
+                        <Button size="lg">Request a Quote<ArrowRight className="ml-2 h-4 w-4" /></Button>
                       </GetStartedModal>
                     </>
                   ) : (
