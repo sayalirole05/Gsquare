@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
     };
   }
 
-  const serviceTitle = service.slug === 'housekeeping' ? 'Housekeeping Services' : service.title;
+  const serviceTitle = service.title;
 
   return {
     title: serviceTitle,
@@ -101,7 +101,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     notFound();
   }
   
-  const serviceTitle = service.slug === 'housekeeping' ? 'Housekeeping Services' : service.title;
+  const serviceTitle = service.title;
 
   const serviceHeroImages: { [key: string]: { src: string; alt: string; } } = {
     'housekeeping': {
@@ -183,6 +183,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     {
       question: "Can you provide housekeeping services outside of regular business hours?",
       answer: "Absolutely. We offer flexible scheduling options, including after-hours and weekend services, to minimize disruption to your business operations. We work with you to create a cleaning schedule that best suits your needs."
+    },
+    {
+      question: "How do you monitor the quality of your housekeeping services?",
+      answer: "We have a multi-layered quality assurance process that includes regular supervisor inspections, detailed cleaning checklists for every task, and a client feedback system to ensure our high standards are consistently met."
+    },
+    {
+      question: "What types of service plans do you offer?",
+      answer: "We offer flexible plans including dedicated full-time staff, shift-based teams for 24/7 operations, and scheduled daily or weekly services. We can customize a plan to fit your exact needs."
     }
   ];
 
@@ -192,37 +200,27 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     { icon: <Layers className="h-8 w-8 text-primary" />, title: "Microfiber Cleaning Systems", description: "Effectively trap dust and bacteria while minimizing chemical usage." },
     { icon: <GlassWater className="h-8 w-8 text-primary" />, title: "Glass Cleaning Tools", description: "Professional tools for streak-free cleaning of glass panels and windows." },
   ];
-
-  const cleaningMaterials = [
-      { icon: <Leaf className="h-8 w-8 text-primary" />, title: "Eco-friendly solutions" },
-      { icon: <ShieldCheck className="h-8 w-8 text-primary" />, title: "Surface disinfectants" },
-      { icon: <FlaskConical className="h-8 w-8 text-primary" />, title: "Floor cleaning chemicals" },
-      { icon: <Droplets className="h-8 w-8 text-primary" />, title: "Glass cleaning liquids" },
-      { icon: <ShowerHead className="h-8 w-8 text-primary" />, title: "Washroom hygiene products" },
-  ];
   
   const safetyPractices = [
-    'All staff members receive training on safe cleaning practices and proper equipment usage.',
-    'Housekeeping staff use gloves, masks, and safety gear while performing cleaning tasks.',
-    'Cleaning chemicals are used according to safety guidelines to avoid risks to employees and workplace infrastructure.',
-    'Special attention is given to high-touch surfaces such as door handles, desks, and shared workspaces.',
-    'Cleaning processes are designed to comply with corporate safety and facility management standards.',
+    { icon: <Users className="h-6 w-6 text-primary flex-shrink-0" />, title: "Trained Housekeeping Staff", description: "All staff members receive training on safe cleaning practices and proper equipment usage." },
+    { icon: <ShieldCheck className="h-6 w-6 text-primary flex-shrink-0" />, title: "Use of Personal Protective Equipment (PPE)", description: "Housekeeping staff use gloves, masks, and safety gear while performing cleaning tasks." },
+    { icon: <FlaskConical className="h-6 w-6 text-primary flex-shrink-0" />, title: "Safe Chemical Handling", description: "Cleaning chemicals are used according to safety guidelines to avoid risks to employees and workplace infrastructure." },
+    { icon: <ClipboardCheck className="h-6 w-6 text-primary flex-shrink-0" />, title: "Compliance with Workplace Safety Standards", description: "Cleaning processes are designed to comply with corporate safety and facility management standards." },
   ];
 
   const qualityProcess = [
-    'Each cleaning activity follows a structured checklist to ensure all areas are properly maintained.',
-    'Dedicated supervisors conduct regular inspections to monitor cleaning quality and staff performance.',
-    'Regular service evaluations help maintain high standards and identify areas for improvement.',
-    'We actively collect client feedback to continuously improve service delivery.',
-    'Housekeeping staff receive regular training updates to maintain service quality.',
+    { icon: <ClipboardList className="h-6 w-6 text-primary" />, title: 'Cleaning Checklists', description: 'Each cleaning activity follows a structured checklist to ensure all areas are properly maintained.'},
+    { icon: <Search className="h-6 w-6 text-primary" />, title: 'Supervisor Inspections', description: 'Dedicated supervisors conduct regular inspections to monitor cleaning quality and staff performance.'},
+    { icon: <CalendarDays className="h-6 w-6 text-primary" />, title: 'Scheduled Service Reviews', description: 'Regular service evaluations help maintain high standards and identify areas for improvement.'},
+    { icon: <Users className="h-6 w-6 text-primary" />, title: 'Client Feedback Mechanism', description: 'We actively collect client feedback to continuously improve service delivery.'},
+    { icon: <Rocket className="h-6 w-6 text-primary" />, title: 'Continuous Training', description: 'Housekeeping staff receive regular training updates to maintain service quality.'},
   ];
 
   const serviceModels = [
-    'Full-time housekeeping personnel deployed at your workplace for daily cleaning operations.',
-    'Multiple cleaning shifts for offices with extended working hours.',
-    'Cleaning services performed on daily, weekly, or periodic schedules.',
-    'Special cleaning support for corporate events, office renovations, or seasonal cleaning.',
-    'Service plans tailored to specific workplace requirements.',
+    { icon: <Users className="h-6 w-6 text-primary flex-shrink-0" />, title: "Dedicated Housekeeping Staff", description: "Full-time housekeeping personnel deployed at your workplace for daily cleaning operations."},
+    { icon: <CalendarClock className="h-6 w-6 text-primary flex-shrink-0" />, title: "Shift-Based Cleaning Teams", description: "Multiple cleaning shifts for offices with extended working hours."},
+    { icon: <CalendarDays className="h-6 w-6 text-primary flex-shrink-0" />, title: "Scheduled Cleaning Services", description: "Cleaning services performed on daily, weekly, or periodic schedules."},
+    { icon: <Settings2 className="h-6 w-6 text-primary flex-shrink-0" />, title: "Customized Service Plans", description: "Service plans tailored to specific workplace requirements, including event and deep cleaning support."},
   ];
 
   const siteInspectionPoints = [
@@ -282,36 +280,20 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         answer: "Yes. We specialize in bulk supply for corporate offices and businesses, ensuring consistent product availability and competitive pricing."
     },
     {
-        question: "Do you deliver office supplies across Pune?",
-        answer: "Yes, we provide organized and timely delivery of office supplies to businesses across Pune and nearby areas."
-    },
-    {
-        question: "Can we request a customized office supply package?",
-        answer: "Yes. We can create customized office supply kits based on your workplace requirements, team size, and operational needs."
+        question: "Do you offer corporate supply contracts?",
+        answer: "Yes. We offer long-term office supply solutions for businesses that require regular deliveries and bulk procurement support, which includes benefits like locked-in pricing and priority stock."
     },
     {
         question: "What brands of office stationery do you supply?",
-        answer: "We provide quality products from trusted brands such as Camlin, Classmate, Kangaro, Reynolds, Faber-Castell, and JK Paper."
+        answer: "We provide quality products from trusted brands such as Camlin, Classmate, Kangaro, Reynolds, Faber-Castell, and JK Paper to ensure reliability and performance."
     },
     {
         question: "How can we place an order for office supplies?",
-        answer: "You can request a quotation through our website or contact our team to discuss your office supply requirements."
-    },
-    {
-        question: "Do you offer corporate supply contracts?",
-        answer: "Yes. We offer long-term office supply solutions for businesses that require regular deliveries and bulk procurement support."
-    },
-    {
-        question: "What is the minimum order quantity?",
-        answer: "Minimum order quantities may vary depending on the product type and supply requirements. Our team can guide you during the quotation process."
+        answer: "You can start by requesting a quotation through our website or by contacting our team directly to discuss your specific office supply requirements, quantities, and delivery schedule."
     },
     {
         question: "How quickly can office supplies be delivered?",
-        answer: "Delivery timelines depend on the order size and product availability, but most orders are processed and delivered within a short turnaround time."
-    },
-    {
-        question: "Do you supply office welcome kits or employee kits?",
-        answer: "Yes. We provide customized employee onboarding kits and office supply kits that include essential workstation items."
+        answer: "Delivery timelines depend on the order size and product availability. However, most standard orders are processed and delivered within a short turnaround time. We will provide a clear timeline when you place your order."
     }
   ];
 
@@ -359,7 +341,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       { question: "What is the minimum order quantity for customized gifts?", answer: "Minimum Order Quantities (MOQs) depend on the product and the level of customization required. We work with you to find solutions for both small and large-scale orders." },
       { question: "Can we include our own company's branded materials in the gift boxes?", answer: "Absolutely. We encourage you to include your own merchandise, marketing materials, or personalized notes, and we can seamlessly integrate them into the gift packages." },
       { question: "What is the typical lead time for bulk corporate gift orders?", answer: "Lead times vary based on product selection and customization complexity. We generally recommend planning 3-4 weeks in advance, especially for festive seasons or large orders, to ensure a smooth process from production to delivery." },
-      { question: "Do you handle delivery to multiple addresses for remote employees?", answer: "Yes, we provide end-to-end logistics, including secure packaging and PAN-India delivery to individual employee or client addresses. We ensure every gift arrives safely and on time." }
+      { question: "Do you handle delivery to multiple addresses for remote employees?", answer: "Yes, we provide end-to-end logistics, including secure packaging and PAN-India delivery to individual employee or client addresses. We ensure every gift arrives safely and on time." },
+      { question: "What occasions do you create gifts for?", answer: "We cater to a wide range of occasions including employee onboarding, festive celebrations like Diwali, client appreciation, corporate events, and employee milestones. We can curate the perfect gift for any business moment." },
+      { question: "Do you offer eco-friendly and sustainable gifting options?", answer: "Yes, we have a growing range of eco-friendly gifts made from materials like bamboo and recycled paper, and we use sustainable packaging options to align with modern corporate values." }
   ];
 
 
@@ -548,15 +532,18 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Flexible Service Plans & Staffing Models</h2>
                             <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl mt-4">We offer flexible housekeeping service models designed to meet the operational needs of different workplace environments. Every workplace has different operational requirements.</p>
                         </div>
-                        <div className="max-w-4xl mx-auto">
-                            <ul className="space-y-4">
-                                {serviceModels.map((item, index) => (
-                                    <li key={index} className="flex items-start gap-4 p-4 border-2 border-neutral-300 rounded-lg">
-                                        <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-6">
+                            {serviceModels.map((item, index) => (
+                                <Card key={index} className="bg-card text-left p-6 border-2 border-neutral-300 shadow-sm">
+                                    <div className="flex items-start gap-4">
+                                        <div className="bg-primary/10 p-3 rounded-lg mt-1">{item.icon}</div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-secondary mb-1">{item.title}</h3>
+                                            <p className="text-muted-foreground text-sm">{item.description}</p>
+                                        </div>
+                                    </div>
+                                </Card>
+                            ))}
                         </div>
                     </div>
                 </section>

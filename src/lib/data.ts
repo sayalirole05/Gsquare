@@ -58,7 +58,7 @@ export const services = [
 export const servicePages = [
   {
     slug: 'housekeeping',
-    title: 'Corporate Housekeeping & Material Supply',
+    title: 'Housekeeping Services',
     description: 'We provide top-tier corporate housekeeping, facility management, and material supply services. Our trained professionals and quality products ensure your workspace is immaculate, safe, and hygienic.',
     features: [
       'Trained & Verified Staff',
