@@ -262,13 +262,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       { icon: <Settings2 className="h-8 w-8 text-primary" />, title: "Custom Solutions", description: "From branded stationery to custom kits, we tailor solutions for you." },
   ];
 
-  const customKits = [
-      { icon: <Package className="h-8 w-8 text-primary" />, title: "Employee Welcome Kits", description: "Equip new hires with all the essentials from day one." },
-      { icon: <Building2 className="h-8 w-8 text-primary" />, title: "Workstation Starter Kits", description: "A complete set of supplies for a new desk or office setup." },
-      { icon: <Users className="h-8 w-8 text-primary" />, title: "Conference & Meeting Kits", description: "Notepads, pens, and folders for your meetings." },
-      { icon: <ClipboardCheck className="h-8 w-8 text-primary" />, title: "Training Program Kits", description: "Custom kits with materials for training sessions." },
-  ];
-
   const supplyBrands = [ "Camlin", "Classmate", "Reynolds", "Kangaro", "Faber-Castell", "BILT", "JK Paper", "HP", "Canon" ];
 
   const contractBenefits = [
@@ -858,27 +851,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                       </li>
                                   ))}
                               </ul>
-                          </div>
-                      </div>
-                  </section>
-              </FadeIn>
-              <FadeIn>
-                  <section className="bg-muted">
-                      <div className="container px-4 md:px-6">
-                          <div className="text-center mb-12">
-                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Customized Office Supply Kits</h2>
-                              <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We create tailored supply kits that serve specific corporate needs, from onboarding to events.</p>
-                          </div>
-                          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                              {customKits.map(item => (
-                                  <Card key={item.title} className="text-center border-2 border-neutral-300 hover:border-primary transition-all duration-300">
-                                      <CardHeader className="items-center">
-                                          <div className="bg-primary/10 p-4 rounded-full mb-4">{item.icon}</div>
-                                          <CardTitle className="text-xl font-headline text-secondary">{item.title}</CardTitle>
-                                      </CardHeader>
-                                      <CardContent><p className="text-muted-foreground">{item.description}</p></CardContent>
-                                  </Card>
-                              ))}
                           </div>
                       </div>
                   </section>
