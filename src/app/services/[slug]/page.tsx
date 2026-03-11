@@ -260,7 +260,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       { icon: <Settings2 className="h-8 w-8 text-primary" />, title: "Custom Solutions", description: "From branded stationery to custom kits, we tailor solutions for you." },
   ];
 
-  const supplyBrands = [ "Camlin", "Classmate", "Reynolds", "Kangaro", "Faber-Castell", "BILT", "JK Paper", "HP", "Canon" ];
+  const supplyBrands = [ "Camlin", "Classmate", "Reynolds", "Kangaro", "Faber-Castell", "BILT", "JK Paper" ];
 
   const contractBenefits = [
       "Long-term supply agreements with locked-in corporate pricing.",
@@ -689,10 +689,11 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                           <div className="grid lg:grid-cols-2 gap-12 items-center">
                               <div>
                                   <h3 className="text-2xl font-bold text-secondary mb-4">Brands We Supply</h3>
-                                  <div className="flex flex-wrap gap-4">
+                                  <div className="flex flex-wrap gap-4 items-center">
                                       {supplyBrands.map(brand => (
                                           <div key={brand} className="bg-accent text-accent-foreground font-semibold px-4 py-2 rounded-md">{brand}</div>
                                       ))}
+                                      <p className="text-muted-foreground font-semibold">and many more...</p>
                                   </div>
                               </div>
                                <div>
