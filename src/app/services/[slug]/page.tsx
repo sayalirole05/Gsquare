@@ -177,7 +177,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       answer: "Every member of our staff undergoes a rigorous background verification process. They receive professional training on cleaning protocols, equipment usage, and corporate etiquette. We also have on-site supervisors to ensure consistent quality and adherence to SLAs."
     },
     {
-      question: "Are your cleaning products and methods eco-friendly?",
+      question: "Are your cleaning products and methods eco-friendly / sustainable ?",
       answer: "Yes, we prioritize the use of environmentally friendly and non-toxic cleaning agents that are safe for your employees and the planet. We are committed to sustainable practices in all our operations."
     },
     {
