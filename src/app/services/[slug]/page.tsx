@@ -285,7 +285,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     },
     {
         question: "What brands of office stationery do you supply?",
-        answer: "We provide quality products from trusted brands such as Camlin, Classmate, Kangaro, Reynolds, Faber-Castell, and JK Paper to ensure reliability and performance."
+        answer: "We provide quality products from trusted brands such as Camlin, Classmate, Kangaro, Reynolds, Faber-Castell, JK Paper, and many more."
     },
     {
         question: "How can we place an order for office supplies?",
@@ -406,7 +406,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <section>
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Our Services Overview</h2>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Our Housekeeping Services</h2>
                             <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">We offer a comprehensive suite of services to ensure every corner of your workspace is pristine.</p>
                         </div>
                         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
