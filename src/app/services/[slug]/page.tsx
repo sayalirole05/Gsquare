@@ -494,7 +494,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 </section>
             </FadeIn>
              <FadeIn>
-                <section>
+                <section className="bg-muted">
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Flexible Service Plans & Staffing Models</h2>
@@ -518,7 +518,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             </FadeIn>
 
             <FadeIn>
-              <section className="bg-muted py-16">
+              <section>
                 <div className="container px-4 md:px-6 lg:px-12">
                   <div className="grid gap-5 lg:grid-cols-2 lg:gap-16 items-center">
                     <div className="space-y-4">
@@ -549,7 +549,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
               </section>
             </FadeIn>
             <FadeIn>
-                <section>
+                <section className="bg-muted">
                     <div className="container px-4 md:px-6">
                         <div className="text-center mb-12">
                              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Frequently Asked Questions</h2>
@@ -693,7 +693,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                       {supplyBrands.map(brand => (
                                           <div key={brand} className="bg-accent text-accent-foreground font-semibold px-4 py-2 rounded-md">{brand}</div>
                                       ))}
-                                      <p className="text-muted-foreground font-semibold">and many more...</p>
+                                      <div className="bg-accent text-accent-foreground font-semibold px-4 py-2 rounded-md">and many more...</div>
                                   </div>
                               </div>
                                <div>
