@@ -493,38 +493,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     </div>
                 </section>
             </FadeIn>
-            <FadeIn>
-              <section className="bg-muted">
-                <div className="container px-4 md:px-6">
-                  <div className="text-center mb-12">
-                      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-secondary">Why Outsource Housekeeping?</h2>
-                      <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mt-4">Making the right choice for your facility management can impact efficiency, costs, and overall workplace quality.</p>
-                  </div>
-                  <div className="max-w-4xl mx-auto bg-card rounded-lg border-2 border-neutral-300 overflow-hidden">
-                      <div className="grid grid-cols-3 text-left">
-                          <div className="p-4 font-bold text-secondary bg-accent/50 text-lg">Feature</div>
-                          <div className="p-4 font-bold text-secondary bg-accent/50 border-l text-lg">In-House Staff</div>
-                          <div className="p-4 font-bold text-secondary bg-accent/50 border-l text-lg">Professional Housekeeping</div>
-                      </div>
-                      <div className="grid grid-cols-3 text-left border-t items-center">
-                          <div className="p-4 font-semibold text-secondary">Training</div>
-                          <div className="p-4 text-muted-foreground border-l">Training required</div>
-                          <div className="p-4 text-muted-foreground border-l">Trained professionals</div>
-                      </div>
-                      <div className="grid grid-cols-3 text-left border-t items-center">
-                          <div className="p-4 font-semibold text-secondary">Management Overhead</div>
-                          <div className="p-4 text-muted-foreground border-l">Management overhead</div>
-                          <div className="p-4 text-muted-foreground border-l">Managed services</div>
-                      </div>
-                      <div className="grid grid-cols-3 text-left border-t items-center">
-                          <div className="p-4 font-semibold text-secondary">Equipment Investment</div>
-                          <div className="p-4 text-muted-foreground border-l">Equipment investment</div>
-                          <div className="p-4 text-muted-foreground border-l">Provided by vendor</div>
-                      </div>
-                  </div>
-                </div>
-              </section>
-            </FadeIn>
              <FadeIn>
                 <section>
                     <div className="container px-4 md:px-6">
