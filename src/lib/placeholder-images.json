@@ -17,14 +17,14 @@
     "hint": "team discussion"
   },
   "housekeeping": {
-    "src": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1920",
+    "src": "/images/house-keeping.jpeg",
     "width": 1920,
     "height": 1280,
     "alt": "Professional cleaning staff member wiping down a glass surface in a modern office.",
     "hint": "office cleaning"
   },
   "officeSupplies": {
-    "src": "https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1920",
+    "src": "/images/office-supply.jpeg",
     "width": 1920,
     "height": 1280,
     "alt": "A well-organized desk with stationery supplies.",
@@ -44,11 +44,6 @@
     "alt": "Team collaborating in a modern office",
     "hint": "team meeting"
   },
-  "materialSupplyPage": {
-    "src": "https://images.unsplash.com/photo-1583947215259-38e34be8751f?q=80&w=1920",
-    "alt": "Shelves stocked with cleaning supplies",
-    "hint": "cleaning supplies"
-  },
   "stationeryPage": {
     "src": "https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1920",
     "alt": "A well-organized desk with stationery",
@@ -58,5 +53,27 @@
     "src": "https://images.unsplash.com/photo-1594903335559-07cf9302633d?q=80&w=1920",
     "alt": "A curated corporate gift box with various items ready for sending.",
     "hint": "curated gift"
-  }
+  },
+  "giftShowcase": [
+    {
+      "src": "https://images.unsplash.com/photo-1572240359941-026b7b3b3a3c?q=80&w=600&h=450&fit=crop",
+      "alt": "Curated gift hamper",
+      "hint": "gift hamper"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1606820854416-439b3305ff39?q=80&w=600&h=450&fit=crop",
+      "alt": "Employee welcome kit",
+      "hint": "welcome kit"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1580828723985-35e6a25a07c4?q=80&w=600&h=450&fit=crop",
+      "alt": "Premium branded merchandise",
+      "hint": "branded merchandise"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1571212879368-a1458102a9e3?q=80&w=600&h=450&fit=crop",
+      "alt": "Event gifting kit",
+      "hint": "event kit"
+    }
+  ]
 }

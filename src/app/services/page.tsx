@@ -56,14 +56,13 @@ export default function ServicesHubPage() {
             <div className="container px-4 md:px-6">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
                 {servicePages.map((service) => (
-                  <Card key={service.slug} className="group flex flex-col transition-all duration-300 border-2 border-secondary hover:border-primary hover:shadow-xl">
+                  <Card key={service.slug} className="group flex flex-col transition-all duration-300 border-2 border-neutral-300 hover:border-primary hover:shadow-xl">
                     <CardHeader className="flex flex-row items-center gap-4">
                       <div className="bg-primary/10 group-hover:bg-primary p-4 rounded-full transition-colors">
                         {
                           {
                             'housekeeping': <ClipboardList className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
-                            'material-supply': <Truck className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
-                            'stationery': <Package className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
+                            'office-supplies': <Package className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />,
                             'corporate-gifting': <Gift className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />
                           }[service.slug]
                         }

@@ -65,14 +65,6 @@ export default function Home() {
     },
   ];
 
-  const stats = [
-      { value: '500+', label: 'Organisations Served' },
-      { value: '50+', label: 'Multi-Location Offices' },
-      { value: '99.5%', label: 'SLA Compliance' },
-      { value: '10+', label: 'Years of Excellence' },
-  ];
-
-
   return (
     <>
      <JsonLd data={{
@@ -100,11 +92,11 @@ export default function Home() {
             className="object-cover"
             data-ai-hint={placeholderImages.hero.hint}
           />
-          <div className="absolute inset-0 bg-foreground/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#2B4A7C]/95 via-[#2B4A7C]/90 to-[#1a2d4d]/95" />
           <div className="container relative px-4 md:px-6 flex items-center">
             <div className="flex flex-col space-y-8 max-w-3xl py-0">
               <div>
-                <div className="inline-block bg-primary text-primary-foreground text-xs font-medium px-4 py-1.5 rounded-full mb-6">
+                <div className="inline-block bg-white/20 border border-white/30 text-primary text-xs font-medium px-4 py-1.5 rounded-full mb-6">
                   Executive Corporate Support Partner
                 </div>
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight">
@@ -130,12 +122,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col gap-4 min-[400px]:flex-row">
-                <Button asChild size="lg">
-                  <Link href="/#contact-us">Request Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="bg-transparent border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground">
-                  <Link href="/services">Explore Services</Link>
-                </Button>
+                <GetStartedModal>
+                  <Button size="lg">Request Consultation <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                </GetStartedModal>
               </div>
             </div>
           </div>
@@ -165,15 +154,6 @@ export default function Home() {
                     </div>
                 ))}
               </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 mt-20 text-center">
-                {stats.map((stat, index) => (
-                    <div key={index}>
-                        <p className="text-4xl lg:text-5xl font-bold text-primary">{stat.value}</p>
-                        <p className="text-muted-foreground mt-2 text-sm sm:text-base">{stat.label}</p>
-                    </div>
-                ))}
-              </div>
             </div>
           </section>
         </FadeIn>
@@ -189,94 +169,86 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Corporate Gifting Card */}
-                <div className="rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
-                  <div className="relative h-64">
-                    <Image
-                        src={placeholderImages.corporateGifting.src}
-                        alt={placeholderImages.corporateGifting.alt}
+                {/* Housekeeping Card */}
+                <Link href="/services/housekeeping" className="flex">
+                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full w-full">
+                    <div className="relative h-64">
+                      <Image
+                        src={placeholderImages.housekeeping.src}
+                        alt={placeholderImages.housekeeping.alt}
                         fill
                         className="object-cover"
-                        data-ai-hint={placeholderImages.corporateGifting.hint}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Corporate Gifting</h3>
-                  </div>
-                  <div className="p-6 space-y-4 bg-card">
-                    <p className="text-sm text-muted-foreground">
-                      Customized festive and employee engagement kits that strengthen relationships and boost morale.
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">Customized gift solutions</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">Festival & occasion-based kits</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">Employee engagement packages</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">Bulk ordering & timely delivery</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                {/* Housekeeping Card */}
-                <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
-                  <div className="relative h-64">
-                    <Image
-                      src={placeholderImages.housekeeping.src}
-                      alt={placeholderImages.housekeeping.alt}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={placeholderImages.housekeeping.hint}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Housekeeping Services</h3>
-                  </div>
-                  <div className="p-6 space-y-4 bg-card">
-                    <div>
-                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Trained Manpower</h4>
-                      <p className="text-sm text-muted-foreground">Verified, uniformed workforce with dedicated supervisors ensuring consistent quality</p>
+                        data-ai-hint={placeholderImages.housekeeping.hint}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                      <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Housekeeping Services</h3>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Premium Materials</h4>
-                      <p className="text-sm text-muted-foreground">High-quality chemicals, tools, and consumables for professional maintenance</p>
+                    <div className="p-6 space-y-4 bg-card">
+                      <div>
+                        <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Trained Manpower</h4>
+                        <p className="text-sm text-muted-foreground">Verified, uniformed workforce with dedicated supervisors ensuring consistent quality</p>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Premium Materials</h4>
+                        <p className="text-sm text-muted-foreground">High-quality chemicals, tools, and consumables for professional maintenance</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Office Supplies Card */}
-                <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl">
-                  <div className="relative h-64">
-                    <Image
-                      src={placeholderImages.officeSupplies.src}
-                      alt={placeholderImages.officeSupplies.alt}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={placeholderImages.officeSupplies.hint}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                    <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Office Supplies</h3>
-                  </div>
-                  <div className="p-6 space-y-4 bg-card">
-                    <div>
-                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Stationery Management</h4>
-                      <p className="text-sm text-muted-foreground">End-to-end supply of desk essentials, print materials, and office consumables</p>
+                <Link href="/services/office-supplies" className="flex">
+                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full w-full">
+                    <div className="relative h-64">
+                      <Image
+                        src={placeholderImages.officeSupplies.src}
+                        alt={placeholderImages.officeSupplies.alt}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={placeholderImages.officeSupplies.hint}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                      <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Office Supplies</h3>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">General Supplies</h4>
-                      <p className="text-sm text-muted-foreground">Pantry items, utilities, and recurring operational materials with automated inventory</p>
+                    <div className="p-6 space-y-4 bg-card">
+                      <div>
+                        <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Stationery Management</h4>
+                        <p className="text-sm text-muted-foreground">End-to-end supply of desk essentials, print materials, and office consumables</p>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">General Supplies</h4>
+                        <p className="text-sm text-muted-foreground">Pantry items, utilities, and recurring operational materials with automated inventory</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
+                {/* Corporate Gifting Card */}
+                <Link href="/services/corporate-gifting" className="flex">
+                  <div className="bg-white rounded-lg border-2 border-neutral-300 group text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-xl h-full w-full">
+                    <div className="relative h-64">
+                      <Image
+                          src={placeholderImages.corporateGifting.src}
+                          alt={placeholderImages.corporateGifting.alt}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={placeholderImages.corporateGifting.hint}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                      <h3 className="absolute bottom-4 left-6 text-white text-2xl font-bold">Corporate Gifting</h3>
+                    </div>
+                    <div className="p-6 space-y-4 bg-card">
+                      <div>
+                        <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Customized Solutions</h4>
+                        <p className="text-sm text-muted-foreground">Custom festive and employee engagement kits with branded and non-branded products.                      </p>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-md text-secondary group-hover:text-primary transition-colors">Timely Delivery</h4>
+                        <p className="text-sm text-muted-foreground">Bulk ordering and timely delivery to ensure your gifts arrive on schedule.</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </section>
@@ -296,7 +268,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-4 lg:gap-x-12">
                 {processSteps.map((step, index) => (
                   <div key={step.title} className="relative">
-                    <div className="bg-card p-6 rounded-lg border border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div className="bg-card p-6 rounded-lg border-2 border-neutral-300 shadow-sm text-left h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary">
                       <div className="text-5xl font-extrabold text-primary/20 mb-4">{`0${index + 1}`}</div>
                       <h3 className="text-lg font-bold text-secondary mb-2">{step.title}</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
@@ -325,7 +297,7 @@ export default function Home() {
                   className="object-cover"
                   data-ai-hint={placeholderImages.cta.hint}
                 />
-                <div className="absolute inset-0 bg-foreground/80" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#2B4A7C]/95 to-[#2B4A7C]/85" />
                 <div className="relative space-y-6">
                   <h2 className="text-3xl md:text-4xl font-bold text-white font-headline">Ready to Transform Your Operations?</h2>
                   <p className="max-w-2xl mx-auto text-white/90 md:text-lg">

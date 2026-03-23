@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Eye, Goal, Layers, Scaling, ThumbsUp, Briefcase, Factory, Users, School, Store, Laptop } from 'lucide-react';
+import { CheckCircle, Eye, Goal, Layers, Scaling, ThumbsUp, Briefcase, Factory, Users, School, Store, Laptop } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -58,12 +58,12 @@ const approachSteps = [
 ];
 
 const industries = [
-    { icon: <Laptop className="h-10 w-10 text-secondary" />, name: 'IT & Technology' },
-    { icon: <Briefcase className="h-10 w-10 text-secondary" />, name: 'Corporate Offices' },
-    { icon: <Users className="h-10 w-10 text-secondary" />, name: 'Co-working Spaces' },
-    { icon: <Factory className="h-10 w-10 text-secondary" />, name: 'Manufacturing' },
-    { icon: <School className="h-10 w-10 text-secondary" />, name: 'Educational Institutions' },
-    { icon: <Store className="h-10 w-10 text-secondary" />, name: 'Retail & Commercial' },
+    { icon: <Laptop className="h-10 w-10 text-primary" />, name: 'IT & Technology' },
+    { icon: <Briefcase className="h-10 w-10 text-primary" />, name: 'Corporate Offices' },
+    { icon: <Users className="h-10 w-10 text-primary" />, name: 'Co-working Spaces' },
+    { icon: <Factory className="h-10 w-10 text-primary" />, name: 'Manufacturing' },
+    { icon: <School className="h-10 w-10 text-primary" />, name: 'Educational Institutions' },
+    { icon: <Store className="h-10 w-10 text-primary" />, name: 'Retail & Commercial' },
 ];
 
 export default function AboutPage() {
@@ -84,43 +84,37 @@ export default function AboutPage() {
       />
       <div className="flex flex-col">
         {/* Hero Section */}
-        <section className="relative w-full py-24 md:py-32 lg:py-40">
-           <Image
-            alt={placeholderImages.aboutHero.alt}
-            src={placeholderImages.aboutHero.src}
-            fill
-            priority
-            className="object-cover"
-            data-ai-hint={placeholderImages.aboutHero.hint}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-           <FadeIn className="container relative text-center">
-            <div className="max-w-3xl mx-auto">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl font-headline">
-                Building Efficient Workplaces for Modern Businesses
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-200">
-                We partner with organizations to simplify workplace operations and create productive environments through reliable operational support services.
-              </p>
-              <div className="mt-10">
-                <Button asChild size="lg">
-                  <Link href="/#contact-us">Contact Us</Link>
-                </Button>
-              </div>
+        <section 
+            className="relative w-full bg-cover bg-center bg-fixed" 
+            style={{ 
+                backgroundImage: `url(${placeholderImages.aboutHero.src})`,
+                height: '400px' 
+            }}
+        >
+            <div className="absolute inset-0 bg-secondary/70" />
+            <div className="relative container h-full flex flex-col justify-center items-center text-center text-white">
+                <FadeIn>
+                    <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
+                        About Us
+                    </h1>
+                    <div className="mt-4 text-lg">
+                        <Link href="/" className="text-primary-foreground/80 hover:text-white transition-colors">Home</Link>
+                        <span className="mx-2 text-primary-foreground/50">&gt;</span>
+                        <span className="font-semibold">About Us</span>
+                    </div>
+                </FadeIn>
             </div>
-           </FadeIn>
         </section>
 
         {/* Company Story Section */}
         <FadeIn>
-          <section>
+          <section className='py-16'>
             <div className="container">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center  lg:px-6">
                 <div className="space-y-6">
-                    <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Every Productive Workplace Needs a Strong Operational Foundation</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Strong Productive Workplaces</h2>
                     <div className="text-muted-foreground space-y-4 text-lg">
-                        <p>Behind every successful organization is a well-managed workplace environment. Clean facilities, organized workspaces, and reliable operational support contribute significantly to productivity and employee experience.</p>
-                        <p>Our focus is to help organizations streamline everyday workplace operations so teams can concentrate on growth and innovation.</p>
+                        <p>Every successful organization relies on well-managed workplace operations. Clean facilities, organized environments, and dependable operational support create the conditions where teams can focus on productivity, efficiency, and innovation. Our goal is to help businesses streamline daily workplace operations so employees can concentrate on what truly drives growth.</p>
                     </div>
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
@@ -139,14 +133,14 @@ export default function AboutPage() {
         
         {/* Value Proposition Section */}
         <FadeIn>
-            <section className="bg-muted">
+            <section className="bg-muted py-16">
                 <div className="container">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
+                    <div className="text-center max-w-3xl mx-auto mb-8">
                         <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Designed for Modern Enterprises</h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {valueProps.map((item, index) => (
-                            <Card key={index} className="bg-card text-left p-6 border-transparent shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <Card key={index} className="bg-card text-left p-6 border-2 border-neutral-300 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-primary">
                                 <div className="bg-primary/10 p-3 rounded-lg w-max mb-4">{item.icon}</div>
                                 <h3 className="text-xl font-bold text-secondary mb-2">{item.title}</h3>
                                 <p className="text-muted-foreground">{item.description}</p>
@@ -158,7 +152,7 @@ export default function AboutPage() {
         </FadeIn>
 
         {/* Mission & Vision Section */}
-        <FadeIn>
+        {/* <FadeIn>
             <section>
                 <div className="container">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -183,39 +177,19 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
-        </FadeIn>
-
-        {/* Our Approach Section */}
-        <FadeIn>
-            <section className="bg-muted">
-                <div className="container">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">How We Work</h2>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {approachSteps.map((step, index) => (
-                           <Card key={index} className="bg-card text-left p-8 border-transparent shadow-md hover:shadow-xl hover:border-primary transition-all duration-300">
-                                <div className="text-5xl font-extrabold text-primary/20 mb-4">0{index + 1}</div>
-                                <h3 className="text-xl font-bold text-secondary mb-2">{step.title}</h3>
-                                <p className="text-muted-foreground">{step.description}</p>
-                           </Card>
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </FadeIn>
+        </FadeIn> */}
 
          {/* Industries Section */}
-        <FadeIn>
-            <section>
+         <FadeIn>
+            <section className='py-16'>
                 <div className="container">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
+                    <div className="text-center max-w-3xl mx-auto mb-8">
                         <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Industries We Support</h2>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
                         {industries.map((industry) => (
                             <div key={industry.name} className="flex flex-col items-center text-center gap-4">
-                                <div className="bg-muted p-5 rounded-lg border">
+                                <div className="bg-accent p-5 rounded-lg">
                                     {industry.icon}
                                 </div>
                                 <p className="font-semibold text-secondary">{industry.name}</p>
@@ -226,8 +200,29 @@ export default function AboutPage() {
             </section>
         </FadeIn>
 
-        {/* Closing Statement Section */}
+        {/* Our Approach Section */}
         <FadeIn>
+            <section className="bg-muted py-16">
+                <div className="container">
+                    <div className="text-center max-w-3xl mx-auto mb-8">
+                        <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">How We Work</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {approachSteps.map((step, index) => (
+                           <Card key={index} className="bg-card text-left p-8 border-2 border-neutral-300 shadow-md hover:shadow-xl hover:border-primary transition-all duration-300">
+                                <div className="text-5xl font-extrabold text-primary/20 mb-4">0{index + 1}</div>
+                                <h3 className="text-xl font-bold text-secondary mb-2">{step.title}</h3>
+                                <p className="text-muted-foreground">{step.description}</p>
+                           </Card>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </FadeIn>
+
+
+        {/* Closing Statement Section */}
+        {/* <FadeIn>
             <section className="bg-muted">
                 <div className="container text-center max-w-3xl mx-auto">
                     <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-headline">Supporting Workplaces That Drive Business Success</h2>
@@ -236,14 +231,14 @@ export default function AboutPage() {
                     </p>
                 </div>
             </section>
-        </FadeIn>
+        </FadeIn> */}
 
         {/* Final CTA Section */}
         <FadeIn>
           <section className="bg-secondary">
               <div className="container text-center">
                   <div className="max-w-2xl mx-auto">
-                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-headline">Let’s Build Better Workplace Operations Together</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-headline">Let’s Build Better Workplace Operations</h2>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Button asChild size="lg">
                             <Link href="/#contact-us">Contact Us</Link>

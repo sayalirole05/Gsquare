@@ -15,6 +15,10 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuPortal,
 } from '@/components/ui/dropdown-menu';
 import {
   Accordion,
@@ -47,7 +51,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center gap-2">
-            <Image src="/images/Logo-Final.png" alt="GSQUARE CORPORATE SERVICES Logo" width={100} height={50} style={{ height: '50px', width: 'auto' }} />
+            <Image src="/images/Logo-Final.png" alt="GSQUARE CORPORATE SERVICES Logo" width={100} height={75} className="h-[55px] w-auto" />
             <span className="hidden tracking-wider text-md font-bold text-secondary lg:block">
               <span className="text-primary">G</span><span className="text-secondary">SQUARE</span> CORPORATE SERVICES
             </span>
@@ -70,11 +74,28 @@ export function Navbar() {
                     <ChevronDown className="h-4 w-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
-                    {item.children.map((child) => (
-                      <DropdownMenuItem key={child.href} asChild>
-                        <Link href={child.href}>{child.title}</Link>
-                      </DropdownMenuItem>
-                    ))}
+                    {item.children.map((child) =>
+                      child.children ? (
+                        <DropdownMenuSub key={child.title}>
+                          <DropdownMenuSubTrigger>
+                            <span>{child.title}</span>
+                          </DropdownMenuSubTrigger>
+                          <DropdownMenuPortal>
+                            <DropdownMenuSubContent>
+                              {child.children.map((subChild) => (
+                                <DropdownMenuItem key={subChild.href} asChild>
+                                  <Link href={subChild.href}>{subChild.title}</Link>
+                                </DropdownMenuItem>
+                              ))}
+                            </DropdownMenuSubContent>
+                          </DropdownMenuPortal>
+                        </DropdownMenuSub>
+                      ) : (
+                        <DropdownMenuItem key={child.href} asChild>
+                          <Link href={child.href!}>{child.title}</Link>
+                        </DropdownMenuItem>
+                      )
+                    )}
                   </DropdownMenuContent>
                 </DropdownMenu>
               ) : (
@@ -146,20 +167,47 @@ export function Navbar() {
                               {item.title}
                             </AccordionTrigger>
                             <AccordionContent>
-                              <nav className="grid gap-4 pl-4 pt-2">
-                                {item.children.map((child) => (
-                                  <Link
-                                    key={child.href}
-                                    href={child.href}
-                                    onClick={() => setIsMenuOpen(false)}
-                                    className={cn(
-                                      'text-base transition-colors hover:text-primary',
-                                      pathname === child.href ? 'text-primary' : 'text-navlink'
-                                    )}
-                                  >
-                                    {child.title}
-                                  </Link>
-                                ))}
+                              <nav className="grid gap-2 pl-4 pt-2">
+                                {item.children.map((child) =>
+                                  child.children ? (
+                                    <Accordion key={child.title} type="single" collapsible className="w-full">
+                                      <AccordionItem value={child.title} className="border-b-0">
+                                        <AccordionTrigger className="py-2 text-base font-medium text-navlink hover:text-primary hover:no-underline [&>svg]:size-4">
+                                          {child.title}
+                                        </AccordionTrigger>
+                                        <AccordionContent>
+                                          <nav className="grid gap-4 pl-4 pt-2">
+                                            {child.children.map((subChild) => (
+                                              <Link
+                                                key={subChild.href}
+                                                href={subChild.href}
+                                                onClick={() => setIsMenuOpen(false)}
+                                                className={cn(
+                                                  'text-base transition-colors hover:text-primary',
+                                                  pathname === subChild.href ? 'text-primary' : 'text-navlink'
+                                                )}
+                                              >
+                                                {subChild.title}
+                                              </Link>
+                                            ))}
+                                          </nav>
+                                        </AccordionContent>
+                                      </AccordionItem>
+                                    </Accordion>
+                                  ) : (
+                                    <Link
+                                      key={child.href}
+                                      href={child.href!}
+                                      onClick={() => setIsMenuOpen(false)}
+                                      className={cn(
+                                        'block py-2 text-base transition-colors hover:text-primary',
+                                        pathname === child.href ? 'text-primary' : 'text-navlink'
+                                      )}
+                                    >
+                                      {child.title}
+                                    </Link>
+                                  )
+                                )}
                               </nav>
                             </AccordionContent>
                           </AccordionItem>

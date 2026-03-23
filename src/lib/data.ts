@@ -3,7 +3,7 @@ import placeholderImages from './placeholder-images.json';
 export const siteConfig = {
   name: 'GSQUARE CORPORATE SERVICES',
   brandName: 'GSQUARE',
-  description: 'Premier Facility Management and Corporate Support Services across India. We provide housekeeping, material supply, stationery, and corporate gifting solutions.',
+  description: 'Premier Facility Management and Corporate Support Services across India. We provide housekeeping, material supply, office supplies, and corporate gifting solutions.',
   url: 'https://gsquarecorp.in',
   phone: '+917020813399',
   email: 'contact@gsquarecorp.in',
@@ -22,16 +22,12 @@ export const mainNav = [
     href: '/services',
     children: [
       {
-        title: 'Corporate Housekeeping',
+        title: 'Housekeeping Services',
         href: '/services/housekeeping',
       },
       {
-        title: 'Cleaning Material Supply',
-        href: '/services/material-supply',
-      },
-      {
-        title: 'Office Stationery',
-        href: '/services/stationery',
+        title: 'Office Supplies',
+        href: '/services/office-supplies',
       },
       {
         title: 'Corporate Gifting',
@@ -44,18 +40,13 @@ export const mainNav = [
 export const services = [
   {
     slug: 'housekeeping',
-    title: 'Corporate Housekeeping',
-    shortDescription: 'Professional cleaning services for a pristine corporate environment.',
+    title: 'Housekeeping Services',
+    shortDescription: 'Professional cleaning services and material supply for a pristine corporate environment.',
   },
   {
-    slug: 'material-supply',
-    title: 'Cleaning Material Supply',
-    shortDescription: 'Reliable supply of high-quality cleaning and pantry materials.',
-  },
-  {
-    slug: 'stationery',
-    title: 'Office Stationery',
-    shortDescription: 'Comprehensive solutions for all your office stationery needs.',
+    slug: 'office-supplies',
+    title: 'Office Supplies',
+    shortDescription: 'Comprehensive solutions for all your office supply needs.',
   },
   {
     slug: 'corporate-gifting',
@@ -67,46 +58,28 @@ export const services = [
 export const servicePages = [
   {
     slug: 'housekeeping',
-    title: 'Corporate Housekeeping Services',
-    description: 'We provide top-tier corporate housekeeping and facility management services. Our trained professionals ensure your workspace is immaculate, safe, and hygienic, using industry-best practices and eco-friendly products.',
+    title: 'Housekeeping Services',
+    description: 'We provide top-tier corporate housekeeping, facility management, and material supply services. Our trained professionals and quality products ensure your workspace is immaculate, safe, and hygienic.',
     features: [
       'Trained & Verified Staff',
       'Flexible Scheduling (Daily, Weekly, Monthly)',
-      'Use of Eco-Friendly Chemicals',
+      'Quality Cleaning Material Supply',
       'Advanced Cleaning Equipment',
       'Supervision & Quality Checks',
     ],
     benefits: [
       'Enhances corporate image and brand reputation.',
       'Promotes a healthy and productive work environment.',
-      'Reduces administrative burden of in-house cleaning.',
+      'Reduces administrative burden of in-house staff and procurement.',
       'Ensures compliance with health and safety standards.',
     ],
   },
   {
-    slug: 'material-supply',
-    title: 'Cleaning Material Suppliers',
-    description: 'GSQUARE is a leading supplier of cleaning, housekeeping, and pantry materials. We offer a comprehensive range of high-quality products at competitive prices, ensuring you never run out of essential supplies.',
+    slug: 'office-supplies',
+    title: 'Office Supplies',
+    description: 'Streamline your office procurement with our complete office supply solutions. From basic pens and paper to custom-printed materials, we provide everything your office needs to operate efficiently.',
     features: [
-      'Wide Range of Products',
-      'Branded & Quality Assured Items',
-      'Scheduled & On-Demand Delivery',
-      'Inventory Management Support',
-      'Competitive Pricing',
-    ],
-    benefits: [
-      'Consolidate procurement with a single, reliable vendor.',
-      'Save time and resources on sourcing materials.',
-      'Ensure consistent quality of supplies.',
-      'Optimize inventory levels and reduce wastage.',
-    ],
-  },
-  {
-    slug: 'stationery',
-    title: 'Office Stationery Suppliers',
-    description: 'Streamline your office supplies with our complete stationery solutions. From basic pens and paper to custom-printed materials, we provide everything your office needs to operate efficiently.',
-    features: [
-      'One-Stop-Shop for All Stationery',
+      'One-Stop-Shop for All Office Supplies',
       'Custom Printing Services',
       'Bulk Order Discounts',
       'Reliable and Timely Delivery',
