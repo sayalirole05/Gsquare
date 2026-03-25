@@ -71,8 +71,9 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for each service page
-export async function generateMetadata({ params }: { params: { slug:string } }): Promise<Metadata> {
-  const service = servicePages.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = servicePages.find((p) => p.slug === slug);
 
   if (!service) {
     return {
@@ -94,8 +95,9 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
   };
 }
 
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
-  const service = servicePages.find((p) => p.slug === params.slug);
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = servicePages.find((p) => p.slug === slug);
 
   if (!service) {
     notFound();
