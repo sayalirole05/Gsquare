@@ -63,7 +63,7 @@ export function Footer() {
             <address className="not-italic space-y-4 text-sm">
                 <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">{siteConfig.address.street},<br/>{siteConfig.address.city}, {siteConfig.address.zip}</p>
+                    <p className="text-muted-foreground">{siteConfig.address.street},<br/>{siteConfig.address.city} - {siteConfig.address.zip}</p>
                 </div>
                 <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary flex-shrink-0" />

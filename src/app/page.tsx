@@ -351,9 +351,8 @@ export default function Home() {
                     <div>
                       <h4 className="text-lg font-bold text-secondary">Registered Office</h4>
                       <address className="not-italic font-semibold text-foreground">
-                        C/13, S NO 6, SHUBHAM COMPLEX,<br/>
-                        OLD JAKAT NAKA, CHINCHWAD,<br/>
-                        PUNE, India - 411033
+                        {siteConfig.address.street},<br/>
+                        {siteConfig.address.city} - {siteConfig.address.zip}
                       </address>
                     </div>
                   </div>
